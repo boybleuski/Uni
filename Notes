@@ -1,0 +1,75 @@
+Data
+	Order - phone or walk-in
+	With phone:
+		customer phone and id, ask for name and address
+		data added to database
+		existing customer ids = name and address appear, confirm both with customer
+		new customer/different name or address = new record is created
+		verify order with a call back:
+			if not confirmed, mark order as hoax and put on hold until confirmed
+			record time the call was commenced and terminated - total time
+	Otherwise, record customer name to confirm order
+	Method: Delivery or pick-up
+	Order attributes: 
+		date of order
+		number of unique items (1 or more)
+		quantity of each item
+		price of each item
+		subtotal
+		discount code/amount (if any)
+		tax
+		total due
+		payment method
+			if via card, payment approval number
+		status (cooking/ready/etc)
+		type (phone/walk-in)
+		description
+			if delivery, driver who delivered
+	Discount program attributes (applied to order total):
+		discount code
+		program start date
+		program end date
+		requirements
+		discount percentage
+		description
+		
+	Menu/Ingredient/Supplier
+	Menu item attributes:
+		unique item code
+		name
+		size
+		sale price
+		ingredient name
+		ingredient quantity
+	Ingredient attributes:
+		unique code
+		name
+		type
+		description
+		stock level as of current stocktake --------------------!!!!!!!!!!!!!!!
+		date of previous stocktake
+		suggest stock level
+		reorder level
+		list of applicable suppliers
+	Stocktake performed each week
+		compare current stock with suggested stock, create report
+		
+	Employees
+	Employee attributes:
+		In-store (paid hourly) or delivery (paid commission by delivery)
+		Employee number
+		First name
+		Last name
+		Address
+		Contact number
+		TFN
+		Bank details (bank code, bank name, account number)
+		Pay rate
+		Status
+		Description
+		Shift worked
+			Start date
+			Start time
+			End date
+			End time
+		For delivery: order delivery record

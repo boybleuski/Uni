@@ -1,0 +1,46 @@
+Semester 1 - 2017
+	INFT1004 - Introduction to Programming				69
+	COMP1010 - Computing Fundamentals				76
+	SENG1110 - Object-Oriented Programming				79
+	MATH1110 - Maths for Engineering, Science and Technology 1	63
+
+Semester 2 - 2017
+	SENG1050 - Web Technologies					71
+	MATH1510 - Discrete Mathematics					53
+	
+Semester 1 - 2018
+	SENG2130 - System Analysis and Design				72
+	SENG1120 - Data Structures					66
+ 
+Semester 2 - 2018
+	COMP1140 - Database and Information Management			66
+	COMP3320 - Computer Graphics					NN
+
+Semester 2 - 2019
+	COMP2240 - Operating Systems					58
+	SENG2260 - Human-Computer Interaction				67
+
+Semester 1 - 2020
+	COMP2270 - Theory of Computation				54
+	SENG2200 - Programming Languages and Paradigms			60
+	SENG3320 - Software Verification and Validation			74
+
+Semester 2 - 2020
+	INFT3960 - Games Production					71
+	SENG2250 - System and Network Security				71
+
+Semester 1 - 2021
+	COMP3260 - Data Security					71
+	INFT3800 - Professional Practice in Information Technology	77
+
+Semester 2 - 2021
+	COMP2230 - Algorithms						77
+	ELEC3500 - Telecommunication Networks				77
+	
+Semester 1 - 2022
+	SENG2050 - Web Engineering
+	INFT3100 - Project Management
+	COMP3851A - CS Work Integrated Learning Project Part A
+
+Semester 2 - 2022
+	COMP3851B - CS Work Integrated Learning Project Part B
