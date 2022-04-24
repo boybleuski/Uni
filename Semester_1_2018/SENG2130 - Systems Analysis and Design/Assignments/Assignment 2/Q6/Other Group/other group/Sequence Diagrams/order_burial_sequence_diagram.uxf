@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>208</x>
+      <y>0</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>ui:UserInterface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>80</x>
+      <y>0</y>
+      <w>64</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Manager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>984</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>72</y>
+      <w>24</w>
+      <h>960</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;1180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>240</x>
+      <y>88</y>
+      <w>16</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>16</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>80</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Login()
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1096</x>
+      <y>0</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>db:DatabaseBroker</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1136</x>
+      <y>96</y>
+      <w>16</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>88</y>
+      <w>904</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>AuthenticateCredentials()
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>1110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1136</x>
+      <y>16</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1136</x>
+      <y>120</y>
+      <w>24</w>
+      <h>504</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;610.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>240</x>
+      <y>136</y>
+      <w>16</w>
+      <h>856</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>112</y>
+      <w>24</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>128</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Select Order Menu 
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>168</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Select Burial Order
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>216</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>input date_and_time
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>240</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>select adult_or_child
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>264</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Select lawn_cemeter_ 
+monument_or_green
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>72</x>
+      <y>296</y>
+      <w>208</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>alt: selected lawn cemetery</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>344</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Select plaque_or_cross
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>72</x>
+      <y>384</y>
+      <w>208</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>alt: selected green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>320</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>prompt for choice
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>400</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>prompt for choice
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>424</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Select off_or_on_site
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>72</x>
+      <y>464</y>
+      <w>208</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>alt: selected monument</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>480</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>prompt for choice
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>504</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Select single_design_ 
+or_user_specified design
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>72</x>
+      <y>544</y>
+      <w>208</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>alt: selected monument AND user 
+specified design</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>576</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>show disclaimer to user
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>656</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>User confirms or cancels
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>72</x>
+      <y>688</y>
+      <w>216</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>alt: user cancels</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>696</y>
+      <w>168</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+getBurialOrderPage()</panel_attributes>
+    <additional_attributes>10.0;30.0;60.0;30.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>176</y>
+      <w>184</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+getBurialOrderPage()</panel_attributes>
+    <additional_attributes>10.0;30.0;80.0;30.0;80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>136</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+getOrderPage()</panel_attributes>
+    <additional_attributes>10.0;30.0;80.0;30.0;80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>80</x>
+      <y>744</y>
+      <w>1088</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>alt: user concfirms</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>488</x>
+      <y>0</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>prices:PriceList</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>16</y>
+      <w>24</w>
+      <h>608</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;740.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>520</x>
+      <y>608</y>
+      <w>16</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>600</y>
+      <w>288</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>getPrice(burialCode: String, 1)
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>340.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1136</x>
+      <y>608</y>
+      <w>16</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>296</x>
+      <y>424</y>
+      <w>224</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>burialCode =
+"burial_" + adult_or_child + lawn_cemetery_ 
+monument_or_green
+* 	if lawn_cemetery_monument_green = 0
+	burial += plaque_or_cross
+*	if lawn_cemetery_monument_green = 1
+	burial += off_or_on_site
+* 	if lawn_cemetery_monument_green = 2
+	burial += single_design_specified_design
+lawn_cemeter_monument_green is 0,1,2
+all other vars are boolean
+bg=yellow
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>600</y>
+      <w>624</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>getPriceRecord(burialCode)
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>760.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>608</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Display price
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>592</x>
+      <y>0</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>orders:Order</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>16</y>
+      <w>24</w>
+      <h>760</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;930.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>624</x>
+      <y>760</y>
+      <w>16</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>752</y>
+      <w>392</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>checkResource(id: Integer, date_and_time: Date)
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>470.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>200</x>
+      <y>784</y>
+      <w>960</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>alt: resource available at given date and time</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>648</y>
+      <w>24</w>
+      <h>392</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;470.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>800</y>
+      <w>304</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+bookResource(id: Integer, date_and_time: Date)</panel_attributes>
+    <additional_attributes>10.0;30.0;60.0;30.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>832</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+placeOrder()</panel_attributes>
+    <additional_attributes>10.0;30.0;60.0;30.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>200</x>
+      <y>904</y>
+      <w>736</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>alt: resource unavabil at given date and time</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>840</y>
+      <w>392</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>reply "order created"
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;470.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>920</y>
+      <w>392</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>reply "order could not be created due to booked resource(s) on this date time"
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;470.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1136</x>
+      <y>648</y>
+      <w>24</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>736</x>
+      <y>0</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>relevantResource:Resource</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>848</x>
+      <y>16</y>
+      <w>24</w>
+      <h>768</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;940.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>848</x>
+      <y>832</y>
+      <w>16</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>752</y>
+      <w>232</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>isInUse(date_and_time: Date)
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>848</x>
+      <y>768</y>
+      <w>16</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>848</x>
+      <y>792</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>760</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>getResourceRecord(burialCode, date_and_time)
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1136</x>
+      <y>776</y>
+      <w>16</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>832</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>setResourceRecord(burialCode, date_and_time)
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>848</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>setOrderRecord(burialCode, date_and_time)
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

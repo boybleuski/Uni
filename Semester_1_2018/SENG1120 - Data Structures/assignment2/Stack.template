@@ -1,0 +1,75 @@
+// Stack.template
+// Author: Sam Dolbel
+// Student No.: c3130069
+// Course: SENG1120
+// Last modified: 13/5/2018
+
+template <class value_type>
+Stack<value_type>::Stack()
+{
+  used = 0;
+}
+
+template <class value_type>
+Stack<value_type>::~Stack()
+{
+  used = 0;
+  data.~LinkedList();
+}
+
+template <class value_type>
+int Stack<value_type>::size() const
+{
+  return used;
+}
+
+template <class value_type>
+bool Stack<value_type>::is_empty() const
+{
+  if(used==0)
+    return true;
+  else
+    return false;
+}
+
+template <class value_type>
+value_type Stack<value_type>::top()
+{
+  data.end(); // ensures that the current Node represents the top of the stack
+  return data.get_current_data();
+}
+
+template <class value_type>
+void Stack<value_type>::push(const value_type& obj)
+{
+  if (is_empty()==true)
+  {
+    used++;
+    data.add_to_head(obj);
+  }
+  else
+  {
+    used++;
+    data.add_to_tail(obj);
+  }
+}
+
+template <class value_type>
+value_type Stack<value_type>::pop()
+{
+   return data.remove_from_tail();
+}
+
+template <class value_type>
+ostream& operator << (ostream& out, Stack<value_type>& myStack) // enable output of Stacks.
+{
+  int size = myStack.size();
+  out << "(";
+
+  for (int i=0; i<size; i++)
+  {
+    out << " " << myStack.pop() << " ";
+  }
+  out << ")";
+  return out;
+}

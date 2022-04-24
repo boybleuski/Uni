@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c93eeb64-45fc-4146-b144-16036f3a21ae" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1dD90U4G61fo1AN27fWIuiPHFX0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="PA3" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PA3" />
+      <module name="Ass3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="PA3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c93eeb64-45fc-4146-b144-16036f3a21ae" name="Default Changelist" comment="" />
+      <created>1591948573522</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591948573522</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="79" key="#Project_Structure" timestamp="1591949822010">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="320" y="79" key="#Project_Structure/0.0.1680.1010@0.0.1680.1010" timestamp="1591949822010" />
+    <state x="537" y="124" key="#Unnamed" timestamp="1591948795859">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="537" y="124" key="#Unnamed/0.0.1680.1010@0.0.1680.1010" timestamp="1591948795859" />
+    <state x="588" y="218" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591949787434">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="588" y="218" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1591949787434" />
+    <state x="569" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1591949622763">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="569" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1591949622763" />
+    <state width="1637" height="336" key="GridCell.Tab.0.bottom" timestamp="1591949854182">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1591949854182" />
+    <state width="1637" height="336" key="GridCell.Tab.0.center" timestamp="1591949854182">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1591949854182" />
+    <state width="1637" height="336" key="GridCell.Tab.0.left" timestamp="1591949854182">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1591949854182" />
+    <state width="1637" height="336" key="GridCell.Tab.0.right" timestamp="1591949854182">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1591949854182" />
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1591949854182">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1591949854182" />
+    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1591949854182">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1591949854182" />
+    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1591949854182">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1591949854182" />
+    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1591949854182">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1591949854182" />
+    <state x="28" y="81" key="SettingsEditor" timestamp="1591949559833">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="28" y="81" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1591949559833" />
+    <state x="409" y="234" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1591948912525">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="409" y="234" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1680.1010@0.0.1680.1010" timestamp="1591948912525" />
+    <state x="222" y="125" key="new project wizard" timestamp="1591949850955">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="222" y="125" key="new project wizard/0.0.1680.1010@0.0.1680.1010" timestamp="1591949850955" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PA3.java</url>
+          <line>283</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PA3.java</url>
+          <line>187</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

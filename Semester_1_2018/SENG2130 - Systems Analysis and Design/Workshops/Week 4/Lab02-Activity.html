@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title>SENG2130/6350 - Activity Diagram</title>
+		<link rel="stylesheet" type="text/css" href="./style.css"/>
+	</head>
+	
+	<body>
+
+		<div id="body">
+
+		<h1 id="top">SENG2130/6350 Systems Analysis and Design - Week 4, Lab 2</h1>
+		
+		<h1>Activity Diagram</h1>		
+
+		<p>
+			The objectives of this exercise are to familiarise you with creating Activity diagram in Rational Rose software.
+		</p>
+
+		<p>
+			Note that you should have registered for the lab session which you are
+			attending. If you are not registered for a lab, the demonstrators have
+			every right to ask you to leave the laboratory room. If you have not
+			registered for any lab session, then you should <a href="mailto:joe.ryan@newcastle.edu.au">contact</a> the lecturer as soon as possible.
+		</p>
+
+		<hr />
+		<div class="toc">
+			<a href="RationalRose.pdf"  target="_blank">Click here for the instructions of the Rational Rose</a>
+		</div>
+		<hr />
+
+		<h2 id="usecase">Create an Activity diagram based on scenario.</h2>
+
+		<h3>Learning objectives</h3>
+
+		<p>
+			At the end of this exercise you should be able to produce a fully realised Activity diagram and Sequence diagram that satisfies 
+			the requirements set out in the scenario.
+			<br /><br /> 
+			Please note that your diagram may look very different to others in the class, depending on design decisions that you make.
+
+		</p>
+		<br />
+		
+		
+		<h3> Exercise 1 - DownTown Video Rental System</h3>
+		Based on the following scenario, create an Activity diagram showing the operation of checking out movies.
+		<blockquote>
+		<p><em>
+		DownTown Videos is a chain of 11 video stores scattered throughout a major metropolitan area in the Midwest. 
+		The chain started with a single store several years ago and has grown to its present size. 
+		Paul Lowes, the owner of the chain, knows that to compete with the national chains will require a state-of-the-art movie rental system. 
+		You have been asked to develop the system requirements for the new system. 
+		<br /><br />Each store has a stock of movies and video games for rent. It is important to keep track of each movie title to know and to identify its category 
+		(classical, drama, comedy, and so on), its rental type (new release, standard), movie rating, and other general information such as movie producer, release date, 
+		cost, and so forth. In addition to tracking each title, the business must track each individual copy to note its purchase date, its condition, and its rental status. 
+		User functions must be provided to maintain this inventory information. 
+		<br /><br />Customers, the lifeblood of the business, are also tracked. DownTown considers each family to be a customer, so special mailings and promotions are offered to each household. 
+		For any given customer, several people may be authorized to rent videos and games. The primary contact for each customer can also establish rental parameters for other members of the household. 
+		For example, if a parent wants to limit a child's rental authorization to only PG and PG-13 movies, the system will track that. 
+		<br /><br />Each time a movie is rented, the system must keep track of which copies of which movies and games are rented; the rental date and time and the return date and time; 
+		and the household and person renting the movie. Each rental is considered to be open until all of the movies and games have been returned. 
+		Customers pay for rentals when checking out videos at the store. 
+		</em></p>
+		</blockquote>	
+		
+		<br />	
+		<h3> Exercise 2 - Library System</h3>
+		<p>Based on the following scenario produce an Activity diagram specifying a check-out books. </p>
+		<blockquote>
+		<p><em>
+		This case is a simplified (initial draft) of a new system for the University Library. Of course, the library system must keep track of books. Information is maintained about both book titles and the individual book copies. Book titles maintain information about title, author, publisher, and catalog number. Individual copies maintain copy number, edition, publication year, ISBN, book status (whether it is on the shelf or loaned out), and date due back in.
+		<br /><br />The library also keeps track of patrons to the library. Since it is a university library, there are several types of patrons, each with different privileges. There are faculty patrons, graduate student patrons, and undergraduate student patrons. Basic information about all patrons is name, address, and telephone number. For faculty patrons, additional information is office address and telephone number. For graduate students, information such as graduate program and advisor information is maintained. For undergraduate students program and total credit hours are maintained.
+		<br /><br />The library also keeps information about library loans. A library loan is a somewhat abstract object. A loan occurs when a patron approaches the circulation desk with a stack of books to check out. Over time a patron can have many loans. 
+		A loan can have many physical books associated with it. (And a physical book can be on many loans over a period of time. Information about past loans is kept in the database.) So, in this case, it is recommended that an association class be created for loaned books.
+		<br /><br />If a book is checked out that a patron wants, he/she can put that title on reserve. This is another class that does not represent a concrete object. Each reservation is for only one title and one patron. Information such as date reserved, priority, and date fulfilled is maintained.
+		<br /><br />When it is fulfilled, the system associates it with the loan on which it was checked out.
+		<br /><br />Patrons have access to the library information to search for book titles and to see whether a book is available. A patron can also reserve a title if all copies are checked out. When patrons bring books to the circulation desk, a clerk checks out the books on a loan. Clerks also check books in. When books are dropped in the return slot, the clerks check them in.
+		<br /><br />Stocking clerks keep track of the arrival of new books.
+		<br /><br />The managers in the library have their own activities. They will print out reports of book titles by category. They also like to see (online) all overdue books. When books get damaged or destroyed, they will delete information about book copies. Managers also like to see what books are on reserve.
+		</em></p>
+        </blockquote> 
+		<br /><br />		
+		
+		<h1>Extra Work</h1>
+		
+
+	
+		<h3> Exercise 1 - Purchasing system </h3>
+		Based on the following scenario, produce an Activity diagram.
+	    
+		<blockquote>
+		<p><em>The purchasing department handles purchase requests from other departments in the company. People in the company who initiate the original purchase request are the "customers" of the purchasing department. A case worker within the purchasing department receives that request and monitors it until it is ordered and received.
+		<br /><br />Case workers process requests for the purchase of products under $1,500, write a purchase order, and then send it to the approved vendor. Purchase requests over $1,500 must first be sent out for bid from the vendor that supplies the product. When the bids return, the case worker selects one bid. Then, he or she writes a purchase order and sends it to the vendor.
+		</p></em>
+        </blockquote>
+		<br />
+		
+		<h3> Exercise 2 - Shipping system</h3>
+		Based on the following scenario, produce an Activity diagram.
+		<blockquote>
+		<p><em>
+		The shipping department receives all shipments on outstanding purchase orders. When the clerk in the shipping department receives a shipment, he or she finds the outstanding purchase order for those items. The clerk then sends multiple copies of the shipment packing slip. One copy goes to purchasing, and the department updates its records to indicate that the purchase order has been fulfilled. Another copy goes to accounting so that a payment can be made. A third copy goes to the requesting in-house customer so that he or she can receive the shipment.
+		<br /><br />Once payment is made, the accounting department sends a notification to purchasing.
+		<br /><br />Once the customer receives and accepts the goods, he or she sends notification to purchasing. When purchasing receives these other verifications, it closes the purchase order as fulfilled and paid.
+		</p></em>
+		</blockquote>
+		<br />
+		
+		<h3> Exercise 3 - Contractor purchasing system</h3>
+		Based on the following scenario, produce an Activity diagram.
+		<blockquote>
+		<p><em>
+		When a contractor buys materials, he or she takes them to the contractor checkout desk.  
+		The clerk enters the contractor name into the system.  The system displays the contractor information, 
+		including his/her current credit standing.  
+		<br /><br />The clerk then opens up a new ticket (sale) for the contractor.  Next, the clerk then scans in each item 
+		to be purchased.  The system finds the price of the item and adds the item to the ticket.  At the end of the purchase, 
+		the clerk indicates end of sale.  The system compares the total amount against the contractor's current credit limit, 
+		and if it is acceptable, finalizes the sale. The system creates an electronic ticket for the items, and the contractor's
+		credit limit is reduced by the amount of the sale. Some contractors like to keep a record of their purchases, 
+		so they request that the ticket details be printed out. Others aren't interested in a printout. 
+		<br /><br />A sale to the general public is simply entered into the cash register and a paper ticket is printed 
+		as the items are identified. Payment can be by cash, check, or credit card. The clerk must enter the type of payment 
+		to ensure that the cash register balances at the end of the shift. For credit card payments, the system prints out a 
+		credit card voucher that the customer must sign. 
+
+		</p></em>
+		</blockquote>
+		<br />
+		
+
+
+	
+		<div id="copyright">
+				<p> please email <a href="mailto:mira.park@newcastle.edu.au">Mira Park</a> if you find any errors on this page.</p>
+		<p>
+			<a href="http://www.uml.org">
+			<img
+			src="UML.jpg"
+			alt="Object Management Group" height="31" width="88" />
+			</a>
+		</p>		
+		
+	</body>
+
+</html>

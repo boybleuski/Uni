@@ -1,0 +1,75 @@
+Standish Group study
+    - 1994: approx. 16% of project completed on time, 31% failed projects
+    - 2004: approx. 29% of project completed on time, 18% failed projects
+    - 2009: failure rates increased
+
+Project Life Cycle
+    - Defining: objectives, specifications, responsibilities and teams.
+    - Planning: task delegation, planning and scheduling, budget and quality.
+    - Executing: physical and mental work, adjusting forecasts based on measures, changes based on revisions.
+    - Closing: Product delivery, resource deployment and post-project review.
+
+    Defining                Planning            Executing               Closing     
+        - Goals                 - Schedules         - Status reports        - Train customer
+        - Specifications        - Budgets           - Changes               - Transfer documents
+        - Tasks                 - Resources         - Quality               - Release resources
+        - Responsibilities      - Risks             - Forecasts             - Evaluation
+                                - Staffing                                  - Lessons learned
+
+Compression of the Product Life Cycle
+    - Knowledge Explosion: Ever-increasing product complexity.
+    - Triple Bottom Line (Planet, People, Profit): Instead of just making money, ecological and sociological concerns.
+    - Corporate Downsizing: Outsourcing and reduction of middle management.
+    - Increased Customer Focus: Customers now require customised goods and services.
+    - Small Projects Represent Big Problems
+
+Sociocultural Dimensions: Leadership, Problem solving, Teamwork, Negotiation, Politics, Customer expectations
+Technical Dimensions: Scope, WBS, Schedules, Resource allocation, Baseline budgets, Status reports
+
+Strategic Management
+    - Identify the main focus of the business - markets to target fo maximum return, efficiency and budget
+    - Avoid narrowing focus on too small or immediate a customer base, do not complicate a project with technology when a simple solution works, and do not aim for perfection when only the project team cares about perfection.
+    - Projects should demonstrably add to the company's mission. Explain this in non-technical terms.
+    - Major dimensions of strategic management: external and internal.
+        - External == Maximise limited resources to remain competitive, and always search for change and opportunity.
+        - Internal == manage environmental volatility, organisation culture and responses to projects.
+
+Four Activities of Strategic Management
+    1. Review and define organisational mission.
+        - What the company wants to become - mission statements.
+        - Mission statements are significant and rarely change. Think Apple branching out in the late 90s.
+        - "Where" the company is going.
+    2. Set long-range goals and objectives.
+        - Convert mission into measurable realistic objectives.
+        - "When" the company will get there.
+    3. Analyse and formulate strategies to reach objectives.
+        - Evaluate the company's past and objectives, selecting the best.
+        - Assess the internal and external environments (SWOT analysis).
+        - "What" the company will do to get there.
+    4. Implement strategies through projects.
+        - Allocate resources (people, funds, skills, etc)
+        - Define management, who is best suited for what role.
+        - Planning and control systems.
+        - Provide motivation.
+        - "How" startegies are realised.
+Issues
+    - IMPLEMENTATION GAP == Problems when upper management formulates startegy and leaves implementation to the others - trust issues, lack of inside knowledge (costs, skills, etc), role confusion, etc.
+    - ORGANISATION POLITICS == preferences of people in power, in-fighting and so forth.
+    - RESOURCE CONFLICTS AND MULTITASKING == starting and stopping tasks is inefficient and results in delays.
+
+Project Classifications
+    - Compliance == must-do || penalties for non-compliance
+    - Strategic == future goals || new products, research and development || increase revenue
+    - Operational == important maintenance || improve delivery and performance, reduce costs
+
+Selection Criteria
+    - Financial
+        - Payback model == measures the time until the project is paid back.
+            - Payback period (yrs) = Project cost / annual savings
+        - NPV (net present value) model == uses minimum desired rate of return to compute net inflow.
+            - NPV = Investment + SUM(Net cash flow for period / (1 + minimum return rate)^period index
+    - Non-financial
+        - Maintain core competencies.
+        - Ignore projects with low profit margins.
+        - Develop useful core technology.
+        - Reduce dependency on external factors, and more.

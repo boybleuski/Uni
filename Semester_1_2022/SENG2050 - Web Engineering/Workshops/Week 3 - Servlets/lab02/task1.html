@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Task1</title>
+        <script>
+            // Adds a new input to the text field
+            // Note: I dont expect you to understand how this works
+            // Just for demonstration purposes :)
+            function addnumberrow() {
+                var input = document.createElement("input")
+                input.type = "text"
+                input.name = "number"
+                
+                var target = document.getElementById("number-add-target")
+                target.appendChild(input)
+            }
+        </script>
+        <style>
+            /* Make all inputs appear stacked */
+            input {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Task 1</h1>
+        <hr />
+        <p>
+            What is your name?
+        </p>
+        <form action="/lab02/task1-single" method="GET">
+            <input type="text" name="name" />
+            <input type="submit" />
+        </form>
+        <hr />
+        <p>
+            What numbers do you like?
+        </p>
+        <form action="/lab02/task1-multi" method="GET">
+            <div id="number-add-target">
+                <input type="text" name="number" />
+            </div>
+
+            <input type="button" value="Add Number" onclick="javascript:addnumberrow()" />
+            <input type="submit" />
+        </form>
+    </body>
+</html>

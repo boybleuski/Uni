@@ -1,0 +1,192 @@
+// LinkedList.template
+// Author: Sam Dolbel
+// Student No.: c3130069
+// Course: SENG1120
+// Last modified: 12/5/2018
+
+//constructor
+template <class value_type>
+LinkedList<value_type>::LinkedList()
+{
+	current = NULL;
+	head = NULL;
+	tail = NULL;
+	length = 0;
+}
+
+//destructor
+template <class value_type>
+LinkedList<value_type>::~LinkedList()
+{
+	do
+	{
+		if(head!=NULL)
+		  remove_from_head();
+	}
+	while(head!=NULL);
+}
+
+//queriers
+template <class value_type>
+Node<value_type>* LinkedList<value_type>::get_head() const
+{
+	return head;
+}
+
+template <class value_type>
+Node<value_type>* LinkedList<value_type>::get_tail() const
+{
+	return tail;
+}
+
+template <class value_type>
+Node<value_type>* LinkedList<value_type>::get_current() const
+{
+	return current;
+}
+
+template <class value_type>
+value_type LinkedList<value_type>::get_current_data() const
+{
+	return current->get_data();
+}
+
+template <class value_type>
+int LinkedList<value_type>::get_length() const // output the total length in words/Nodes of the list
+{
+	return length;
+}
+
+//mutators
+template <class value_type>
+void LinkedList<value_type>::start()
+{
+	current = head;
+}
+
+template <class value_type>
+void LinkedList<value_type>::end()
+{
+	current = tail;
+}
+
+template <class value_type>
+void LinkedList<value_type>::set_head(Node<value_type>* newHead)
+{
+	head = newHead;
+}
+
+template <class value_type>
+void LinkedList<value_type>::set_tail(Node<value_type>* newTail)
+{
+	tail = newTail;
+}
+
+template <class value_type>
+void LinkedList<value_type>::set_current(Node<value_type>* newCurrent)
+{
+	current = newCurrent;
+}
+
+template <class value_type>
+void LinkedList<value_type>::fill_list(value_type data) // fill a LinkedList with data-containing Nodes on construction
+{
+	Node<value_type>* input;
+	if (head == NULL) // if the ListedList is empty
+	  add_to_head(data);
+	else
+	  add_to_tail(data);
+}
+
+template <class value_type>
+void LinkedList<value_type>::add_to_head(value_type data)
+{
+	head = new Node<value_type>(data); // creates the first Node at the front of the list
+	current = head;
+	if (length==0)
+	  tail = head;
+	length++;
+}
+
+template <class value_type>
+void LinkedList<value_type>::add_to_tail(value_type data)
+{
+	Node<value_type>* newNode = new Node<value_type>(data); // creates a new Node and inserts data
+  tail->set_next(newNode); // defines the latest Node as the end of the list
+  newNode->set_prev(current); // defines the Node created before as the previous Node
+  tail = newNode;
+  current = newNode;
+	if (length==0)
+	  head = tail;
+	length++;
+}
+
+template <class value_type>
+void LinkedList<value_type>::remove(const value_type& data)
+{
+	for (current=head; current!=NULL; current=current->get_next()) // searches the entire LinkedList for matches.
+	{
+		if (data == current->get_data()) // checks whether the user-defined data matches what is in a specific Node.
+		{
+			if (current->get_prev()==NULL) // if the match is the head Node, make the head Node the next Node and delete the original head.
+			{
+				remove_from_head();
+			}
+
+			else if (current->get_next()==NULL) // if the match is the tail Node, make the tail Node the previous Node and delete the original tail.
+			{
+				remove_from_tail();
+			}
+
+			else
+			{
+				Node<value_type>* temp;
+				// when removing Nodes from the middle of the list, the surrounding Nodes
+				// are made to point to each other before the relevent Node is deleted.
+				temp = current->get_prev();
+				temp->set_next(current->get_next());
+				temp = current->get_next();
+				temp->set_prev(current->get_prev());
+				current = temp;
+			}
+			length--;
+		}
+	}
+}
+
+template <class value_type>
+value_type LinkedList<value_type>::remove_from_head() // designation when the head Node is removed
+{
+	Node<value_type>* temp;
+	temp = head;
+	head = head->get_next();
+	current = head;
+	if (head!=NULL)
+	{
+		head->set_prev(NULL);
+	}
+	else
+	{
+		tail = NULL;
+	}
+	value_type data = temp->get_data();
+	return data;
+}
+
+template <class value_type>
+value_type LinkedList<value_type>::remove_from_tail() // designation when the tail Node is removed
+{
+		Node<value_type>* temp;
+		temp = tail;
+		tail = tail->get_prev();
+		current = tail;
+		if (tail!=NULL)
+		{
+			tail->set_next(NULL);
+		}
+		else
+		{
+			head = NULL;
+		}
+		return temp->get_data();
+}

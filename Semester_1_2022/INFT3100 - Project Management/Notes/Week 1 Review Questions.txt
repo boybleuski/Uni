@@ -1,0 +1,177 @@
+Chapter 1
+1. Define a project. What are five characteristics that help differentiate projectsfrom other functions carried out in the daily operations of the organization?
+
+    A project is the series of tasks and responsibilities needed to create a product, service or result. The characteristics are:
+        1 - an established objective.
+        2 - a designated lifespan.
+        3 - multiple professionals and/or departments.
+        4 - a unique outcome.
+        5 - time, cost and performance requirements.
+
+2. What are some of the key environmental forces that have changed the way projects are managed? What has been the effect of these forces on the management of projects?
+    - Knowledge explosion: increasing complexity necessitates divergent technology
+    - Triple bottom line: companies are required to consider ecological (planet) and societal (people) concerns, along with profit.
+    - Corporate downsizing: companies are becoming leaner, leading to a focus on core competencies and outsourcing.
+    - Increased customer focus: customers have more specific needs, meaning personalised projects will only become more relevant.
+    - Small projects, big problems: not all companies will be able to organise many small projects at once - costs can be hidden and efficacy suffers.  
+
+3. Why is the implementation of projects important to strategic planning and the project manager?
+    - Without implementing projects, they don't get fuckin done. Pretty obvious isn't it?
+
+4. The technical and sociocultural dimensions of project management are two sides to the same coin. Explain.
+    - Managers need to balance both dimensions. Technical excellence means nothing if the team refuses to communicate and cooperate, both with each other and the end user. However, inability to plan and perform is equally disastrous - the team will communicate well and accomplish nothing with any efficiency.
+
+5. What is meant by an integrative approach to project management? Why is this approach important in today’s environment?
+    - An integrative approach centralises all aspects of project management, combining them all into a seamless domain. This allows for a clearer and more flexible exchange of fresh data and ideas in an increasingly complex environment. Goals and requirements can be updated with greater agility.
+
+Chapter 2
+1. You manage a hotel resort located on the South Beach on the Island of Kauai
+in Hawaii. You are shifting the focus of your resort from a traditional fun-inthe-sun destination to eco-tourism. (Eco-tourism focuses on environmental
+awareness and education.) How would you classify the following projects in
+terms of compliance, strategic, and operational?
+    a. OPER - Convert the pool heating system from electrical to solar power.
+    b. STRA - Build a 4-mile nature hiking trail.
+    c. OPER - Renovate the horse barn.
+    d. COMP - Replace the golf shop that accidentally burned down after being struck by lightning.
+    e. STRA - Launch a new promotional campaign with Hawaii Airlines.
+    f. STRA - Convert 12 adjacent acres into a wildlife preserve.
+    g. OPER - Update all the bathrooms in condos that are 10 years old or older.
+    h. STRA - Change hotel brochures to reflect eco-tourism image.
+    i. COMP - Test and revise disaster response plan.
+    j. STRA - Introduce wireless Internet service in café and lounge areas.
+How easy was it to classify these projects? What made some projects more difficult than others? What do you think you now know that would be useful for
+managing projects at the hotel?
+
+2. Two new software projects are proposed to a young, start-up company. The Alpha project will cost $150,000 to develop and is expected to have annual net
+cash flow of $40,000. The Beta project will cost $200,000 to develop and is expected to have annual net cash flow of $50,000. The company is very concerned
+about their cash flow. Using the payback period, which project is better from a
+cash flow standpoint? Why?
+    - 150000/40000 = 3.75 years
+    - 200000/50000 = 4 years
+    Project A is better, paid back sooner.
+
+3. A five-year project has a projected net cash flow of $15,000, $25,000, $30,000,
+$20,000, and $15,000 in the next five years. It will cost $50,000 to implement
+the project. If the required rate of return is 20 percent, conduct a discounted
+cash flow calculation to determine the NPV.
+
+4. You work for the 3T company, which expects to earn at least 18 percent on its
+investments. You have to choose between two similar projects. Below is the cash
+information for each project. Your analysts predict that inflation rate will be a
+stable 3 percent over the next 7 years. Which of the two projects would you
+fund if the decision is based only on financial information? Why?
+
+5. You are the head of the project selection team at SIMSOX. Your team is considering three different projects. Based on past history, SIMSOX expects at
+least a rate of return of 20 percent. Your financial advisors predict inflation to
+remain at 3 percent into the foreseeable future.
+ Given the following information for each project, which one should be
+SIMSOX first priority? Should SIMSOX fund any of the other projects? If so,
+what should be the order of priority based on return on investment?
+
+
+
+
+
+6. You are the head of the project selection team at Broken Arrow records. Your
+team is considering three different recording projects. Based on past history,
+Broken Arrow expects at least a rate of return of 20 percent. Your financial advisors predict inflation to remain at 2 percent into the foreseeable future.
+ Given the following information for each project, which one should be Broken Arrow’s first priority? Should Broken Arrow fund any of the other projects?
+If so, what should be the order of priority based on return on investment?
+
+7. The Custom Bike Company has set up a weighted scoring matrix for evaluation
+of potential projects. Below are three projects under consideration.
+    a. Using the scoring matrix below, which project would you rate highest? Lowest?
+    b. If the weight for “Strong Sponsor” is changed from 2.0 to 5.0, will the project selection change? What are the three highest weighted project scores with this new weight?
+    c. Why is it important that the weights mirror critical strategic factors?
+
+
+Chapter 3
+1. What are the relative advantages and disadvantages of the functional, matrix,
+and dedicated team approaches to managing projects?
+2. What distinguishes a weak matrix from a strong matrix?
+3. Under what conditions would it be advisable to use a strong matrix instead of
+a dedicated project team?
+4. How can project management offices (POs) support effective project
+management?
+5. Why is it important to assess the culture of an organization before deciding
+what project management structure should be used to complete a project?
+6. Other than culture, what other organizational factors should be used to determine which project management structure should be used?
+7. What do you believe is more important for successfully completing a project—
+the formal project management structure or the culture of the parent
+organization?
+
+
+Chapter 17
+1. Going to college is analogous to working in a matrix environment in that most
+students take more than one class and must distribute their time across multiple
+classes. What problems does this situation create for you? How does it affect
+your performance? How could the system be better managed to make your life
+less difficult and more productive?
+2. You work for LL Company, which manufactures high-end optical scopes for
+hunting rifles. LL Company has been the market leader for the past 20 years
+and has decided to diversify by applying its technology to develop a top-quality
+binocular. What kind of project management structure would you recommend
+they use for this project? What information would you like to have to make this
+recommendation, and why?
+3. You work for Barbata Electronics. Your R&D people believe they have come
+up with an affordable technology that will double the capacity of existing MP3
+players and uses audio format that is superior to MP3. The project is code
+named KYSO (Knock Your Socks Off). What kind of project management
+structure would you recommend they use for the KYSO project? What information would you like to have to make this recommendation and why?
+4. This chapter discussed the role of values and beliefs in forming an organization’s culture. The topic of organization culture is big business on the Internet.
+Many companies use their Web pages to describe their mission, vision, and corporate values and beliefs. There also are many consulting firms that advertise
+how they help organizations to change their culture. The purpose of this exercise is for you to obtain information pertaining to the organizational culture for
+two different companies. You can go about this task by very simply searching
+on the key words “organizational culture” or “corporate vision and values.”
+This search will identify numerous companies for you to use to answer the
+ following questions. You may want to select companies that you would like to
+work for in the future.
+ a. What are the espoused values and beliefs of the companies?
+ b. Use the worksheet in Figure 3.6 to assess the Web page. What does the Web
+page reveal about the culture of this organization? Would this culture be
+conducive to effective project management?
+5. Use the cultural dimensions listed in Figure 3.5 to assess the culture of your
+school. Instead of employees, consider students, and instead of management, use
+faculty. For example, member identity refers to the degree to which students identify with the school as a whole rather than their major or option. Either as individuals or in small groups rate the culture of your school on the 10 dimensions.
+ a. What dimensions were easy to evaluate and which ones were not?
+ b. How strong is the culture of your school?
+ c. What functions does the culture serve for your school?
+ d. Do you think the culture of your school is best suited to maximizing your
+learning? Why or why not?
+ e. What kind of projects would be easy to implement in your school and what
+kind of projects would be difficult given the structure and culture of your
+school? Explain your answer.
+6. You work as an analyst in the marketing department for Springfield International (SI). SI uses a weak matrix to develop new services. Management has
+created an extremely competitive organizational culture that places an emphasis upon achieving results above everything else. One of the project managers
+that you have been assigned to help has been pressuring you to make his project
+your number one priority. He also wants you to expand the scope of your work
+on his project beyond what your marketing manager believes is necessary or appropriate. The project manager is widely perceived as a rising star within SI. Up
+to now you have been resisting the project manager’s pressure and complying
+with your marketing manager’s directives. However, your most recent interchange with the project manager ended by his saying, “I’m not happy with the
+level of help I am getting from you and I will remember this when I become VP
+of Marketing.” How would you respond and why?
+
+1. Why is the traditional project management approach less effective when project
+scope and technology are not well known?
+2. What is iterative incremental development? Why is it useful for developing
+new products?
+3. What are the advantages of Agile PM? What are the disadvantages of Agile PM?
+4. What similarities and differences exist between a traditional project manager
+and a Scrum master?
+5. What are the differences between a self-organizing team and a conventional
+project team?
+6. Why is it difficult to apply Agile PM to large scale projects?
+1. Break into small groups and identify at least two real-life examples of projects
+in which:
+ a. The scope and technology are well known.
+ b. The scope is well known but the technology is less well known.
+ c. The scope is not well known but the technology is known.
+ d. Neither the scope nor the technology is well known.
+2. Break into small groups and discuss the following question:
+ What organizational, group, individual, and project factors do you think would
+promote the successful adoption of Agile PM methodologies like Scrum? Why?
+3. Use a project you are currently working on to hold a Scrum meeting according
+to the guidelines on pages 590–591. Designate one member to act as the Scrum
+master and hold a standing meeting that lasts no longer than 15 minutes. Assess the value of such meetings?
+4. Below are four mini-cases from practice. Break into small groups and (1) analyze
+the case and (2) provide five recommendations for the IT department.

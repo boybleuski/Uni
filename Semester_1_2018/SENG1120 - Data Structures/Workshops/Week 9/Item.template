@@ -1,0 +1,41 @@
+template<class object>
+Item<object>::Item(object newValue)
+{
+  value = newValue;
+}
+
+template<class object>
+Item<object>::~Item()
+{
+  value = 0;
+}
+
+template<class object>
+object Item<object>::get_value()
+{
+  return value;
+}
+
+template<class object>
+bool Item<object>::operator== (const Item& obj1)
+{
+  return (value == obj1.get_value());
+}
+
+template<class object>
+bool Item<object>::operator> (const Item& obj1)
+{
+  return (value > obj1.get_value());
+}
+
+template<class object>
+bool Item<object>::operator< (const Item& obj1)
+{
+  return (value < obj1.get_value());
+}
+
+template<class object>
+bool Item<object>::operator!= (const Item& obj1)
+{
+  return (value != obj1.get_value());
+}

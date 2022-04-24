@@ -1,0 +1,78 @@
+// Queue.template
+// Author: Sam Dolbel
+// Student No.: c3130069
+// Course: SENG1120
+// Last modified: 12/5/2018
+
+template <class value_type>
+Queue<value_type>::Queue()
+{
+  used = 0;
+}
+
+template <class value_type>
+Queue<value_type>::~Queue()
+{
+  used = 0;
+  data.~LinkedList();
+}
+
+template <class value_type>
+int Queue<value_type>::size() const
+{
+  return used;
+}
+
+template <class value_type>
+bool Queue<value_type>::is_empty() const
+{
+  if(used==0)
+    return true;
+  else
+    return false;
+}
+
+template <class value_type>
+double Queue<value_type>::average()
+{
+  double averageGrade;
+  for(int i=0; i<used; i++)
+  // removes the value at the front of the queue, adds it and returns it to the
+  // back of the queue
+  {
+    value_type dequeued = dequeue();
+    averageGrade = averageGrade + dequeued;
+    enqueue(dequeued);
+  }
+  averageGrade = averageGrade/used;
+  return averageGrade;
+}
+
+template <class value_type>
+value_type Queue<value_type>::front()
+{
+  data.start();
+  return data.get_current_data();
+}
+
+template <class value_type>
+void Queue<value_type>::enqueue(const value_type& obj)
+{
+  if (is_empty()==true)
+  {
+    used++;
+    data.add_to_head(obj);
+  }
+  else
+  {
+    used++;
+    data.add_to_tail(obj);
+  }
+}
+
+template <class value_type>
+value_type Queue<value_type>::dequeue()
+{
+  used--;
+  return data.remove_from_head();
+}

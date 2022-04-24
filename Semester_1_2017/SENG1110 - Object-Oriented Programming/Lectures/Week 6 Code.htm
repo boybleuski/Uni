@@ -1,0 +1,1754 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:mv="http://macVmlSchemaUri" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Title content=Java>
+<meta name=Keywords content="">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="CodeSamplesWeek7_files/filelist.xml">
+<title>Java</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>regina</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Regina Berretta</o:LastAuthor>
+  <o:Revision>21</o:Revision>
+  <o:TotalTime>184</o:TotalTime>
+  <o:Created>2013-04-19T02:02:00Z</o:Created>
+  <o:LastSaved>2017-03-29T05:03:00Z</o:LastSaved>
+  <o:Pages>11</o:Pages>
+  <o:Words>2297</o:Words>
+  <o:Characters>13098</o:Characters>
+  <o:Lines>109</o:Lines>
+  <o:Paragraphs>30</o:Paragraphs>
+  <o:CharactersWithSpaces>15365</o:CharactersWithSpaces>
+  <o:Version>14.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="CodeSamplesWeek7_files/themedata.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-AU</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="276">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Arial;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:+mn-ea;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:+mn-cs;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+pre
+	{mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Courier;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"MS Gothic";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Consolas;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+<meta http-equiv=Content-Language content=en-us>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="#CCFFFF" lang=EN-AU link=blue vlink=purple style='tab-interval:
+36.0pt'>
+
+<div class=WordSection1>
+
+<p align=center style='text-align:center'><i><span lang=EN-US style='font-family:
+Arial;mso-fareast-font-family:+mn-ea;mso-bidi-font-family:+mn-cs;color:black;
+mso-font-kerning:12.0pt;mso-ansi-language:EN-US'>JAVA: An Introduction to
+Problem Solving &amp; Programming, 6</span></i><span class=SpellE><sup><span
+lang=EN-US style='font-family:Arial;mso-fareast-font-family:+mn-ea;mso-bidi-font-family:
++mn-cs;color:black;position:relative;top:-3.5pt;mso-text-raise:3.5pt;
+mso-font-kerning:12.0pt;mso-ansi-language:EN-US'>th</span></sup></span><span
+lang=EN-US style='font-family:Arial;mso-fareast-font-family:+mn-ea;mso-bidi-font-family:
++mn-cs;color:black;position:relative;top:-3.5pt;mso-text-raise:3.5pt;
+mso-font-kerning:12.0pt;mso-ansi-language:EN-US'><span
+style="mso-spacerun:yes"> </span>Ed. By Walter <span class=SpellE>Savitch</span>.<br>
+ISBN&nbsp; 0132162709 © 2012 Pearson Education, Inc., Upper Saddle River, NJ.
+All Rights Reserved </span></p>
+
+<p align=center style='text-align:center'>&nbsp;<span
+style="mso-spacerun:yes">  </span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:red'>Pet</span><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>Class for basic pet data: name, age, and weight.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class Pet<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private String name;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private <span
+  class=SpellE>int</span> age; //in years<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private double weight; //in pounds<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">    </span><span
+  style='background:yellow;mso-highlight:yellow'>public Pet ()<span style="mso-spacerun:yes">   </span>// default constructor</span></span></b><b><span
+  style='font-size:13.5pt;color:blue;background:yellow;mso-highlight:yellow'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=GramE>name</span> = &quot;No name yet.&quot;;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>age = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>weight = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'> <span style='background:yellow'><span style="mso-spacerun:yes">   </span><a
+  name="public_Pet_(String_initialName,">public Pet (String </a><span
+  class=SpellE><span style='mso-bookmark:"public_Pet_\(String_initialName\,"'>initialName</span></span><span
+  style='mso-bookmark:"public_Pet_\(String_initialName\,"'>,</span> <span
+  class=SpellE>int</span> <span class=SpellE>initialAge</span>, double <span
+  class=SpellE>initialWeight</span>) </span><span style='background:#CCCCFF'><span style="mso-spacerun:yes">                 </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>name = <span
+  class=SpellE>initialName</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if ((<span
+  class=SpellE>initialAge</span> &lt; 0) || (<span class=SpellE>initialWeight</span> &lt; 0))<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Error: Negative age or weight.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>age = <span
+  class=SpellE>initialAge</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>weight = <span
+  class=SpellE>initialWeight</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setPet</span> (String <span class=SpellE>newName</span>, <span
+  class=SpellE>int</span> <span class=SpellE>newAge</span>, double <span
+  class=SpellE>newWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>name = <span
+  class=SpellE>newName</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if ((<span
+  class=SpellE>newAge</span> &lt; 0) || (<span class=SpellE>newWeight</span> &lt; 0))<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Error: Negative age or weight.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>age = <span
+  class=SpellE>newAge</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>weight = <span
+  class=SpellE>newWeight</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span><a
+  name="public_Pet_(String_initialName)"><span style='background:yellow;
+  mso-highlight:yellow'>public Pet (String </span></a><span class=SpellE><span
+  style='mso-bookmark:"public_Pet_\(String_initialName\)"'><span
+  style='background:yellow;mso-highlight:yellow'>initialName</span></span></span><span
+  style='mso-bookmark:"public_Pet_\(String_initialName\)"'><span
+  style='background:yellow;mso-highlight:yellow'>)</span></span><span
+  style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>name = <span
+  class=SpellE>initialName</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>age = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>weight = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setName</span> (String <span class=SpellE>newName</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=GramE>name</span> = <span class=SpellE>newName</span>; //age and weight are unchanged.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">   </span><a
+  name="public_Pet_(int_initialAge)"><span style="mso-spacerun:yes"> </span><span
+  style='background:yellow;mso-highlight:yellow'>public Pet (</span></a><span
+  class=SpellE><span style='mso-bookmark:"public_Pet_\(int_initialAge\)"'><span
+  style='background:yellow;mso-highlight:yellow'>int</span></span></span><span
+  style='mso-bookmark:"public_Pet_\(int_initialAge\)"'><span style='background:
+  yellow;mso-highlight:yellow'> <span class=SpellE>initialAge</span>)</span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=GramE>name</span> = &quot;No name yet.&quot;;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>weight = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (<span
+  class=SpellE>initialAge</span> &lt; 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Error: Negative age.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>age = <span
+  class=SpellE>initialAge</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setAge</span> (<span class=SpellE>int</span> <span class=SpellE>newAge</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (<span
+  class=SpellE>newAge</span> &lt; 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Error: Negative age.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>age = <span
+  class=SpellE>newAge</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>//name and weight are unchanged.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:#FFFF99'> <span style="mso-spacerun:yes">   </span><a
+  name="public_Pet_(double_initialWeight)"><span style='background:yellow;
+  mso-highlight:yellow'>public Pet (double </span></a><span class=SpellE><span
+  style='mso-bookmark:"public_Pet_\(double_initialWeight\)"'><span
+  style='background:yellow;mso-highlight:yellow'>initialWeight</span></span></span><span
+  style='mso-bookmark:"public_Pet_\(double_initialWeight\)"'><span
+  style='background:yellow;mso-highlight:yellow'>)</span></span></span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>name = &quot;No name yet&quot;;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>age = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (<span
+  class=SpellE>initialWeight</span> &lt; 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Error: Negative weight.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>weight = <span
+  class=SpellE>initialWeight</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setWeight</span> (double <span class=SpellE>newWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (<span
+  class=SpellE>newWeight</span> &lt; 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Error: Negative weight.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=GramE>weight</span> = <span class=SpellE>newWeight</span>; //name and age are unchanged.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public String <span
+  class=SpellE>getName</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return name;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  class=SpellE>int</span> <span class=SpellE>getAge</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return age;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public double <span
+  class=SpellE>getWeight</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return weight;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>writeOutput</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Name: &quot; + name);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Age: &quot; + age + &quot; years&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Weight: &quot; + weight + &quot; pounds&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:red'>PetDemo</span></span><span style='mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>PetDemo</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><b><span
+  style='font-size:13.5pt;color:red'>Pet <span class=SpellE>yourPet</span> = new <span
+  style='background:yellow;mso-highlight:yellow'>Pet (&quot;Jane Doe&quot;);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;My records on your pet are inaccurate.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Here is what they currently say:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>yourPet.writeOutput</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Please enter the correct pet name:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>String <span
+  class=SpellE>correctName</span> = <span class=SpellE>keyboard.nextLine</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>yourPet.setName</span> (<span class=SpellE>correctName</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Please enter the correct pet age:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>int</span> <span class=SpellE>correctAge</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>yourPet.setAge</span> (<span class=SpellE>correctAge</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Please enter the correct pet weight:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>double <span
+  class=SpellE>correctWeight</span> = <span class=SpellE>keyboard.nextDouble</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">      </span><span style="mso-spacerun:yes">  </span><span
+  class=SpellE>yourPet.setWeight</span> (<span class=SpellE>correctWeight</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;My updated records now say:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>yourPet.writeOutput</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:red'>Pet2</span><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>Revised class for basic pet data: name, age, and weight.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class Pet2<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private String name;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private <span
+  class=SpellE>int</span> age; //in years<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private double weight; //in pounds<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet2 (String <span
+  class=SpellE>initialName</span>, <span class=SpellE>int</span> <span
+  class=SpellE>initialAge</span>,<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>double <span
+  class=SpellE>initialWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><b><span
+  style='font-size:13.5pt;color:red'>set (<span class=SpellE>initialName</span>, <span
+  class=SpellE>initialAge</span>, <span class=SpellE>initialWeight</span>);</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet2 (String <span
+  class=SpellE>initialName</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><b><span
+  style='font-size:13.5pt;color:red'>set (<span class=SpellE>initialName</span>, 0, 0);</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet2 (<span
+  class=SpellE>int</span> <span class=SpellE>initialAge</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><b><span
+  style='font-size:13.5pt;color:red'>set (&quot;No name yet.&quot;, <span
+  class=SpellE>initialAge</span>, 0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet2 (double <span
+  class=SpellE>initialWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">       </span></span></b><b><span
+  style='font-size:13.5pt;color:red'><span style="mso-spacerun:yes"> </span>set (&quot;No name yet.&quot;, 0, <span
+  class=SpellE>initialWeight</span>);</span></b><b><span style='font-size:13.5pt;
+  color:blue'><o:p></o:p></span></b></pre><pre><b><span style='font-size:13.5pt;
+  color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet2 ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:red'><span style="mso-spacerun:yes">        </span>set (&quot;No name yet.&quot;, 0, 0);</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setPet</span> (String <span class=SpellE>newName</span>, <span
+  class=SpellE>int</span> <span class=SpellE>newAge</span>,<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>double <span
+  class=SpellE>newWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">       </span></span></b><b><span
+  style='font-size:13.5pt;color:red'><span style="mso-spacerun:yes"> </span>set (<span
+  class=SpellE>newName</span>, <span class=SpellE>newAge</span>, <span
+  class=SpellE>newWeight</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setName</span> (String <span class=SpellE>newName</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:red'><span style="mso-spacerun:yes">        </span>set (<span
+  class=SpellE>newName</span>, age, weight); //age and weight unchanged<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setAge</span> (<span class=SpellE>int</span> <span class=SpellE>newAge</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:red'><span style="mso-spacerun:yes">        </span>set (name, <span
+  class=SpellE>newAge</span>, weight); //name and weight unchanged<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setWeight</span> (double <span class=SpellE>newWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:red'><span style="mso-spacerun:yes">        </span>set (name, age, <span
+  class=SpellE>newWeight</span>); //name and age unchanged<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">    </span><a
+  name="private_void_set_(String_newName,_int_ne">private void set (String </a><span
+  class=SpellE><span style='mso-bookmark:"private_void_set_\(String_newName\,_int_ne"'>newName</span></span><span
+  style='mso-bookmark:"private_void_set_\(String_newName\,_int_ne"'>, <span
+  class=SpellE>int</span> <span class=SpellE>newAge</span>,</span> double <span
+  class=SpellE>newWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>name = <span
+  class=SpellE>newName</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if ((<span
+  class=SpellE>newAge</span> &lt; 0) || (<span class=SpellE>newWeight</span> &lt; 0))<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Error: Negative age or weight.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>age = <span
+  class=SpellE>newAge</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>weight = <span
+  class=SpellE>newWeight</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>/*<span style="mso-spacerun:yes">   </span>The methods <span
+  class=SpellE>getName</span>, <span class=SpellE>getAge</span>, <span
+  class=SpellE>getWeight</span>, and <span class=SpellE>writeOutput</span> are<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">         </span>the same as in Listing Pet class (above) &gt;<span style="mso-spacerun:yes">  </span>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:red'>Pet3</span><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>Revised class for basic pet data: name, age, and weight.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class Pet3<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private String name;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private <span
+  class=SpellE>int</span> age; //in years<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private double weight; //in pounds<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet3 (String <span
+  class=SpellE>initialName</span>, <span class=SpellE>int</span> <span
+  class=SpellE>initialAge</span>, double <span class=SpellE>initialWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>set (<span
+  class=SpellE>initialName</span>, <span class=SpellE>initialAge</span>, <span
+  class=SpellE>initialWeight</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet3 (String <span
+  class=SpellE>initialName</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  style='background:yellow'>this (<span class=SpellE>initialName</span>, 0, 0);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet3 (<span
+  class=SpellE>int</span> <span class=SpellE>initialAge</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'> <span style="mso-spacerun:yes">   </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  style='background:yellow;mso-highlight:yellow'>this (&quot;No name yet.&quot;, <span
+  class=SpellE>initialAge</span>, 0);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet3 (double <span
+  class=SpellE>initialWeight</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  style='background:yellow'>this (&quot;No name yet.&quot;, 0, <span
+  class=SpellE>initialWeight</span>);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet3 ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  style='background:yellow'>this (&quot;No name yet.&quot;, 0, 0);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>/<span
+  class=GramE>*<span style="mso-spacerun:yes">  </span>The</span> rest of the class is like Pet2 in Listing 6.3.<span style="mso-spacerun:yes">  </span>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:red'>SavingsAccount</span></span><span style='mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>Class with static and <span class=SpellE>nonstatic</span> members.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>SavingsAccount</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private double </span></b><b><span
+  style='font-size:13.5pt;color:#00B050'>balance</span></b><b><span
+  style='font-size:13.5pt;color:blue'>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  style='background:yellow'>static</span> double </span></b><span class=SpellE><b><span
+  style='font-size:13.5pt;color:red'>interestRate</span></b></span><b><span
+  style='font-size:13.5pt;color:red'> </span></b><b><span style='font-size:
+  13.5pt;color:blue'>= 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  style='background:yellow'>static</span> <span class=SpellE>int</span> </span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:red'>numberOfAccounts</span></b></span><b><span
+  style='font-size:13.5pt;color:red'> </span></b><b><span style='font-size:
+  13.5pt;color:blue'>= 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  class=SpellE>SavingsAccount</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><b><span
+  style='font-size:13.5pt;color:#00B050'>balance </span></b><b><span
+  style='font-size:13.5pt;color:blue'>= 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:red'>numberOfAccounts</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'>++;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  style='background:yellow'>static</span> void <span class=SpellE>setInterestRate</span> (double <span
+  class=SpellE>newRate</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:red'>interestRate</span></b></span><b><span
+  style='font-size:13.5pt;color:red'> </span></b><b><span style='font-size:
+  13.5pt;color:blue'>= <span class=SpellE>newRate</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  style='background:yellow'>static</span> double <span class=SpellE>getInterestRate</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return </span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:red'>interestRate</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  style='background:yellow'>static</span> double <span class=SpellE>getNumberOfAccounts</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return </span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:red'>numberOfAccounts</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void deposit (double amount)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><b><span
+  style='font-size:13.5pt;color:#00B050'>balance </span></b><b><span
+  style='font-size:13.5pt;color:blue'>= </span></b><b><span style='font-size:
+  13.5pt;color:#00B050'>balance </span></b><b><span style='font-size:13.5pt;
+  color:blue'>+ amount;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public double withdraw (double amount)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (</span></b><b><span
+  style='font-size:13.5pt;color:#00B050'>balance </span></b><b><span
+  style='font-size:13.5pt;color:blue'>&gt;= amount)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span></span></b><b><span
+  style='font-size:13.5pt;color:#00B050'>balance </span></b><b><span
+  style='font-size:13.5pt;color:blue'>= </span></b><b><span style='font-size:
+  13.5pt;color:#00B050'>balance </span></b><b><span style='font-size:13.5pt;
+  color:blue'>- amount;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>amount = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return amount;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>addInterest</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>double interest = </span></b><b><span
+  style='font-size:13.5pt;color:#00B050'>balance </span></b><b><span
+  style='font-size:13.5pt;color:blue'>* </span></b><span class=SpellE><b><span
+  style='font-size:13.5pt;color:red'>interestRate</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>// you can replace </span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:red'>interestRate</span></b></span><b><span
+  style='font-size:13.5pt;color:red'> </span></b><b><span style='font-size:
+  13.5pt;color:blue'>with <span class=SpellE>getInterestRate</span>()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><b><span
+  style='font-size:13.5pt;color:#00B050'>balance </span></b><b><span
+  style='font-size:13.5pt;color:blue'>= </span></b><b><span style='font-size:
+  13.5pt;color:#00B050'>balance </span></b><b><span style='font-size:13.5pt;
+  color:blue'>+ interest;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public double <span
+  class=SpellE>getBalance</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return </span></b><b><span
+  style='font-size:13.5pt;color:#00B050'>balance</span></b><b><span
+  style='font-size:13.5pt;color:blue'>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  style='background:yellow'>static</span> void <span class=SpellE>showBalance</span> (<span
+  class=SpellE>SavingsAccount</span> account)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.print</span> (<span class=SpellE>account.getBalance</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:red'>SavingsAccountDemo</span></span><span style='mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>SavingsAccountDemo</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE><span style='background:yellow'>SavingsAccount.setInterestRate</span></span><span
+  style='background:yellow'> (0.01);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>SavingsAccount</span> </span></b><span class=SpellE><b><span
+  style='font-size:13.5pt;color:red'>mySavings</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> = new <span class=SpellE>SavingsAccount</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>SavingsAccount</span> </span></b><span class=SpellE><b><span
+  style='font-size:13.5pt;color:#FFC000'>yourSavings</span></b></span><b><span
+  style='font-size:13.5pt;color:#FFC000'> </span></b><b><span style='font-size:
+  13.5pt;color:blue'>= new <span class=SpellE>SavingsAccount</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;I deposited $10.75.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:red'>mySavings</span></b><b><span
+  style='font-size:13.5pt;color:blue'>.deposit</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> (10.75);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;You deposited $75.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:#FFC000'>yourSavings</span></b><b><span
+  style='font-size:13.5pt;color:blue'>.deposit</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> (75.00);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;You deposited $55.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span></span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:#FFC000'>yourSavings</span></b><b><span
+  style='font-size:13.5pt;color:blue'>.deposit</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> (55.00);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>double cash = </span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:#FFC000'>yourSavings</span></b><b><span
+  style='font-size:13.5pt;color:blue'>.withdraw</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> (15.00);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;You withdrew $&quot; + cash + &quot;.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (</span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:#FFC000'>yourSavings</span></b><b><span
+  style='font-size:13.5pt;color:blue'>.getBalance</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> () &gt; 100.00)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;You received interest.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span></span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:#FFC000'>yourSavings</span></b><b><span
+  style='font-size:13.5pt;color:blue'>.addInterest</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Your savings is $&quot; + </span></b><span
+  class=SpellE><b><span style='font-size:13.5pt;color:#FFC000'>yourSavings</span></b><b><span
+  style='font-size:13.5pt;color:blue'>.getBalance</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.print</span> (&quot;My savings is $&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">   </span><span style="mso-spacerun:yes">     </span><span
+  class=SpellE><span style='background:yellow'>SavingsAccount.showBalance</span></span><span
+  style='background:yellow'> (</span></span></b><span class=SpellE><b><span
+  style='font-size:13.5pt;color:red;background:yellow'>mySavings</span></b></span><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'>);</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>int</span> count =<span style='background:yellow'> <span
+  class=SpellE>SavingsAccount.getNumberOfAccounts</span> ()</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;We opened &quot; + count+&quot; savings accounts today.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}<o:p></o:p></span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:red'>SpeciesEqualsDemo1</span><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class SpeciesEqualsDemo1<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>Species s1 = new Species (), s2 = new Species ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>s1.setSpecies (&quot;Klingon Ox&quot;, 10, 15);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>s2.setSpecies (&quot;Klingon Ox&quot;, 10, 15);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Now change one Klingon Ox.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>s2.setSpecies (&quot;<span
+  class=SpellE>klingon</span> ox&quot;, 10, 15); //Use lowercase<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'> <o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (s1 == s2)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">           </span><span
+  class=SpellE>System.out.println</span> (&quot;Match with ==.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">           </span><span
+  class=SpellE>System.out.println</span> (&quot;Do Not match with ==.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  style='background:yellow'>if (s1.equals (s2))<o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">           </span><span
+  class=SpellE>System.out.println</span> (&quot;Match with the method equals.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  style='background:yellow'>else<o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">           </span><span
+  class=SpellE>System.out.println</span> (&quot;Do Not match with the method equals.&quot;);</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Now change one Klingon Ox.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>s2.setSpecies (&quot;<span
+  class=SpellE>klingon</span> ox&quot;, 10, 15); //Use lowercase<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  style='background:yellow'>if (s1.equals (s2))<o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">           </span><span
+  class=SpellE>System.out.println</span> (&quot;Match with the method equals.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  style='background:yellow'>else<o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">           </span><span
+  class=SpellE>System.out.println</span> (&quot;Do Not match with the method equals.&quot;);</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:red'>SpeciesEqualsDemo2</span><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class SpeciesEqualsDemo2<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>Species s1 = new Species (), s2 = new Species ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>s1.setSpecies (&quot;Klingon Ox&quot;, 10, 15);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>s2.setSpecies (&quot;Klingon Ox&quot;, 10, 15);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE><span style='background:yellow'>testEqualsOperator</span></span><span
+  style='background:yellow'> (s1, s2);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE><span style='background:yellow'>testEqualsMethod</span></span><span
+  style='background:yellow'> (s1, s2);<span style="mso-spacerun:yes">  </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Now change one Klingon Ox.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>s2.setSpecies (&quot;<span
+  class=SpellE>klingon</span> ox&quot;, 10, 15); //Use lowercase<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE><span style='background:yellow;mso-highlight:yellow'>testEqualsMethod</span></span><span
+  style='background:yellow;mso-highlight:yellow'> (s1, s2);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span><span
+  style='background:yellow'>private static void <span class=SpellE>testEqualsOperator</span> (Species s1, Species s2)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (s1 == s2)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Match with ==.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Do Not match with ==.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span><span
+  style='background:yellow'>private static void <span class=SpellE>testEqualsMethod</span> (Species s1, Species s2)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (s1.equals (s2))<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Match with the method equals.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Do Not match with the method equals.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="84%"
+ style='width:84.28%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="99%" style='width:99.6%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:red'>Species</span><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="99%" style='width:99.6%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class Species<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private String name;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private <span
+  class=SpellE>int</span> population;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>private double <span
+  class=SpellE>growthRate</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>readInput</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;What is the species' name?&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">  </span><span style="mso-spacerun:yes">      </span>name = <span
+  class=SpellE>keyboard.nextLine</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;What is the population of the species?&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>population = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>while (population &lt; 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;Population cannot be negative.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;<span class=SpellE>Reenter</span> population:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>population = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter growth rate (% increase per year):&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>growthRate</span> = <span class=SpellE>keyboard.nextDouble</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>writeOutput</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Name = &quot; + name);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Population = &quot; + population);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Growth rate = &quot; + <span
+  class=SpellE>growthRate</span> + &quot;%&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>Precondition: <span
+  class=GramE>years is</span> a nonnegative number.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">  </span><span style="mso-spacerun:yes">  </span>Returns the projected population of the receiving object<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span><span
+  class=GramE>after</span> the specified number of years.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  class=SpellE>int</span> <span class=SpellE>predictPopulation</span> (<span
+  class=SpellE>int</span> years)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>int</span> result = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>double <span
+  class=SpellE>populationAmount</span> = population;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>int</span> count = years;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'> <span style="mso-spacerun:yes">       </span>while ((count &gt; 0) &amp;&amp; (<span
+  class=SpellE>populationAmount</span> &gt; 0))<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>populationAmount</span> = (<span class=SpellE>populationAmount</span> + (<span
+  class=SpellE>growthRate</span> / 100) * <span class=SpellE>populationAmount</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>count - - ;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (<span
+  class=SpellE>populationAmount</span> &gt; 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>result = (<span
+  class=SpellE>int</span>) <span class=SpellE>populationAmount</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return result;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>setSpecies</span> (String <span class=SpellE>newName</span>, <span
+  class=SpellE>int</span> <span class=SpellE>newPopulation</span>, double <span
+  class=SpellE>newGrowthRate</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>name = <span
+  class=SpellE>newName</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>if (<span
+  class=SpellE>newPopulation</span> &gt;= 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>population = <span
+  class=SpellE>newPopulation</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">      </span><span style="mso-spacerun:yes">  </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.out.println</span> (&quot;ERROR: using a negative population.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>growthRate</span> = <span class=SpellE>newGrowthRate</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public String <span
+  class=SpellE>getName</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return name;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  class=SpellE>int</span> <span class=SpellE>getPopulation</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return population;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public double <span
+  class=SpellE>getGrowthRate</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><a
+  name="return_growthRate;">return </a><span class=SpellE><span
+  style='mso-bookmark:"return_growthRate\;"'>growthRate</span></span><span
+  style='mso-bookmark:"return_growthRate\;"'>;</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  class=SpellE>boolean</span> equals (Species <span class=SpellE>otherObject</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return (<span
+  class=SpellE>name.equalsIgnoreCase</span> (otherObject.name)) &amp;&amp;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>(population == <span
+  class=SpellE>otherObject.population</span>) &amp;&amp;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">            </span>(<span
+  class=SpellE>growthRate</span> == <span class=SpellE>otherObject.growthRate</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">   </span><span
+  style='background:yellow'><span style="mso-spacerun:yes"> </span>public static void main (String [] <span
+  class=SpellE>args</span>)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>Species <span
+  class=SpellE>speciesToday</span> = new Species ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter data on today's species:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>speciesToday.readInput</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>speciesToday.writeOutput</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of years to project:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>int</span> <span class=SpellE>numberOfYears</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>int</span> <span class=SpellE>futurePopulation</span> = <span
+  class=SpellE>speciesToday.predictPopulation</span> (<span class=SpellE>numberOfYears</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;In &quot; + <span class=SpellE>numberOfYears</span> + &quot; years the population will be &quot; +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">                </span><span
+  class=SpellE>futurePopulation</span>);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>speciesToday.setSpecies</span> (&quot;Klingon ox&quot;, 10, 15);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;The new species is:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>speciesToday.writeOutput</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;&nbsp; </p>
+
+<p>&nbsp;&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-bidi-font-family:
+  "Times New Roman";color:red;mso-bidi-font-weight:normal'>Overload</span><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>This class illustrates overloading.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class Overload<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>double average1 = <span
+  class=SpellE>Overload.getAverage</span> (40.0, 50.0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>double average2 = <span
+  class=SpellE>Overload.getAverage</span> (1.0, 2.0, 3.0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>char average3 = <span
+  class=SpellE>Overload.getAverage</span> ('a', 'c');<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;average1 = &quot; + average1);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;average2 = &quot; + average2);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;average3 = &quot; + average3);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public static </span></b><b><span
+  style='font-size:13.5pt;color:red'>double <span class=SpellE>getAverage</span> (double first, double second)</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return (first + second) / 2.0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public static </span></b><b><span
+  style='font-size:13.5pt;color:red'>double <span class=SpellE>getAverage</span> (double first, double second, double third)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return (first + second + third) / 3.0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public static </span></b><b><span
+  style='font-size:13.5pt;color:red'>char <span class=SpellE>getAverage</span> (char first, char second)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return (char) (((<span
+  class=SpellE>int</span>) first + (<span class=SpellE>int</span>) second) / 2);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;&nbsp;&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:red'>PetPair</span></span><span style='mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>Class whose privacy can be breached.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>PetPair</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">   </span><span style="mso-spacerun:yes"> </span><span
+  style='background:yellow'>private Pet first, second;</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public <span
+  class=SpellE>PetPair</span> (Pet <span class=SpellE>firstPet</span>, Pet <span
+  class=SpellE>secondPet</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>first = <span
+  class=SpellE>firstPet</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>second = <span
+  class=SpellE>secondPet</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">    </span>public Pet <span
+  class=SpellE>getFirst</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">        </span>return first;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><span style="mso-spacerun:yes">    </span>}<span style="mso-spacerun:yes">                     </span></span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public Pet <span
+  class=SpellE>getSecond</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span>return second;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>public void <span
+  class=SpellE>writeOutput</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;First pet in the pair:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>first.writeOutput</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>System.out.println</span> (&quot;\<span class=SpellE>nSecond</span> pet in the pair:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">        </span><span
+  class=SpellE>second.writeOutput</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style="mso-spacerun:yes">    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

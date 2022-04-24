@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title>SENG2130/6350 - Use Case Diagram</title>
+		<link rel="stylesheet" type="text/css" href="./style.css"/>
+	</head>
+	
+	<body>
+
+		<div id="body">
+
+		<h1 id="top">SENG2130/6350 Systems Analysis and Design - Week 3, Lab 1</h1>
+
+		
+		<p>
+			Note that you should have registered for the lab session which you are
+			attending. If you are not registered for a lab, the demonstrators have
+			every right to ask you to leave the laboratory room. If you have not
+			registered for any lab session, then you should <a href="mailto:joe.ryan@newcastle.edu.au">contact</a> the lecturer as soon as possible.
+		</p>
+		<br/>
+		
+		<h1  id="usecase">Use Case Diagram</h1>		
+		
+		<hr/>
+		<div class="toc">
+			<a href="RationalRose.pdf" target="_blank">Rational Rose Instruction</a>			
+			
+		</div>
+		<hr>
+
+		
+		<p>
+			The objectives of this exercise are to familiarise you with creating Use Case diagram in Rational Rose software.
+		</p>
+
+
+
+
+		<h2>Create Use Case diagram and develop Use Case descriptions based on scenario.</h2>
+
+		<h3>Learning objectives</h3>
+
+		<p>
+			At the end of this exercise you should be able to produce a fully realised use case diagram that satisfies 
+			the requirements set out in the scenario.
+		</p>
+		
+		<br />
+		<h3> Exercise 1 - Course registration</h3>
+		Create a simple Use Case Diagram (no "include" and "extends" relationships) for a course registration system 
+		described as follows:
+		<blockquote>
+		<p> The Course registration system should allow students to register for and drop courses. The system&#39;s administrator 
+		should be able to add and delete courses from the system as well as to cancel planned courses. If a planned course is 
+		cancelled the relevant instructor should be notified through the system. </P>
+		</blockquote>
+		<br />
+		
+    	<h3> Exercise 2 - Retail sale system</h3>
+		A retail sale system typically includes a computer, monitor, keyboard, barcode, scanners, weight scale, 
+		receipt printer, credit card processing system, etc. and a retail sale terminal Software.
+		<p>
+		<img src="Checkout.jpg" alt="Checkout Use Case Diagram"/>
+		</p>
+		<p> Extend the above diagram based on the following information:</p>
+		<blockquote>
+		<p><b>Checkout</b> use case involves Customer, Clerk and Credit Payment Service actors and includes scanning items, 
+		calculating total and taxes, payment use cases. This is an example of large and complex use case split into 
+		several use cases each describing some logical unit of behaviour.</p> 
+		<p><b>Payment </b> use case is represented using generalization relationship. It means that only one specific type 
+		of payment is accepted - either by cash, or by credit, debit, or with check.</P>
+	    </blockquote>
+		<br />
+		
+	    <h3> Exercise 3 - Online Shopping</h3>
+		<p>1. Create the first level of Use Case Diagram for the online shopping system descripted as follows:</p>
+		<blockquote>
+		Web Customer (actor) uses some web site to make purchases online. The first level use cases are 
+		<b>View Items, Make Purchase, Checkout</b> and <b>Client Register</b>. 
+		<b>View Items</b> use case could be used by Web customer if customer only 
+		wants to find and see some products. This use case could also be used as a part of <b>Make Purchase</b> 
+		use case. <b>Client Register</b> use case allows Web customer to register on the web site, 
+		for example to get some coupons or be invited to private sales. 
+		Note, that <b>Checkout</b> use case is included use case - checkout is part of making purchase. <p>
+		<p>
+		Except for the <b>Web Customer</b> actor there are several other actors: Authentification, Identify Provider, 
+		Credit Payment Service, and Paypal.
+		</p>
+		</blockquote>
+		
+		<p>2. Extend the <b>View Item</b> use case based on the following information:</p>
+		<blockquote>
+		<p><b>View Items</b> use case is extended by several optional use cases - customer may search for items, browse catalog, 
+		view items recommended for him/her, add items to shopping cart or wish list. All these use cases are extending use cases 
+		because they provide some optional functions allowing customer to find item</p> 
+		<p><b>Customer Authentication</b> use case is included in View Recommended Items and Add to Wish List because both require customer 
+		to be authenticated. At the same time, item could be added to the shopping cart without user authentication.</P>
+	    </blockquote>
+		<br />
+		
+		<p>3. Extend the <b>Checkout</b> use case based on the following information:</p>
+		<blockquote>
+		<p><b>Checkout</b> use case includes several required uses cases. Web customer should be authenticated. 
+		It could be done through user login page, user authentication cookie ("Remember me") or Single Sign-On (SSO).
+		Web site authentication service is used in all these use cases, while SSO also requires participation of external 
+		identity provider. </p> 
+		<p><b>Checkout</b> use case also includes Payment use case which could be done either by using credit card and external 
+		credit payment service or with PayPal. </P>
+	    </blockquote>
+     	<br />
+		
+		<h3> Exercise 4 - Library System</h3>
+		<p>Based on the following scenario produce a use case diagram and develop fully developed use cases descriptions
+		for each of the use cases.</p>
+		<p><em>
+		<blockquote>
+		This case is a simplified (initial draft) of a new system for the University Library. Of course, the library system must keep track of books. Information is maintained about both book titles and the individual book copies. Book titles maintain information about title, author, publisher, and catalog number. Individual copies maintain copy number, edition, publication year, ISBN, book status (whether it is on the shelf or loaned out), and date due back in.
+		<br /><br />The library also keeps track of patrons to the library. Since it is a university library, there are several types of patrons, each with different privileges. There are faculty patrons, graduate student patrons, and undergraduate student patrons. Basic information about all patrons is name, address, and telephone number. For faculty patrons, additional information is office address and telephone number. For graduate students, information such as graduate program and advisor information is maintained. For undergraduate students program and total credit hours are maintained.
+		<br /><br />The library also keeps information about library loans. A library loan is a somewhat abstract object. A loan occurs when a patron approaches the circulation desk with a stack of books to check out. Over time a patron can have many loans. A loan can have many physical books associated with it. (And a physical book can be on many loans over a period of time. Information about past loans is kept in the database.) So, in this case, it is recommended that an association class be created for loaned books.
+		<br /><br />If a book is checked out that a patron wants, he/she can put that title on reserve. This is another class that does not represent a concrete object. Each reservation is for only one title and one patron. Information such as date reserved, priority, and date fulfilled is maintained.
+		<br /><br />When it is fulfilled, the system associates it with the loan on which it was checked out.
+		<br /><br />Patrons have access to the library information to search for book titles and to see whether a book is available. A patron can also reserve a title if all copies are checked out. When patrons bring books to the circulation desk, a clerk checks out the books on a loan. Clerks also check books in. When books are dropped in the return slot, the clerks check them in.
+		<br /><br />Stocking clerks keep track of the arrival of new books.
+		<br /><br />The managers in the library have their own activities. They will print out reports of book titles by category. They also like to see (online) all overdue books. When books get damaged or destroyed, they will delete information about book copies. Managers also like to see what books are on reserve.
+		</em></p>
+		</blockquote>
+		<br/>
+		<h4>***Please show your diagram to your demonstrator to discuss when completed.<h4>
+		<br/><br/>
+		
+		
+		
+		<div id="copyright">
+				<p> please email <a href="mailto:mira.park@newcastle.edu.au">Mira Park</a> if you find any errors on this page.</p>
+		<p>
+			<a href="http://www.uml.org">
+			<img
+			src="UML.jpg"
+			alt="Object Management Group" height="31" width="88" />
+			</a>
+		</p>		
+		
+	</body>
+
+</html>

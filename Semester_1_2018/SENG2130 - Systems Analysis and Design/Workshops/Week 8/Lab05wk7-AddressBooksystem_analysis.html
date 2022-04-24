@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title>SENG2130 - Complete Diagramming Exercise</title>
+		<link rel="stylesheet" type="text/css" href="./style.css"/>
+	</head>
+	
+	<body>
+
+		<div id="body">
+
+		<h1 id="top">SENG2130 Software Development - Week 8, Lab 5</h1>
+		<h1>UML Diagram: Address Book - Analysis</h1>		
+
+		<p>
+			The objectives of this exercise are to build a complete system with creating UML.
+		</p>
+
+
+		<hr />
+		<div class="toc">
+			<a href="RationalRose.pdf"   target="_blank">Click here for the instructions of the Rational Rose</a>
+		</div>
+		<hr />
+
+		<h2 id="usecase">Create UML diagram based on scenario.</h2>
+
+		<h3>Learning objectives</h3>
+
+		<p>
+		This lab attempts to give a complete example of object-oriented analysis, 
+			design, and programming applied to a small size problem: a simple address book.
+			The students would benefit from seeing a complete example of OO methodology applied to a single problem.
+	
+			</p>
+
+		<h3> Case Study: Address Book system</h3>
+		Based on the following scenario, 
+		<ol>
+			<li> Create a Use Case diagram </li>
+			<li> Create a Class diagram </li>
+			<li> Create a Sequence diagram for each Use Case</li> 
+		</ol>
+		
+		<h3> Requirements Statement</h3>
+		
+		<p><em>
+			The software to be designed is a program that can be used to maintain an address book. An address book holds a collection of entries, each recording a person's first and last names, address, city, state, zip, and phone number. 
+			<br/>
+			<br/>
+			It must be possible to add a new person to an address book, to edit existing information about a person (except the person's name), and to delete a person. It must be possible to sort the entries in the address book alphabetically by last name (with ties broken by first name if necessary), or by ZIP code (with ties broken by name if necessary). It must be possible to print out all the entries in the address book in "mailing label" format.<br/>
+			<br/>
+			It must be possible to create a new address book, to open a disk file containing an existing address book to close an address book, and to save an address book to a disk file, using standard New, Open, Close, Save and Save As ... File menu options. The program's File menu will also have a Quit option to allow closing all open address books and terminating the program.
+			<br/>
+			<br/>
+			The initial requirements call for the program to only be able to work with a single address book at a time; therefore, if the user chooses the New or Open menu option, any current address book will be closed before creating/opening a new one. A later extension might allow for multiple address books to be open, each with its own window which can be closed separately, with closing the last open window resulting in terminating the program. In this case, New and Open will result in creating a new window, without affecting the current window.
+			<br/>
+			<br/>
+			The program will keep track of whether any changes have been made to an address book since it was last saved, and will offer the user the opportunity to save changes when an address book is closed either explicitly or as a result of choosing to create/open another or to quit the program.<br/>
+			<br/>
+			The program will keep track of the file that the current address book was read from or most recently saved to, will display the file's name as the title of the main window, and will use that file when executing the Save option. When a New address book is initially created, its window will be titled "Untitled", and a Save operation will be converted to Save As ... - i.e. the user will be required to specify a file.
+			<br/>
+					</em></p>
+		
+		<h3> User Interface</h3>
+		
+		<p><em>
+		Because this is to be a "standard GUI" style application, some attention needs 
+		to be given to the user interface at this point. A user interface like the 
+		following might be adopted. Not shown in the screen shot is a File menu with 
+		New, Open, Close, Save, Save As ..., Print, and Quit options. For the "Edit" 
+		and "Delete" buttons, the user must first select a person in the scrolling list 
+		of names, and then can click the appropriate button to edit/delete that person.
+		</em>
+		</p>
+		
+		<p>
+			<img
+			src="addressBookGUI.JPG"
+			alt="addressBook1" />
+		</p>
+	
+		
+
+<h3>Analysis</h3>
+
+<p>
+An initial reading of the requirements suggests that the following will be
+part of the system.
+</p>
+
+<ul>
+
+<li>A single entity object representing the current address book that the program
+	is working with (<code>AddressBook</code>).
+</li>
+
+<li>An arbitrary number of entity objects, each representing one of the people that
+	is in the current address book (<code>Person</code>).
+</li>
+
+<li>A boundary object representing the interface between the address book system 
+	and the human user (<code>AddressBookGUI</code>).
+</li>
+
+<li>A boundary object representing the interface between the address book system 
+	and the file system on disk (<code>FileSystem</code>).
+</li>
+
+<li>A controller object that carries out the use cases in response to user
+	gestures on the GUI (<code>AddressBookController</code>).  (For a problem
+	of this small size, a single controller is sufficient.)
+</li>
+
+</ul>
+
+ 
+<p class="clickablediagram">
+&nbsp;<br />
+<img src="AnalysisClasses.png" alt="[ Analysis Class Diagram ]" />
+
+</p>
+
+
+<p>
+The various use cases work with these objects, as follows:
+</p>
+
+<ul>
+<li>The Add a Person Use Case involves getting the new information from the 
+	user, and then telling the AddressBook object to add a new person with this
+	information to its collection
+</li>
+<li>The Edit a Person Use Case involves displaying the current information about the 
+	desired person (obtained from the AddressBook), then allowing the user
+	to enter new information for the various fields, then telling the AddressBook
+	object to make  the changes.
+</li>
+<li>The Delete a Person Use Case involves asking the user to confirm deletion, and then
+	telling the AddressBook object to remove this person from its collection.
+</li>
+<li>The Sort Entries by Name Use Case involves telling the AddressBook object to
+	rearrange its collection in order of name.
+</li>
+<li>The Sort Entries by ZIP Use Case involves telling the AddressBook object to
+	rearrange its collection in order of ZIP.
+</li>
+<li>The Create New Address Book Use Case involves creating a new AddressBook object.
+</li>
+<li>The Open Existing Address Book Use Case involves getting a file specification
+	from the user, and then telling the FileSystem object to read in an AddressBook object
+	from this file.
+</li>
+<li>The Save Address Book Use Case involves determining whether or not the current 
+	AddressBook object has a file it was last read from / saved to; if so, telling
+	the FileSystem object to save the current AddressBook object to this file.  (If not,
+	the Save Address Book As ... Use Case is done instead.)
+</li>
+<li>The Save Address Book As ... Use Case involves getting a file specification from
+	the user, and then telling the FileSystem object to save the current AddressBook object
+	to this file.
+</li>
+<li>The Print Address Book Use Case involves telling the AddressBook object to
+	print out its collection in order.
+</li>
+<li>(The Quit Program Use Case does not involve any of the other objects)
+</li>
+<li>(The Offer to Save Changes Extension may involve performing the Save Address Book
+	Use Case.)
+</li>
+</ul>
+		
+
+			
+		</p>
+		
+		<div id="copyright">
+		<p> please emal <a href="mailto:mira.park@newcastle.edu.au">Mira Park</a> if you find any errors on this page.</p>
+		<p>
+			<a href="http://www.uml.org">
+			<img
+			src="UML.jpg"
+			alt="Object Management Group" height="31" width="88" />
+			</a>
+		</p>		
+		
+	</body>
+
+</html>

@@ -1,0 +1,7 @@
+Visual Organisation
+  - Proximity: Place related items together.
+  - Alignment: Group related items along a line.
+  - Constistency: Related items should look similar.
+  - Contrast: Different items should look different.
+
+  

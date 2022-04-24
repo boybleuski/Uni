@@ -1,0 +1,1795 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="CodeSamplesWeek11_exception_files/filelist.xml">
+<title>Java</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>University of Newcastle</o:Author>
+  <o:LastAuthor>University of Newcastle</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>132</o:TotalTime>
+  <o:Created>2013-05-17T06:20:00Z</o:Created>
+  <o:LastSaved>2013-05-17T08:59:00Z</o:LastSaved>
+  <o:Pages>11</o:Pages>
+  <o:Words>1702</o:Words>
+  <o:Characters>15192</o:Characters>
+  <o:Company>University of Newcastle</o:Company>
+  <o:Lines>126</o:Lines>
+  <o:Paragraphs>33</o:Paragraphs>
+  <o:CharactersWithSpaces>16861</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="CodeSamplesWeek11_exception_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="CodeSamplesWeek11_exception_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>75</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-AU</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+pre
+	{mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Consolas;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:476606467;
+	mso-list-template-ids:-791117692;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:1457332139;
+	mso-list-template-ids:1418466072;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]-->
+<meta http-equiv=Content-Language content=en-us>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="#CCFFFF" lang=EN-AU link=blue vlink=purple style='tab-interval:
+36.0pt'>
+
+<div class=WordSection1>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";color:red'>GotMilk</span></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>GotMilk</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of donuts:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>int</span> <span class=SpellE>donutCount</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'>      </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of glasses of milk:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>int</span> <span class=SpellE>milkCount</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>//Dealing with an unusual event without Javas exception<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>//handling features:<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>if (<span class=SpellE>milkCount</span> &lt; 1)<span style='mso-spacerun:yes'>                             </span><span style='mso-spacerun:yes'>             </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>{<span style='mso-spacerun:yes'>                                                           </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.out.println</span> (&quot;No milk!&quot;);<span style='mso-spacerun:yes'>                        </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.out.println</span> (&quot;Go buy some milk.&quot;);<span style='mso-spacerun:yes'>               </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>}<span style='mso-spacerun:yes'>                          </span><span style='mso-spacerun:yes'>                                 </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>else<span style='mso-spacerun:yes'>                                                        </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>{<span style='mso-spacerun:yes'>                                                           </span><o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span>double <span
+  class=SpellE>donutsPerGlass</span> = <span class=SpellE>donutCount</span> / (double) <span
+  class=SpellE>milkCount</span>;</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>donutCount</span> + <span
+  class=GramE>&quot; donuts</span>.&quot;);<span style='mso-spacerun:yes'>           </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>milkCount</span> + <span
+  class=GramE>&quot; glasses</span> of milk.&quot;);<span style='mso-spacerun:yes'>   </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.out.println</span> (&quot;You have &quot; + <span
+  class=SpellE>donutsPerGlass</span> + <span style='mso-spacerun:yes'>   </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>            </span>&quot; <span
+  class=GramE>donuts</span> for each glass of milk.&quot;);<span style='mso-spacerun:yes'>      </span><span style='mso-spacerun:yes'>       </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>}<span style='mso-spacerun:yes'>                                                           </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;End of program.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";color:red'>ExceptionDemo1</span><span style='mso-fareast-font-family:
+  "Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class ExceptionDemo1<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>try</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of donuts:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>int</span> <span class=SpellE>donutCount</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of glasses of milk:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>int</span> <span class=SpellE>milkCount</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>if (<span
+  class=SpellE>milkCount</span> &lt; 1)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span><span
+  class=GramE><span style='background:yellow'>throw</span></span><span
+  style='background:yellow'> new Exception (&quot;Exception: No milk!&quot;);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>double <span
+  class=SpellE>donutsPerGlass</span> = <span class=SpellE>donutCount</span> / (double) <span
+  class=SpellE>milkCount</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'>          </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>donutCount</span> + <span
+  class=GramE>&quot; donuts</span>.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>milkCount</span> + <span
+  class=GramE>&quot; glasses</span> of milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;You have &quot; + <span
+  class=SpellE>donutsPerGlass</span> +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                    </span>&quot; <span
+  class=GramE>donuts</span> for each glass of milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>     </span><span style='mso-spacerun:yes'>   </span><span
+  style='background:yellow'>catch (Exception e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>e.getMessage</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Go buy some milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;End of program.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";color:red'>ExceptionDemo2</span><span style='mso-fareast-font-family:
+  "Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class ExceptionDemo2<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>try<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of donuts:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>int</span> <span class=SpellE>donutCount</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of glasses of milk:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>int</span> <span class=SpellE>milkCount</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:2'>           </span></span></b><b><span
+  style='font-size:13.5pt;color:#33CC33'>// assume user enters positive number of glasses of milk</span></b><b><span
+  style='font-size:13.5pt;color:lime'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>if (<span
+  class=SpellE>milkCount</span> &lt; 1)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span><span
+  class=GramE>throw</span> new Exception (&quot;Exception: No milk!&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:2'>           </span></span></b><b><span
+  style='font-size:13.5pt;color:#33CC33'>// <span class=SpellE>milkCount</span> is positive so exception NOT thrown here</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:2'>           </span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:2'>           </span></span></b><b><span
+  style='font-size:13.5pt;color:#33CC33'>// flow of control continues to here</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>double <span
+  class=SpellE>donutsPerGlass</span> = <span class=SpellE>donutCount</span> / (double) <span
+  class=SpellE>milkCount</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>donutCount</span> + <span
+  class=GramE>&quot; donuts</span>.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>         </span><span style='mso-spacerun:yes'>   </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>milkCount</span> + <span
+  class=GramE>&quot; glasses</span> of milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;You have &quot; + <span
+  class=SpellE>donutsPerGlass</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                    </span>+ <span
+  class=GramE>&quot; donuts</span> for each glass of milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}</span></b><b><span
+  style='font-size:13.5pt;color:#33CC33'>// flow of control leaves here</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:1'>      </span> </span></b><b><span
+  style='font-size:13.5pt;color:#33CC33'><span style='mso-spacerun:yes'> </span>// catch is NOT <span
+  class=SpellE>excecuted</span></span></b><b><span style='font-size:13.5pt;
+  color:blue'><o:p></o:p></span></b></pre><pre><b><span style='font-size:13.5pt;
+  color:blue'><span style='mso-spacerun:yes'>        </span>catch (Exception e)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>e.getMessage</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Go buy some milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'>  </span></span></b><b><span
+  style='font-size:13.5pt;color:#33CC33'>// flow of control comes to here</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;End of program.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";color:red'>ExceptionDemo3</span><span style='mso-fareast-font-family:
+  "Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class ExceptionDemo3<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>try<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of donuts:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>int</span> <span class=SpellE>donutCount</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of glasses of milk:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>int</span> <span class=SpellE>milkCount</span> = <span
+  class=SpellE>keyboard.nextInt</span> ();</span></b><b><span style='font-size:
+  13.5pt;color:fuchsia'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:2'>           </span></span></b><b><span
+  style='font-size:13.5pt;color:fuchsia'>// assume user enters 0 for number of glasses of milk</span></b><b><span
+  style='font-size:13.5pt;color:lime'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>if (<span
+  class=SpellE>milkCount</span> &lt; 1)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span style='mso-spacerun:yes'>    </span><span
+  class=GramE>throw</span> new Exception (&quot;Exception: No milk!&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:2'>           </span></span></b><b><span
+  style='font-size:13.5pt;color:fuchsia'>// <span class=SpellE>milkCount</span> is negative so exception IS thrown here<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:fuchsia'><span style='mso-spacerun:yes'>             </span>// flow of control jumps to catch block<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:fuchsia'><span style='mso-tab-count:2'>           </span></span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:2'>           </span></span></b><b><span
+  style='font-size:13.5pt;color:fuchsia'>// flow of control skips past these lines</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>double <span
+  class=SpellE>donutsPerGlass</span> = <span class=SpellE>donutCount</span> / (double) <span
+  class=SpellE>milkCount</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>donutCount</span> + <span
+  class=GramE>&quot; donuts</span>.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>milkCount</span> + <span
+  class=GramE>&quot; glasses</span> of milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;You have &quot; + <span
+  class=SpellE>donutsPerGlass</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                    </span>+ <span
+  class=GramE>&quot; donuts</span> for each glass of milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:1'>      </span> </span></b><b><span
+  style='font-size:13.5pt;color:#33CC33'><span style='mso-spacerun:yes'> </span></span></b><b><span
+  style='font-size:13.5pt;color:fuchsia'>// catch is <span class=SpellE>IS</span> <span
+  class=SpellE>excecuted</span></span></b><b><span style='font-size:13.5pt;
+  color:blue'><o:p></o:p></span></b></pre><pre><b><span style='font-size:13.5pt;
+  color:blue'><span style='mso-spacerun:yes'>        </span>catch (Exception e)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>e.getMessage</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Go buy some milk.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-tab-count:1'>      </span> </span></b><b><span
+  style='font-size:13.5pt;color:fuchsia'><span style='mso-spacerun:yes'> </span>// flow of control comes to here after catch block</span></b><b><span
+  style='font-size:13.5pt;color:blue'><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>      </span><span style='mso-spacerun:yes'>  </span><span
+  class=SpellE>System.out.println</span> (&quot;End of program.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; <o:p></o:p></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184' height=51>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:17.25pt'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt;
+  height:17.25pt'>
+  <h2 align=center style='text-align:center;mso-line-height-alt:17.25pt'><span
+  class=SpellE><span style='mso-fareast-font-family:"Times New Roman";
+  color:red'>DivideByZeroException</span></span><span style='mso-fareast-font-family:
+  "Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:12.0pt'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt;
+  height:12.0pt'><pre><b><span style='font-size:13.5pt;color:blue'>public class <span
+  class=SpellE>DivideByZeroException</span> extends Exception<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public <span
+  class=SpellE>DivideByZeroException</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=GramE>super</span> (&quot;Dividing by Zero!&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public <span
+  class=SpellE>DivideByZeroException</span> (String message)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>super (message);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><a name="Listing_9.6"></a><span
+  class=SpellE><span style='mso-bookmark:"Listing_9\.6"'><span
+  style='mso-fareast-font-family:"Times New Roman";color:red'>DivideByZeroDemo</span></span></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>DivideByZeroDemo</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private <span
+  class=SpellE>int</span> numerator;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private <span
+  class=SpellE>int</span> denominator;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private double quotient;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'> </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>DivideByZeroDemo</span> <span class=SpellE>oneTime</span> = new <span
+  class=SpellE>DivideByZeroDemo</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>oneTime.doIt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public void <span
+  class=SpellE>doIt</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>try</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter numerator:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>          </span><span style='mso-spacerun:yes'>  </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>numerator = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter denominator:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>denominator = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  style='background:yellow'>if (denominator == 0)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span>throw new <span
+  class=SpellE>DivideByZeroException</span> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>quotient = numerator / (double) denominator;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (numerator + &quot;/&quot; + denominator +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                    </span>&quot; = &quot; + quotient);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>catch (<span class=SpellE>DivideByZeroException</span> e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>e.getMessage</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>giveSecondChance</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<span
+  style='background:yellow'><o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;End of program.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public void <span
+  class=SpellE>giveSecondChance</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Try again:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter numerator:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>numerator = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter denominator:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Be sure the denominator is not zero.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>denominator = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>if (denominator == 0)<span style='mso-spacerun:yes'>                                       </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>{<span style='mso-spacerun:yes'>                                                           </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.out.println</span> (&quot;I cannot do division by zero.&quot;);<span style='mso-spacerun:yes'>   </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.out.println</span> (&quot;Since I cannot do what you want,&quot;);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.out.println</span> (&quot;the program will now end.&quot;);<span style='mso-spacerun:yes'>       </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>System.exit</span> (0);<span style='mso-spacerun:yes'>                                        </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>}<span style='mso-spacerun:yes'>                                                           </span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'>      </span>quotient = ((double) numerator) / denominator;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (numerator + &quot;/&quot; + denominator +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>&quot; = &quot; + quotient);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";color:red'>DoDivision</span></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>DoDivision</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private <span
+  class=SpellE>int</span> numerator;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private <span
+  class=SpellE>int</span> denominator;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private double quotient;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>DoDivision</span> <span class=SpellE>doIt</span> = new <span
+  class=SpellE>DoDivision</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>try</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE><span style='background:yellow'>doIt.doNormalCase</span></span><span
+  style='background:yellow'> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>catch (<span class=SpellE>DivideByZeroException</span> e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>e.getMessage</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>doIt.giveSecondChance</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;End of program.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public void <span
+  class=SpellE><span style='background:yellow'>doNormalCase</span></span><span
+  style='background:yellow'> () throws <span class=SpellE>DivideByZeroException</span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter numerator:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>numerator = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter denominator:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>denominator = <span
+  class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>if (denominator == 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  style='background:yellow'>throw new <span class=SpellE>DivideByZeroException</span> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>quotient = numerator / (double) denominator;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (numerator + &quot;/&quot; + denominator +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>&quot; = &quot; + quotient);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";color:red'>TwoCatchesDemo</span></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>TwoCatchesDemo</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>try</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Enter number of widgets produced:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'> <span style='mso-spacerun:yes'>           </span><span
+  class=SpellE>int</span> widgets = <span class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>if (widgets &lt; 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span><span
+  style='background:yellow'>throw new <span class=SpellE>NegativeNumberException</span> (&quot;widgets&quot;);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;How many were defective?&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>int</span> defective = <span class=SpellE>keyboard.nextInt</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span style='mso-spacerun:yes'>    </span>if (defective &lt; 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>               </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'> </span>throw new <span
+  class=SpellE>NegativeNumberException</span> (&quot;defective widgets&quot;);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>double ratio = <span
+  class=SpellE>exceptionalDivision</span> (widgets, defective);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;One in every &quot; + ratio +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                    </span>&quot; <span
+  class=GramE>widgets</span> is defective.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>catch (<span class=SpellE>DivideByZeroException</span> e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Congratulations! A perfect record!&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>catch (<span class=SpellE>NegativeNumberException</span> e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Cannot have a negative number of &quot; +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                    </span><span
+  class=SpellE>e.getMessage</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;End of program.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static double <span
+  class=SpellE>exceptionalDivision</span> (double numerator,<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>double denominator) <span
+  style='background:yellow'>throws <span class=SpellE>DivideByZeroException</span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>if (denominator == 0)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  style='background:yellow'>throw new <span class=SpellE>DivideByZeroException</span> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>return numerator / denominator;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<span
+  style='background:yellow'><o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";color:red'>NegativeNumberException</span></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>NegativeNumberException</span> extends Exception<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public <span
+  class=SpellE>NegativeNumberException</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=GramE>super</span> (&quot;Negative Number Exception!&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public <span
+  class=SpellE>NegativeNumberException</span> (String message)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>super (message);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";color:red'>UnknownOpException</span></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>UnknownOpException</span> extends Exception<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public <span
+  class=SpellE>UnknownOpException</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>super (&quot;<span
+  class=SpellE>UnknownOpException</span>&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public <span
+  class=SpellE>UnknownOpException</span> (char op)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=GramE>super</span> (op + &quot; is an unknown operator.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public <span
+  class=SpellE>UnknownOpException</span> (String message)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>super (message);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span class=SpellE><span
+  style='mso-fareast-font-family:"Times New Roman";color:red'>PrelimCalculator</span></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>PRELIMINARY VERSION without exception handling.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>Simple line-oriented calculator program. The class<o:p></o:p></span></b></pre><pre><span
+  class=GramE><b><span style='font-size:13.5pt;color:blue'>can</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> also be used to create other calculator programs.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class <span class=SpellE>PrelimCalculator</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private double result;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private double precision = 0.0001;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>//Numbers this close to zero are treated as if equal to zero.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static void main (String [] <span
+  class=SpellE>args</span>) <span style='background:yellow'>throws <span
+  class=SpellE>DivideByZeroException</span>,</span> <span class=SpellE><span
+  style='background:yellow'>UnknownOpException</span></span><span
+  style='background:yellow'><o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>PrelimCalculator</span> clerk = new <span class=SpellE>PrelimCalculator</span> ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Calculator is on.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.print</span> (&quot;Format of each line: &quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;operator space number&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;For example: + 3&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;To end, enter the letter e.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE><span style='background:yellow'>clerk.doCalculation</span></span><span
+  style='background:yellow'> ()</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;The final result is &quot; +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span><span
+  class=SpellE>clerk.resultValue</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Calculator program ending.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public <span
+  class=SpellE>PrelimCalculator</span> ()<span style='background:yellow'><o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>result = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public void reset ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>result = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public void <span
+  class=SpellE>setResult</span> (double <span class=SpellE>newResult</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>result = <span
+  class=SpellE>newResult</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public double <span
+  class=SpellE>getResult</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>return result;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>Returns n1 op n2, provided op is one of '+', '', '*'<span
+  class=GramE>,or</span> '/'.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>Any other value of op throws <span
+  class=SpellE>UnknownOpException</span>.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public double evaluate (char op, double n1, double n2) <span
+  style='background:yellow'>throws <span class=SpellE>DivideByZeroException</span>, <span
+  class=SpellE>UnknownOpException</span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>double answer;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>switch (op)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>case '+':<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>answer = n1 + n2;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>break;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>case '-':<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>answer = n1 - n2;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>break;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>case '*':<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>answer = n1 * n2;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>break;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>case '/':<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>if ((-precision &lt; n2) &amp;&amp; (n2 &lt; precision))<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                    </span><span
+  style='background:yellow'>throw new <span class=SpellE>DivideByZeroException</span> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>answer = n1 / n2;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>break;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>default:<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>t<span
+  style='background:yellow'>hrow new <span class=SpellE>UnknownOpException</span> (op);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>return answer;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public void <span
+  class=SpellE>setResult</span> (double <span class=SpellE>newResult</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>result = <span
+  class=SpellE>newResult</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public double <span
+  class=SpellE>getResult</span> ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>return result;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>Returns n1 op n2, provided op is one of '+', '', '*'<span
+  class=GramE>,or</span> '/'.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>Any other value of op throws <span
+  class=SpellE>UnknownOpException</span>.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public double evaluate (char op, double n1, double n2) <span
+  style='background:yellow'>throws <span class=SpellE>DivideByZeroException</span>, <span
+  class=SpellE>UnknownOpException</span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>double answer;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>switch (op)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>case '+':<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'>             </span>answer = n1 + n2;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>break;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>case '-':<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>answer = n1 - n2;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>break;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>case '*':<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>answer = n1 * n2;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>break;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>case '/':<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>if ((-precision &lt; n2) &amp;&amp; (n2 &lt; precision))<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                    </span><span
+  style='background:yellow'>throw new <span class=SpellE>DivideByZeroException</span> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>answer = n1 / n2;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>break;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>default:<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span><span
+  style='background:yellow'>throw new <span class=SpellE>UnknownOpException</span> (op);<o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>return answer;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'> <span style='mso-spacerun:yes'>   </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span></span></b><b><span
+  style='font-size:13.5pt;color:red'>public void <span class=SpellE>doCalculation</span> () </span></b><b><span
+  style='font-size:13.5pt;color:blue;background:yellow'>throws <span
+  class=SpellE>DivideByZeroException</span></span></b><b><span
+  style='font-size:13.5pt;color:blue'>, <span class=SpellE><span
+  style='background:yellow'>UnknownOpException</span></span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<span
+  style='background:yellow'><o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>Scanner keyboard = new Scanner (System.in);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>boolean</span> done = false;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>result = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;result = &quot; + result);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>while (!done)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  style='background:yellow'>char <span class=SpellE>nextOp</span> = (<span
+  class=SpellE>keyboard.next</span> ()).<span class=SpellE>charAt</span> (0);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>if ((<span
+  class=SpellE>nextOp</span> == 'e') || (<span class=SpellE>nextOp</span> == 'E'))<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span>done = true;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>else<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>               </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'> </span>double <span
+  class=SpellE>nextNumber</span> = <span class=SpellE>keyboard.nextDouble</span> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>               </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'> </span>result = evaluate (<span
+  class=SpellE>nextOp</span>, result, <span class=SpellE>nextNumber</span>)</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span><span
+  class=SpellE>System.out.println</span> (&quot;result &quot; + <span
+  class=SpellE>nextOp</span> + &quot; &quot; +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                        </span><span
+  class=SpellE>nextNumber</span> + &quot; = &quot; + result);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span><span
+  class=SpellE>System.out.println</span> (&quot;updated result = &quot; + result);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp; </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="79%"
+ style='width:79.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+  "Times New Roman";color:red'>Calculator</span><span style='mso-fareast-font-family:
+  "Times New Roman"'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'><pre><b><span
+  style='font-size:13.5pt;color:blue'>import <span class=SpellE>java.util.Scanner</span>;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>/**<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>Simple line-oriented calculator program. The class<o:p></o:p></span></b></pre><pre><span
+  class=GramE><b><span style='font-size:13.5pt;color:blue'>can</span></b></span><b><span
+  style='font-size:13.5pt;color:blue'> also be used to create other calculator programs.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>*/<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>public class Calculator<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private double result;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>private double precision = 0.0001;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>//Numbers this close to zero are treated as if equal to zero.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public static void main (String [] <span
+  class=SpellE>args</span>)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>Calculator clerk = new Calculator ();<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>try</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>         </span><span style='mso-spacerun:yes'>   </span><span
+  class=SpellE>System.out.println</span> (&quot;Calculator is on.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.print</span> (&quot;Format of each line: &quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;operator space number&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;For example: + 3&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;To end, enter the letter e.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE><span style='background:yellow'>clerk.doCalculation</span></span><span
+  style='background:yellow'> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>catch (<span class=SpellE>UnknownOpException</span> e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>{</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>clerk.handleUnknownOpException</span> (e);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>}</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>catch (<span class=SpellE>DivideByZeroException</span> e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>{</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>clerk.handleDivideByZeroException</span> (e);</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>}</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;The final result is &quot; +<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>                </span><span
+  class=SpellE>clerk.resultValue</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Calculator program ending.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public Calculator ()<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>result = 0;<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public void<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE><span style='background:yellow'>handleDivideByZeroException</span></span><span
+  style='background:yellow'> (<span class=SpellE>DivideByZeroException</span> e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Dividing by zero.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Program aborted&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>public void <span
+  class=SpellE><span style='background:yellow'>handleUnknownOpException</span></span><span
+  style='background:yellow'> (<span class=SpellE>UnknownOpException</span> e)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (<span class=SpellE>e.getMessage</span> ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  class=SpellE>System.out.println</span> (&quot;Try again from the beginning:&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>try</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.print</span> (&quot;Format of each line: &quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;operator number&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;For example: + 3&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;To end, enter the letter e.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE><span style='background:yellow'>doCalculation</span></span><span
+  style='background:yellow'> ();</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow'>catch (<span class=SpellE>UnknownOpException</span> e2)</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (e2.getMessage ());<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Try again at some other time.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.out.println</span> (&quot;Program ending.&quot;);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>            </span><span
+  class=SpellE>System.exit</span> (0);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>catch (<span
+  class=SpellE>DivideByZeroException</span> e3)<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>{<span
+  style='background:yellow'><o:p></o:p></span></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>         </span><span style='mso-spacerun:yes'>   </span><span
+  class=SpellE>handleDivideByZeroException</span> (e3);<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>//The methods reset, <span
+  class=SpellE>setResult</span>, <span class=SpellE>getResult</span>, evaluate, and <span
+  class=SpellE>doCalculation</span><o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'><span style='mso-spacerun:yes'>    </span>//are the same as in Listing 9.11.<o:p></o:p></span></b></pre><pre><b><span
+  style='font-size:13.5pt;color:blue'>}</span></b></pre></td>
+ </tr>
+</table>
+
+</div>
+
+<p>&nbsp;</p>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
