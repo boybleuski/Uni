@@ -1,0 +1,4 @@
+DROP TABLE Register
+DROP TABLE Student
+DROP TABLE Course
+DROP TABLE Semester

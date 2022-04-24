@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>COMP1050/COMP6050 - Laboratory 1</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<style type="text/css">
+
+strong.very { color: red; font-size: large }
+</style>
+</head>
+
+<body>
+
+
+<div id="body">
+
+        <h1>COMP1050/COMP6050 - Laboratory 1</h1>
+
+        <p>
+          The objectives of this lab are:
+        </p>
+        <ol>
+          <li><a href="#unix">to use the student UNIX servers to setup your own Web site;</a></li>
+        </ol>
+
+        <hr />
+
+        <div class="toc">
+          <a href="#unix">Task 1</a> -
+          <a href="#file">Task 2</a> -
+          <a href="#flame">Task 3</a> -
+		  <a href="#extra">Extra Task</a> -
+		  <a href="#references">References</a>
+        </div>
+
+        <hr />
+
+        <h2 id="unix">Task 1 - Connecting to a UNIX Server</h2>
+
+        <p>
+          While you will be sitting at a Microsoft Windows PC during laboratories for this course,
+          the files you are creating (on U-drive) are hosted by a UNIX file server.
+          This file server can also be accessed from a variety of UNIX systems run by the
+          School of Electrical Engineering and Computer Science,
+          as well as the PC labs run by the
+          Faculty of Engineering and Built Environment.
+          In particular, the computer for student use is called
+          <span class="host">flame</span> or <span class="host">compseng</span>.
+        </p>
+
+        <p>
+          There are several ways in which you will be able to access the UNIX system <span class="host">compseng</span>. You can use FTP via a program such as <a href="http://winscp.net/">
+WinSCP</a> or <a href="http://filezilla-project.org">FileZilla</a>.
+          
+        </p>
+
+        <div>
+
+         <!-- <h3 id="ftp">Using FTP</h3>
+
+          <p>
+            There are many ftp applications available which employ a graphical
+            user interface. You may find them very easy to use. They
+            have the same functionality as the simple command-line version of ftp.
+            It is generally better to use a more secure
+            client such as <a href="http://winscp.net/eng/index.php" target="_blank">WinSCP</a> 
+            which allows you to use SCP and the newer SFTP protocols. In order to use 
+            <a href="http://winscp.net/eng/index.php" target="_blank">WinSCP</a> simply follow the 
+            instructions below.
+          </p>
+
+          <ol>
+            <li>From a Microsoft Windows PC, access the <span class="menu">Start</span> menu
+              then select <span class="menu">Programs</span>. From there select <span class="menu">WinSCP</span></li>
+            <li>Click on the <span class="menu">WinSCP</span> to open the WinSCP Login dialog.</li>
+            <li>To connect to another computer (in this case <span class="host">flame</span>) using telnet, type the IP address
+              (name or number) of the computer. In this case, you want to type <kbd>flame.newcastle.edu.au</kbd>
+               in the <span class="menu">Host name</span> field of the Login window.</li>
+            <li>Also type your user name and password in the corresponding fields of this window.</li>
+            <li>At this stage click on the <span class="menu">Login</span> button.</li>
+            <li>If you get a window warning about the server's host key not being cached properly, click <kbd>yes</kbd> 
+            to say that you trust the host. This window should only pop up the first time you use putty on the system.</li>
+            <li>After a few seconds, the connection will be established and  
+                you will see a new window for file transfer between your local machine and
+                <span class="host">flame</span>. In this new window you will see your local machine
+                on the left hand side and <span class="host">flame</span> on the right hand side.</li>
+            <li>If you want to transfer a file from <span class="host">flame</span> to your local
+                machine just drag and drop the file in the desired folder of the local machine.</li>
+            <li>Similarly you can also transfer file from your local machine to <span class="host">flame</span>.</li>
+            <li>Once you have finished, you can disconnect from <span class="host">flame</span> by 
+              closing the window.</li>
+            <li>If you need any help, please seek assistance from your Lab Demostrators.</li>
+          </ol>
+-->
+
+          
+
+          <h3 id="telnet">Using Telnet</h3>
+
+          
+
+          <p>
+            Telnet is not secure - it sends all commands and all output
+            as plain-text across the Internet. Therefore, you will have to use a "secure" telnet application,
+            such as <kbd>ssh</kbd>, also known as <kbd>putty</kbd> (<a href="#putty">see below</a>) to
+            connect to <span class="host">compseng</span>.
+            Once connected, <kbd>ssh</kbd> functions
+            exactly as <kbd>telnet</kbd> does.
+          </p>
+
+        </div>
+
+        <div>
+           <h3 id="putty">Putty ssh</h3>
+
+          <ol>
+            <li>To start Putty, access the
+              <span class="menu">Start</span> menu, then select <span class="menu">Programs</span>,
+              <span class="menu">Putty 0.61</span> (or correct version number).</li>
+            <li>In the <kbd>Host Name (or IP address)</kbd> field enter <kbd>compseng.newcastle.edu.au</kbd> 
+                and click <kbd>open</kbd><br />
+            <img src="Putty1.gif" alt="putty login screen" /></li>
+            <li>If you get a window warning about the server's host key not being cached properly, click <kbd>yes</kbd> 
+            to say that you trust the host. This window should only pop up the first time you use putty on the system.</li> 
+            <li>You should now see the a login prompt. If there is anything that is not clear to you, 
+            ask your demonstrator for help.</li>
+         </ol>
+       </div> 
+
+
+      <!--  <div>
+
+          <h3 id ="x">Using X Windows</h3>
+
+          
+
+          <p>
+            You can also use telnet to connect to flame from almost any computer connected to the Internet.
+            However, you will not be able to run programs that require a graphical user interface - to run these,
+            you need to use the <a href="#x">X Windows</a> method described below.
+          </p>
+
+          <ol>
+            <li>Just as Microsoft's current operating systems have a windowing environment
+              (hence the name Microsoft <em>Windows</em>), UNIX systems also have a windowing environment, called
+              X Windows. The Faculty PCs in the ES building support an X Windows simluator which lets you use
+              X Windows as an application inside Microsoft Windows. To start X Windows, access the
+              <span class="menu">Start</span> menu, then select <span class="menu">Programs</span>,
+              <span class="menu">Xwindows Flame</span>.</li>
+            <li>A full-screen window should then appear, prompting you to login (<a href="#login">see below</a>).</li>
+            <li>Once you are logged in, the full-screen window will contain your X Windows desktop. This should include
+              a running xterm (the X Windows version of <a href="#telnet">telnet</a>), from which will be able to
+              issue commands for <span class="host">flame</span> to run.</li>
+            <li>You can swap between the X Windows desktop and the Microsoft Windows desktop using the standard
+              Microsoft Windows taskbar (usually across the bottom of the screen).</li>
+            <li>Once you have finished, you can disconnect from <span class="host">flame</span> by right-clicking on the
+              <span class="menu">X</span> icon in the bottom-right corner then selecting
+              <span class="menu">Exit</span>.</li>
+          </ol>
+
+          <p>
+            X Windows environment can only be used from computers which support the X Windows protocol - these
+            include most UNIX workstations (including Linux and FreeBSD), as well as other computers running
+            an X Windows simulator.
+            In the X Windows environment, you will able to run any programs on the host computer, including those
+            that require a graphical user interface.
+          </p>
+
+        </div> -->
+
+        <div>
+
+          <h3 id ="login">Logging In to <span class="host">compseng</span></h3>
+
+          <ul>
+            <li>Your username on the UNIX systems is simply your student number with a
+              lowercase 'c' at the start. For example, <kbd>c3012345</kbd></li>
+            <li>You will then be prompted for a password. Use your normal login password. If this is your first time logging in, then your <em>initial</em> password made by combining
+              the 4 letter code on your student card with your birth date and month.</li>
+            <li>Note that the computer will not "echo" your password as you type it - it may not even display
+              a line of asterisks.</li>
+            <li>Do not panic if you get your password wrong. You usually get three attempts before the UNIX server
+              will break the connection. If this happens, then you can just reopen the connection and try again.
+              If your password fails several times, then ask your demonstrator for help.</li>
+           <!-- <li>Once you have successfully logged in, you should change this password to something else.
+              To change your password on <span class="host">flame</span> and <span class="host">frost</span>,
+              type <kbd>passwd</kbd>. You will be prompted for your old password, then your new password,
+              then your new password again.</li>
+            <li>You must think of a good password: something that is easy to remember but <strong>HARD</strong> for someone else to guess.
+              For example, your name, your mother's name or your cat's name, are all <strong>BAD</strong> passwords.
+              Other examples of <strong>BAD</strong> passwords are your date of birth, your age, a movie you like, a colour or any word that
+              appears in a dictionary. For some notes on selecting good passwords,
+              <a href="http://www.cs.newcastle.edu.au/Dept/password-guide.html" target="_blank">follow this link</a>.</li>
+            <li>Note that changing your password on <span class="host">flame</span> also changes it on
+              <span class="host">frost</span>, and vice versa. However, changing your password on the UNIX systems
+              will <strong>not</strong> change your password for the Microsoft Windows PCs, and vice versa.</li> -->
+          </ul>
+
+        </div>
+
+        <hr />
+
+        <h2 id="file">Task 2 - Familiarize yourself with UNIX File Commands</h2>
+
+        <p>
+          The following example will show you how to move around your files on the UNIX system
+          (these are the files you see in the U-drive from a Microsoft Windows PC).
+        </p>
+
+        <ul>
+          <li>The directory structure of a UNIX system (that is, the organisation of its files) is like a tree.
+            When you login, you are automatically placed at a particular branch in the tree called your "home" directory.
+            Everyone with an account on this machine has a branch to himself or herself.
+            You can put things onto your own branch but you need permission to put or get stuff from other people's branches or even further down the tree.
+            If you want to see where you are in the overall tree, type <kbd>pwd</kbd>.
+            As you will see, you are far up the tree - each <samp>/</samp> represents a branch on a branch.</li>
+          <li>From your home directory, you should create three or four directories, which are new branches off the branch you own.
+            Directories should have names that reflect the content of the files you plan to hang from them.
+            For example, <span class="file">lecture_notes</span>, <span class="file">assignments</span>, <span class="file">downloads</span>,
+            <span class="file">images</span>, etc.
+            The command to create a directory is <kbd>mkdir <var>dirname</var></kbd>
+            (where <kbd><var>dirname</var></kbd> is the name to give to the new directory).</li>
+          <li>Once you have created a few directories you should list all the files and directories you have on the current branch.
+            The command to list the files and directories is <kbd>ls</kbd>. This just gives a simple list of names.
+            To get more information, type the command <kbd>ls -l</kbd> (NOTE: this is 'dash l' not 'minus 1').</li>
+          <li>You can move around the tree quite easily. To move up to one of the new branches you have created, type <kbd>cd <var>dirname</var></kbd>.
+            Once you have moved you can type <kbd>pwd</kbd> command again to see where you are,
+            or <kbd>ls -l</kbd> to see what files and directories are hanging from this branch (if you just created the branch then it should contain nothing).</li>
+          <li>There are two "special" versions of the <kbd>cd</kbd> command. Typing <kbd>cd ..</kbd> takes you back down the tree one level,
+            to the branch below the one you are currently in. Typing <kbd>cd ~</kbd> takes you back to your home directory, no matter where you
+            currently are.</li>
+          <li>The <kbd>cd</kbd> command even lets you chain directories together, separating them with a <kbd>/</kbd>.
+            For example, if you are in a directory called <span class="file">testfiles</span> and you type
+            <kbd>cd ../testfiles/../testfiles</kbd> - what does this do? Type <kbd>pwd</kbd> to see where you are.
+            Do you understand what happened? If you do, great - if you don't ask a demonstrator.
+            <em>Understanding how to move around the tree is very important.</em></li>
+          <li>You can delete a directory you have created (provided it contains no files), by positioning yourself in the directory immediately
+            below and typing <kbd>rmdir <var>dirname</var></kbd>.</li>
+          <li>You can copy files (but not directories) using the command <kbd>cp <var>existingfiilename</var> <var>newfilename</var></kbd>.
+            For example, <kbd>cp notes.txt mynotes.txt</kbd> will make a copy of the file <span class="file">notes</span>
+            and call it <span class="file">mynotes</span>. Try it on one of your own files.
+            After typing the command, you should have two files - use <kbd>ls -l</kbd> to see.</li>
+          <li>You can move (rename) files (<em>and directories</em>) with the command <kbd>mv  <var>existingfiilename</var> <var>newfilename</var></kbd>.
+            For example, <kbd>mv mynotes.txt morenotes.txt</kbd> changes the name of the file, but you still only have one file.
+            Try this, and use <kbd>ls -l</kbd> to see the result.</li>
+          <li>You can also use the <kbd>mv</kbd> command to move a file into a completely different directory.
+            For example, <kbd>mv mynotes.txt notes/</kbd> moves the file into the <span class="file">notes</span> directory under the current
+            directory (assuming the <span class="file">notes</span> directory exists), while
+            <kbd>mv mynotes.txt ../morenotes.txt</kbd> moves the file into the parent directory <em>and</em> changes the name of the file.</li>
+          <li>You can delete (remove) a (non-directory) file (such as one you created with your plain-text editor) by typing <kbd>rm <var>filename</var></kbd>.
+             Be careful not to delete files starting with a dot "." - these are UNIX system files, and
+            deleting them may stop your account from working.</li>
+          <li>Note that once you remove these files they are gone, and it is very difficult to get them back.
+            The files are really deleted, not just moved into a "trash can". There is no "undelete" or "restore" command on our UNIX servers.</li>
+          <li>Well, almost. These days you can manually recover files from the last weeks' worth of daily backups.
+            You can find these backup files in the directory
+            <span class="file">OnlBak</span> which is under your home directory.
+            Inside <span class="file">OnlBak</span> you will find a subdirectory
+            for each day of the week - these contain your daily "incremental"
+            backups (only those files which changed that day are stored).
+            In addition, the subdirectory <span class="file">Full</span>
+            contains a weekly backup of your entire U-drive.</li>
+		  <li> Get help: Need to know more about any command use <kbd>man command_name</kbd>
+        </ul>
+
+        <hr />
+
+        <h2 id="flame">Task 3 - The UNIX Web Server and File Permissions</h2>
+
+        <p>
+          As well as being a UNIX server for students to use, <span class="host">compseng</span> acts as a Web server
+          on which students can place documents to be accessed by others.
+        </p>
+
+        <ul>
+          <li>All files that you want accessible via <span class="host">compseng</span>'s Web server must be placed in a special directory,
+            immediately under your home directory, called <span class="file">public_html</span>.
+            This directory probably may already exist, but if it does not, then you will have to create it using the <kbd>mkdir</kbd> command as follows.</li>
+          <li><strong>Note: This step is only for people without an existing <kbd>public_html</kbd> directory.</strong> Make sure you are in your home directory (<kbd>cd ~</kbd>). Type <kbd>mkdir public_html</kbd>, be sure to use all lower case, and press enter. 
+           Now <kbd>ls</kbd> to check that the directory has been correctly added. You will now need to change the permissions on this directory and your account so that the
+           you can view the files stored. Type <kbd>chmod 755 public_html</kbd>. Now type <kbd>cd ..</kbd> to move up a directory. Type <kbd>chmod 711 c<var>XXXXXXX</var></kbd>
+           , where <var>XXXXXXX</var> should be replaced by your student number. To get back into your home directory type <kbd>cd ~</kbd>. Now you can move onto the next step, 
+           what you just did should become clearer once you understand permissions.</li>
+          <li>To test this, copy a file into your <span class="file">public_html</span> directory, or make a new file there.
+            You can then access this file using your Web browser with the URL
+            <span class="url">http://compseng.newcastle.edu.au/~c<var>XXXXXXX</var>/index.html</span> -
+            where <var>XXXXXXX</var> should be replaced by your student number, and index.html replaced with the name of your file.</li>
+          <li>You probably got a response like <samp>Page Not Found</samp> or <samp>You Don't Have Permission to Access This File</samp>.
+            This is because, while <em>you</em> have permission to access this file, the Web server program does not.
+            To fix this, you need to change the permissions on your file so it is "readable" by the Web server,
+            and change the permissions on <span class="file">public_html</span> and your home directory so they are "executable" by the Web server.</li>
+          <li>To see the current permissions of your file, change into the <span class="file">public_html</span>
+            directory and type <kbd>ls -l</kbd> - the permissions of each file are shown in the left-most column.
+            <ul>
+              <li>The permissions consist of 10 characters.</li>
+              <li>The first character denotes the type of the file. A directory has a <span class="permit">d</span> as the first letter. A "regular" file (like the ones you have created) have a <span class="permit">-</span>. Other types of files exist, but you will not need to know about them for COMP1050.</li>
+              <li>The remaining 9 characters break down into 3 groups: permissions for you, permissions for your group, and permissions for everyone else.</li>
+              <li>Each group consists of 3 characters: permission to <span class="permit">Read</span>, permission to <span class="permit">Write</span>, and permission to <span class="permit">eXecute</span> the file.
+                If the corresponding letter (<span class="permit">r</span>, <span class="permit">w</span> or <span class="permit">x</span>) appears,
+                then the corresponding permission is granted. If the character <span class="permit">-</span> appears, then that permission is denied.</li>
+            </ul>
+          </li>
+          <li>You can change the permission on any file you own. In general, you "own" your home directory, plus any files that you create under it. To change the permissions of a file, type the command <kbd>chmod <var>XXX filename</var></kbd> where <var>XXX</var> are the permissions you are going to set.
+            <ul>
+              <li>The three <var>X</var>s are (in order) the permissions for yourself, your group, and everyone else.</li>
+              <li>Each <var>X</var> is a number from 0-7. You derive the number by taking the binary string of permissions, where 1 means "permission granted" and 0 means "permission denied", and converting it to a decimal number.</li>
+              <li>For example, a file that is readable by you only, and writeable and executable by no one, has the permissions string <span class="permit">r--------</span> = 100:000:000 (base 2) = 4:0:0 (base 10) - hence, the command to set these permissions is <kbd>chmod 400 <var>filename</var></kbd>. Can you see what the command would be to set the permissions of a file so that you, your group, and everyone could read it and execute it, but only you could write to it?
+
+<div id="permit">
+<table>
+  <thead>
+    <tr><th colspan="3">You</th><th colspan="3">Group</th><th colspan="3">World</th></tr>
+    <tr><th>R</th><th>W</th><th>X</th><th>R</th><th>W</th><th>X</th><th>R</th><th>W</th><th>X</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+  </tbody>
+</table>
+</div>
+              </li>
+            </ul>
+          </li>
+          <li>An alternative way to change permissions is as follows. Using the same principles outlined above, 
+           but using characters rather than numbers in the <kbd>chmod</kbd> command. By using a combination of the symbols <kbd> [ugo]{+|-|}[rwx]</kbd>.
+            For example, if I want to change the first permission shown above to the second, I would use the command
+           <kbd>chmod go+rx <var>filename</var></kbd>, followed by <kbd>chmod u+wx <var>filename</var></kbd>. To remove a permission, you use the minus sign, rather than a plus sign.</li> 
+          <li>The Web server is part of the permission group for "everyone else". So,
+            you need to change the permissions on <span class="file">index.html</span> so that you can read, write and execute the file, while the group and everyone else can only read it.
+            Similarly, you need to change the permissions on <span class="file">public_html</span> and your home directory so that you can read, write and execute them, while the group and everyone else can only execute them
+            (a directory must be executable for the files it contains to be accessible).</li>
+           <li> Unfortunately you cannot see the changes to permissions on this system, however they do work. And you should know them.</li>
+          <li>Once you have updated these permissions, try reloading <span class="url">http://compseng.newcastle.edu.au/~c<var>XXXXXXX</var>/index.html</span> into your Web browser.
+            All going well, the Web page should now appear.</li>
+        </ul>
+
+        <p>
+          <strong>Note:</strong>
+          any files placed in <span class="file">public_html</span> with the permissions above can be accessed from within the University by
+          <em>anyone</em> with a Web browser, and depending on your account setup, by anyone on the web. <em>You should not place any files in <span class="file">public_html</span>
+          that you wish to keep private.</em> In particular, <strong class="warning">do not place assignment solutions in your
+          <span class="file">public_html</span> directory!</strong> If you do, and another student copies the files,
+          then you will be liable for the same penalties as if you had given them a copy of your work.
+        </p>
+
+		<h2 id="extra">Extra Task (Optional)</h2>
+		<p>
+		This optional task is targeted at students who want to learn how to transfer data to and from the Unix server.
+		</p>
+		Steps to follow:
+		<ol>
+			<li>Download the <a href="https://filezilla-project.org/">FileZilla</a> Client. Double click the downloaded file and follow the instructions to install the program. </li>
+			<li>Open FileZilla from Start Menu</li>
+			<li> Go to the <em>File > Site Manager</em> menu, click <em>New Site</em>. Type in <kbd>Compseng</kbd> as the new site name. Type <kbd>compseng.newcastle.edu.au</kbd> as the Host. Type <kbd>22</kbd> as the Port. 
+			Select the <em>SFTP - SSH File Transfer Protocol</em> as the Protocol. Choose <em>Normal</em> as the Logon Type. Type in your username and password and click connect. Next time you can select <em>Compseng</em> from the 
+			Site Manager icon to initiate a connection to the remote machine. When you are connecting for the first time to any serever (e.g. Compseng), you will be presented with a dialog box asking you to accept the security key. Click OK to accept</li>
+			<li> The left-hand pane in FileZilla window represents the file system on your local machine. You can navigate through the directory structure. </li>
+		    <li> The right-hand pane in FileZilla window represents the file system on the remote machine. You can see your home directory. </li>
+			<li> To transfer files between your local machine and the remote machine you can simply drag-and-drop between the two panes. Note: In the remote machine you can put your files under your home directly (or any subdirectory under that) only as you do not have permission to access any other directory.</li>
+			<li> Use Windows explorer to create a new directory and Notepad to create a multi-line text file under that directory. Now navigate to that directory in FileZilla window and transfer the text file in your home directory in the remote machine.</li>
+			<li> Similarly any file that you create in the remote machine can be downloaded to your local machine by dragging between the panes.</li>
+			<li> In Windows and Unix the new-line is represented differently. Therefore any file you transfer from Windows to Unix machine needs to be converted by using the command <kbd> dos2unix file_name</kbd> in Unix machine. Similarly any file you want to transfer from Unix to Windows machine needs a conversion using the command <kbd>sed -i 's/$/\r/' file_name</kbd> before your transfer.</li>
+			<li> Finally, disconnect from FileZilla clicking the disconnect button.</li>
+		</ol>
+		<h2 id="references">References</h2>
+		<ol>
+			<li><a href="http://www.linuxgeek.net/beginners/">Beginning Linux</a> </li>
+			<li><a href="http://www.linuxcommand.org/superman_pages.php">Linux man pages</li>
+			<li><a href="http://the.earth.li/~sgtatham/putty/0.60/htmldoc/">Putty Documentation</li>
+		</ol>
+
+</div>
+<div id="copyright">
+
+    <a href="http://validator.w3.org/check?uri=referer"><img
+        src="vs-blue-256.png"
+        alt="Valid HTML 5.0" height="31" /></a>
+  </p>
+ 
+
+</div>
+
+</body>
+
+</html>
+

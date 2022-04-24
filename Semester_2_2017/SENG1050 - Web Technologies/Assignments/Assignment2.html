@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>SENG1050 - Assignment 2</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<style type="text/css">
+
+blockquote { font-style: italic }
+.late { font-size: medium }
+
+</style>
+</head>
+
+<body>
+
+<div id="body">
+
+        <h1>SENG1050 - Assignment 2</h1>
+
+        <hr />
+
+        <div class="toc">
+          <a href="#outline">Outline</a> -
+          <a href="#all">All Web Pages</a> -
+		  <a href="#home">Homepage</a> -
+          <a href="#form">Data Collection Form</a> <br />
+		  <a href="#peb">Restaurant Information Display Pages</a> -
+		  <a href="#design">Web Design</a> -
+		  <a href="#style">Coding Style</a> -
+          <a href="#submit">Submission</a> -
+          <a href="#marking">Marking</a>
+        </div>
+
+        <hr />
+
+        <ul class="due">
+          <li>Due: 11:59pm, Friday 20th October, 2017
+            <ul class="late">
+              <li>by 11:59pm, Saturday 21st October, 2017: -10%</li>
+              <li>by 11:59pm, Sunday 22nd October, 2017: -20%</li>
+              <li>by 11:59pm, Monday 23rd October, 2017: -30%</li>
+              <li>by 11:59pm, Tuesday 24th October, 2017: -40%</li>
+              <li>by 11:59pm, Wednesday 25th October, 2017: -50%</li>
+              <li>after 11:59pm, Wednesday 25th October, 2017: 0</li>
+            </ul></li>
+          <li>Weight: 25% of course total.</li>
+        </ul>
+
+        <p>
+          The objectives of this assignment are </p>
+	  <ol>
+		<li>to exercise your ability to create Web pages using HTML and CSS,</li>
+		<li>to transform the XML documents from Assignment 1 into HTML using XSLT,</li>
+		<li>to test your skill in employing HTML features such as forms,</li>
+        <li>to evaluate your expertise with JavaScript for client side processing.</li>
+	  </ol>
+       
+
+        <div class="warning">
+
+          <h3 id="generated">Warning - HTML Generating Tools</h3>
+
+          <p>
+            You are <strong>NOT</strong> allowed to use a HTML generating
+            program for this assignment. This includes DreamWeaver,
+            Microsoft Frontpage, Saving to HTML from Word, etc.
+            You must write all of the HTML tags yourself in a plain-text
+            editor such as NotePad.
+            Any assignments that use HTML generated from a tool will be given
+            <strong>ZERO</strong>.
+          </p>
+
+ 
+        </div>
+
+        <hr />
+
+        <h2 id="outline">Outline</h2>
+
+ 
+        <p>
+			The NewcastleAd company has invited you, as a promising student of their partner 
+			institution the University of Newcastle with web communication skills, to develop 
+			a web site, Online Food Delivery, that advertises the restaurants who have adopted 
+			online ordering and delivery system. This service is well received by those who 
+			use it but currently there is no place to advertise the system.<br><br>
+
+			Whether the restaurants are opening first time or the restaurants have been 
+			many years, they need advertising to be successful businesses. 
+			Your job is to help them! <br><br>
+
+			Your task is to present the restaurants as appealingly as possible on the web. 
+		</p>
+		
+        <p>
+          Your assignment will have the following parts.
+        </p>
+
+        <ol>
+          <li><a href="#home">A Homepage</a></li>
+          <li><a href="#form">A "Data Collection" page</a></li>
+	    <li><a href="#peb">2 Cuisine pages</a></li>
+        </ol>
+
+        <p>
+          All pages must have good readability, consistency and navigation. Details of all of these pages are given below.
+        </p>
+
+        <hr />
+
+		<h2 id="all"> General guidelines for preparing your all web pages </h2>
+		<ul>
+			<li>All pages should be coded according to the HTML5 standard.</li>
+			<li>All pages should contain the full HTML5 document structure, including &lt;&#33;DOCTYPE&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt; and &lt;body&gt;</li>
+			<li>All pages should use Cascading Style Sheets for visual formatting. You must use an external style file (style.css) 
+				which will define the style for all web pages you have created, 
+				Embedded (Document-level) style (where appropriate) and a few ( NOT many) inline styles.
+				<ul>
+				    <li>All visual formatting of the Web site should be implemented using
+						<a href="http://www.w3.org/TR/REC-CSS2/">Cascading Style Sheets</a>.
+					</li>
+					<li><strong>Use one external CSS for all web pages.</strong></li>
+					<li>Use at least one <em>id</em> and  one <em>class</em> selector.</li>
+					<li>At least one &lt;div&gt;, used to provide some interesting styling (your choice of borders, background, floating alignment, etc.)</li>
+					<li>At least one &lt;span&gt;, used to provide some formatting (e.g. a colour or font change) for a few words of text</li>
+					<li>You should use a document-level style sheet to apply styles that
+						are unique to the particular page (if appropriate).
+					</li>
+					<li>You should only use inline styles for one-off visual effects.
+					</li>
+				</ul>
+			</li>
+        
+			<li>Your assignment directory should contain a sub-directory, named <em>images</em> with all the image files you are using in your web pages. </li>
+			<li>There should be a nice background for the whole web site.</li>
+			<li>There should be a left side margin of 1 cm for all pages.</li>
+			<li>There should be hyperlinks on each of the pages that provide navigation capabilities for your site. </li>
+				<ul>
+					<li>Hyperlinks from the Index page to other pages. Also hyperlinks from other pages back to the Index page. These links should use <em>a relative</em> URL.</li>
+					<li>Each page should also have links to every other page. </li>
+					<li>The text colours of a link before they are visited, after they are visited and during a user action must be different from each other. The link must appear noticibly bigger when you move the cursor over them.</li>
+				</ul>
+			<li>The pages must have good readability, consistency and navigation.</li>
+			<li>Comments for your HTML code: Comments at the top of the file, stating the name of the file, 
+			the name of the author and the date the file was created. 
+			</li>
+		</ul>
+
+
+		<hr />
+
+        <h2 id="home">Homepage</h2>
+
+        <p>
+          Your submission should contain a homepage, called
+          <b>index.html</b> which you created in Assignment 1. 
+		  You may need to make changes to this page, to ensure that any links to other pages in the website work,
+		  or incorporate any other updates listed in your assignment 1 feedback. 
+        </p>
+<p>
+Links necessary for Homepage are
+<ul>
+<li>A link to the data collection page (form).</li>
+<li>A privacy policy. This is necessary as you are collecting data including personal identifying information (PII) from your guests. There is no need to actually create this page, just link to <a href="https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/">https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/</a></li>
+<li>Terms and conditions. This can link to <a href="https://media.termsfeed.com/pdf/terms-and-conditions-template.pdf">https://media.termsfeed.com/pdf/terms-and-conditions-template.pdf</a></li>
+<li>About us. This can link to <a href="http://www.blogtyrant.com/best-about-us-pages/">http://www.blogtyrant.com/best-about-us-pages/</a></li>
+<li>Contact. This can link to <a href="http://www.blogtyrant.com/best-contact-us-pages/">http://www.blogtyrant.com/best-contact-us-pages/</a></li>
+</ul>
+
+</p>
+		
+
+        <hr />
+
+        <h2 id="form">Data Collection Page</h2>
+
+        <p>
+            This page will allow customers to provide comments and impressions about 
+			the system as well as some personal information (so there should 
+			be a link to the privacy policy on this page as well). This upload will 
+			be done as a form, which sends the information 
+			to "http://evc-cit.info/cgi-bin/echoform.cgi"
+			when applicants click the "Submit" button. The following things need to be 
+			included on the page.
+        </p>
+		<h3> Create the form</h2>
+		<p> The form needs to have at least the following things.
+        <ol>
+          <li>An appropriate level 1 heading.</li>
+		  <li>Mandatory information about the customer;
+			<ul>
+			    <li>A full name,</li>
+				<li>Email</li>
+				<li>Age range (less than 20, 20-30, 31-40, 41-50, 51-60, more than 60),</li>
+				<li>Address,</li>
+				<li>more ...</li>
+			</ul></li>		  
+          <li>Survey questions decided by you. Think through what you want to learn from your survey.
+			<ul>
+				<li>Use different types of input such as textboxes, dropdown menus, radio buttons, checkboxes and textareas 
+		      (at least 1 of each).</li>
+			</ul></li>
+          <li>Buttons to submit and clear the form.</li>          
+        </ol>
+
+		<h3> Validate the form</h3>
+		<p>You will write <strong>Javascript functions</strong> to validate the form 
+		   (<i>DO NOT USE HTML5 form validation attributes such as 'required'</i>).  </p>
+		<ol>
+			<li>Use JavaScript to perform client-side data validation.</li>
+			<li>The validation functions should check that at least three required inputs (marked with asterisks)
+			in your form are filled out. </li>
+			<li>These should be different types of input (e.g., textbox, dropdown menus, 
+				radio buttons or checkboxes), 
+				so the validation will be done differently for each one.</li>
+			<li>The validation functions should check a valid email address 
+			    (<i>please do not use HTML5 form validation INPUT types such as INPUT type="email"</i>).</li>
+			<li>If the form does not pass the validation check, the user should be presented with an alert message
+				asking them to provide the missing information or correct the wrong information.</li>	
+		
+		</ol>
+		
+		<p> The validation functions should be initiated when the form is submitted. </p>
+		
+        <p> 
+           The structure and presentation of this page is up to you 
+           however the specifications provided here must be followed.
+        </p>
+
+
+        <hr />
+
+
+
+ 	  <h2 id="peb">Restaurants Information Display Pages</h2>
+
+        <p>
+          You will be writing an XSL document to transform your XML documents from Assignment 1 
+          into HTML. The HTML that is generated should fit in with the style of the rest of your website (<i>eg.,
+          similar formatting, colors, etc.</i>). You will need to use CSS in your generated HTML.
+        </p>
+
+        <p>
+          <b>Note</b> that all your XML documents have the same tags and DTD and therefore they can all
+          use the same XSL document. This means you should only make 1 XSL file. 
+		  The XSL should have the following;
+        </p>
+
+        <ul>
+          <li>An appropriate level 1 heading. </li>
+          <li>List of all the restaurants sorted alphabetically by the restaurant name</li>
+		  <li>Include the following.
+            <ul>
+              <li>Restaurant details.</li> 
+              <li>An image of a restaurant or food</li>
+			  <li>URL of the restaurant</li>			 
+			</ul> 
+		  </li> 		  
+          <li>All this data must be collected from the XML documents.</li>
+          <li>Other relevant information that is in your XML documents.</li>
+    </ul>
+
+		<hr />
+		<h2 id="design">Web Design</h2>
+		<p>
+		A successful website meets clearly identified goals and provides compelling content that draws 
+		your audience to your site again and again. In addition it should be easy to navigate and 
+		feature visual attractiveness.
+		</P>
+	
+
+		<hr />
+		<h2 id="style" >Coding Style</h2>
+		<p>
+			Please note that your HTML code, CSS code and XSL code must be neat, clear, and commented. A clean structure 
+			is important for a site that will be maintained and updated later by someone else, who won't have 
+			your memory of how things are structured.
+		</P>
+		<p>Other than the specifications mentioned, the way you design your page is up to you. However it should use semantically-correct tags. 
+		All your work should be validated. 
+		</P>
+
+        <hr />
+
+        <h2 id="submit">Submission</h2>
+
+        <p>
+          Your submission should contain all the files that contribute to
+          the Web site, including HTML, CSS, XML, XSL and image files. 
+          You must also include a <span class="file">README.txt</span> file,
+          containing your student number and a list of the files that are part
+          of your submission.
+        </p>
+
+        <p>
+          Finally, your submission should include a completed
+          Assignment Cover Sheet. You should download a
+          cover sheet template,
+          then fill in the details and include it with your submission.
+          <em>Note:</em> an Assignment Cover Sheet submitted electronically is deemed to
+          have been signed.
+          Your assignment <strong>cannot</strong> be marked until a completed cover sheet
+          is received.
+	  </p><p>Failure to follow submission instructions will incur a penalty.
+        </p>
+
+        <div class="warning">
+
+          <h3 id="plagiarism">Warning - Plagiarism</h3>
+
+          <p>
+            Plagiarism is defined as
+            <dfn>presenting the work of others' as if it were your own</dfn>.
+            This includes the copying of content from other people's
+            Web pages (and other sources) without "appropriate referencing"
+            (indicating the parts of your assignment which have been
+            copied and where they were copied from).
+          </p>
+
+          <p>
+            If you "quote" or use other people's work in your assignments, then
+            you <strong>must</strong> reference them appropriately. If you fail to do 
+            so you will be reported to the School's Student Academic Conduct Officer (SACO) 
+            for suspicion of plagiarism. An assignment that consists largely of work copied 
+            from elsewhere and referenced appropriately will receive very low (zero) marks.  
+          </p>
+
+          <p>
+            You can find more information on the University's
+            Policy on Student Academic Integrity in the Course Outline and at
+            <a href="http://www.newcastle.edu.au/policylibrary/000608.html">http://www.newcastle.edu.au/policylibrary/000608.html</a>.
+            You can find advise on quotation and appropriate referencing in the
+            <a href="http://libguides.newcastle.edu.au/managingyourreferences">InfoSkills</a> Web site.
+          </p>
+
+        </div>
+
+        <p>
+          The assignment is to be submitted on <a href="https://uonline.newcastle.edu.au/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_181_1">Blackboard</a>
+          via the  <strong>Assignments</strong> page .
+          To submit your files, place them all into a single
+          <span class="file">.zip</span> archive 
+          named with <b>your student id</b> (eg.,
+          <span class="file">c3012345.zip</span>).
+          
+        </p>
+
+        <p>
+          If you have trouble submitting, contact me as soon as you can.
+          Failure to submit correctly is not of itself a sufficient reason
+          to apply for Adverse Circumstances on the assignment.
+          
+        </p>
+
+        <hr />
+
+        <h2 id="marking">Marking Guidelines</h2>
+
+        <p>
+          The following serves as a rough guide to how many marks are allocated
+          to each part of the assignment.
+        </p>
+        <p style="font-size:larger">Total Marks: 100</p>
+        <ul>
+      
+          <li>Overall and Design: 20
+          </li>
+          <li>External Style sheet: 7
+          </li>
+          <li><a href="#home">Homepage</a>: 3
+           
+          </li>
+          <li><a href="#form">Data Collection Page</a>: 35
+   
+          </li>
+	    <li><a href="#peb">Restaurants Information Display Pages</a>: 35
+
+          </li>
+        </ul>
+
+</div>
+
+
+</body>
+
+</html>
+

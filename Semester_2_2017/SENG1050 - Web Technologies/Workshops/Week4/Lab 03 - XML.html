@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>SENG1050 - Laboratory 3</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		kbd, samp, code, span.file { color: blue }
+	</style>
+</head>
+
+<body>
+
+<div id="body">
+
+    <h1>SENG1050 - Laboratory 3</h1>
+
+    <p> The objectives of this lab are to:</p>
+    <ol>
+        <li><a href="#mod">understand and modify an XML data file to include new specifications;</a></li>
+        <li><a href="#xml">create an XML data file;</a></li>
+        <li><a href="#dtd">write a DTD describing your data file;</a></li>
+        <li><a href="#assign3">begin work on Assignment 1.</a></li>
+    </ol>
+
+    <hr>
+
+    <div class="toc">
+        <a href="#mod">Task 1</a> -
+        <a href="#xml">Task 2</a> -
+        <a href="#dtd">Task 3</a> -
+        <a href="#assign3">Task 4</a>
+    </div>
+
+    <hr>
+
+	<h2 id="mod">Task 1 - Creating XML Data</h2>
+
+        <ol>
+			<li>Look at the following Valid XML document <span class="file">bibliography.xml</span>.
+            <pre><code>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;!DOCTYPE bibliography [
+&lt;!ELEMENT bibliography (book+)&gt;
+  &lt;!ELEMENT book (author+, title, pub?, year, URL*)&gt;
+  &lt;!ELEMENT author (
+	(givenname | nickname)?, surname)&gt;
+  &lt;!ELEMENT givenname (#PCDATA)&gt;
+  &lt;!ELEMENT nickname (#PCDATA)&gt;
+  &lt;!ELEMENT surname (#PCDATA)&gt;
+  &lt;!ELEMENT title (#PCDATA)&gt;
+  &lt;!ELEMENT pub (#PCDATA)&gt;
+  &lt;!ELEMENT year (#PCDATA)&gt;
+  &lt;!ELEMENT URL (#PCDATA)&gt;
+]&gt;
+
+&lt;bibliography&gt;
+   &lt;book&gt;
+	&lt;author&gt;
+		&lt;nickname&gt;Fred&lt;/nickname&gt;
+		&lt;surname&gt;Flintstone&lt;/surname&gt;
+	&lt;/author&gt;
+	&lt;author&gt;
+		&lt;givenname&gt;Helen&lt;/givenname&gt;
+		&lt;surname&gt;James&lt;/surname&gt;
+	&lt;/author&gt;
+	&lt;title&gt;"Statistical Database Disclosure"&lt;/title&gt;
+	&lt;year&gt;2006&lt;/year&gt;
+	&lt;URL&gt;http://some.webaddress.com&lt;/URL&gt;
+	&lt;URL&gt;http://another.webaddress.com&lt;/URL&gt;
+   &lt;/book&gt;
+   &lt;book&gt;
+	&lt;author&gt;
+		&lt;surname&gt;Simpson&lt;/surname&gt;
+	&lt;/author&gt;
+	&lt;title&gt;"Homer's Odyssey"&lt;/title&gt;
+	&lt;pub&gt;Springer Verlag&lt;/pub&gt;
+	&lt;year&gt;2003&lt;/year&gt;
+   &lt;/book&gt;
+&lt;/bibliography&gt;
+            </code></pre></li>
+        	<li>Make sure you understand how the included DTD is working to define the structure of the XML. You may find it useful to
+        	    draw an XML Tree, as shown in the Lecture notes, to help you visualise the structure.</li>
+        	<li>Now think of how you can modify the DTD to
+        	    include information for a journal article as well as for a book. The bibliography entry for a journal article contains the following
+				information: Author(s) names (given name, surname, nickname, article title, journal name, volume number, issue number, page numbers (e.g. 10-17), 
+				year, URL). Then add to the XML to include at least one journal article.</li>
+        	<li>Validate your XML against the DTD by submitting it to an
+                <a href="http://validator.w3.org/">XML Validator</a>.</li>
+        </ol>
+		
+    <hr>
+
+    <h2 id="xml">Task 2 - Creating XML Data</h2>
+
+        <ol>
+			<li>Create a new plain-text file called <span class="file">airline.xml</span>.</li>
+			<li>Using your favourite text editor, copy the following information
+				(representing one "booking") into
+				<span class="file">airline.xml</span>.
+				<pre><kbd>
+Passenger: Paul J. Franks
+Address: University of Newcastle, University Drive, Callaghan, 2308
+Phone: 0249216175
+Leg:
+  Date: 11 Aug 2003
+  Flight: QF005
+  Depart: SYD, 15:45
+  Arrive: SIN, 21:35
+  Class: Economy
+  Aircraft: 744
+Leg:
+  Date: 21 Aug 2003
+  Flight: QF010
+  Depart: SIN, 19:45
+  Arrive: MEL, 04:55
+  Class: Economy
+Leg:
+  Date: 24 Aug 2003
+  Flight: QF434
+  Depart: MEL, 13:00
+  Arrive: SYD, 14:20
+  Class: Business
+  Aircraft: 73H
+				</kbd></pre></li>
+			<li>Add tags to make <span class="file">airline.xml</span>a <em>well-formed XML document</em>.
+				<ul>
+					<li>The root tag should be <code>&lt;bookings&gt;</code>.</li>
+					<li>All the booking information for one passenger should be	enclosed in a <code>&lt;booking&gt;</code> tag.</li>
+					<li>While adding tags, give some consideration to the structure
+						of the data. For example, a passenger name consists of three
+						parts - family name, given name, and initials - while
+						departure and arrival data consists of an airport code and
+						a time.</li>
+				</ul>
+			</li>
+        </ol>
+
+    <hr>
+
+    <h2 id="dtd">Task 3 - Create a Document Type Definition</h2>
+
+        <ol>
+			<li>Add an internal Document Type Definitions (DTD) to <span class="file">airline.xml</span>.
+				<ul>
+					<li>There are potentially many (but possible zero) bookings.</li>
+					<li>Addresses and phone numbers are optional.</li>
+					<li>There is at least one leg in each bookings.</li>
+					<li>Class and aircraft information is optional.</li>
+				</ul>
+			</li>
+			<li>Validate your XML against the DTD by submitting it to an
+				<a href="http://validator.w3.org/">XML Validator</a>.</li>
+        </ol>
+
+    <hr>
+
+    <h2 id="assign3">Task 4 - Create DTD and XML file for data transfer</h2>
+		<p>(Perhaps to be completed as homework if there is not sufficient time in laboratory.)</p>
+        <p>
+          Coles has hired you to transfer all of its customer records from the Oracle database to MySQL database. 
+		  You decide to use XML for transferring the records. The following information is stored for each customer: 
+		  Name, Date of Birth, Address, Phone number, Flybuys number and a sequence of purchase records. In each 
+		  purchase record the stored information is: Purchase date, Purchase time, Store ID, Total amount and the 
+		  list of items purchased. For each purchased item the following information is saved: Item code, Item name, 
+		  Unit price, Quantity, Item price. The following rules are imposed: </p> 
+			<ul>
+				<li>Each customer record has potentially many (but possible zero) purchase records.</li>
+				<li>Address of customer is optional but phone number is mandatory.</li>
+				<li>There should be at least one item in each purchase.</li>
+			</ul>
+		<p>Your first step is to get the following steps done for data transfer:</p>
+			<ol>
+				<li>Create an external DTD for representing the customer purchase history.</li>
+				<li>Create a valid XML file with at least two customer records where each customer record contains at least two purchase records.</li>
+				<li>Validate your XML against the DTD by submitting it to an XML validator.</li>
+			</ol>
+		
+	<hr>
+	
+</div>
+
+<div id="copyright">
+    <p>
+    <a href="http://validator.w3.org/check?uri=referer">
+		<img src="vs-blue-256.png" alt="Valid XHTML 1.0 Transitional" height="31"></a>
+	</p>
+</div>
+
+</body>
+
+</html>
+

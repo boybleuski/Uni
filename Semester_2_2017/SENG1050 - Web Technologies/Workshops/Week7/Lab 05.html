@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>SENG1050 - Laboratory 5</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+
+	</style>
+</head>
+
+<body>
+
+	<div id="body">
+
+		<h1>SENG1050 - Laboratory 5</h1>
+        <p>
+          The objectives of this lab are:
+        </p>
+        <ol>
+			<li>learn about some more features of HTML, that were covered in Week 5 lectures.
+				<ul>
+					<li><a href="#forms">Forms</a></li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#struct">HTML5 Structural Elements</a></li>
+					<li><a href="#imagemap">Image Maps</a></li>
+				</ul>
+			</li>
+        </ol>
+
+        <hr>
+
+        <div class="toc">
+			<a href="#forms">Task 1</a> -
+			<a href="#tables">Task 2</a> -
+			<a href="#struct">Task 3</a> -
+			<a href="#imagemap">Task 4</a>
+        </div>
+
+        <hr>
+
+        <h2 id="forms">Task 1 - HTML Forms</h2>
+
+			<p>
+				In this task, you are going to use HTML5 input types and attributes to create a simple form for submitting information to a Web server.
+				Note that we do not need you to know how the CGI script is working. The main aim of this
+				task is for you to become familiar with the various HTML5 form elements, to help you create your form
+				for Assignment 2.
+			</p>
+
+			<ol>
+				<li>Make a new copy of your
+					<span class="file">template.html</span>
+					file and open it in your favourite plain-text editor (e.g. notepad or textpad).</li>
+				<li>After adding an appropriate title and level-1 heading,
+					insert form tags into the body of your document:
+					<pre><code>&lt;form&gt;
+					&lt;/form&gt;</code></pre></li>
+				<li>In the opening of the form tag, use attributes <code>method="get"</code> and
+					<code>action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi"</code>.</li>
+				<li>Within the form, place elements to accept the following information.
+					<ul>
+						<li>The applicant's first name (<code>&lt;input type="text"&gt;</code>, use <code>placeholder="First name only"</code> and <code>required</code> attributes)</li>
+						<li>The applicant's last name  (similar to first name)</li>
+						<li>The applicant's date of birth (<code>&lt;input type="date"&gt;</code>, make it <code>required</code>)</li>
+						<li>The applicant's age (<code>&lt;input type="number"&gt;</code>, use <code>min, max</code> and <code>value</code> attributes to set the minimum, maximum and default ages)</li>
+						<li>The applicant's email (<code>&lt;input type="email"&gt;</code>, use <code>placeholder</code> attribute and make it <code>required</code>)</li>     
+						<li>The applicant's website (<code>&lt;input type="url"&gt;</code>, use <code>placeholder</code> attribute)</li>      
+						<li>The applicant's phone number (<code>&lt;input type="tel"&gt;</code>, use <code>placeholder</code> attribute and make it <code>required</code>)</li>
+						<li>The applicant's skill level (<code>&lt;input type="range"&gt;</code>, set attributes <code>min="1", max="10"</code> and <code>value="1"</code>)</li>
+						<li>The applicant's address (<code>&lt;textarea&gt;</code>, set attributes <code>rows="5"</code> and make it <code>required</code>)</li> 
+						<li>The applicant's postcode (<code>&lt;input type="text"&gt;</code>, use <code>size="4"</code> and <code>maxlength="4"</code> attributes)</li>
+						<li>The applicant's state ( use <code>&lt;select&gt;</code> and <code>&lt;option&gt;</code> tags. Use one <code>&lt;option&gt;</code> tag for each of the states (<code>NSW,QLD,SA,TAS,VIC,WA</code>) )</li>
+						<li>The applicant's card type (create three <code>&lt;input type="radio"&gt;</code> buttons; use <code>name</code> attribute to ensure that only one of the three card types (<code>visa,mastercard,amex</code>) 
+							can be chosen and set <code>visa</code> to be the default choice using the <code>checked</code> attribute)</li> 
+						<li>The name on the card (similar to first name/last name)</li>
+						<li>The card number (<code>&lt;input type="number"&gt;</code>)</li>
+						<li>The card's security code (<code>&lt;input type="number"&gt;</code>, use <code>min</code> and <code>max</code> attributes to enforce the security code to be a 3 digit positive number)</li>
+						<li>The card's expiry date (<code>&lt;input type="month"&gt;</code>)</li>
+						<li>For each form control associate a label with <code>&lt;label&gt;</code> tag (use explicit labelling)</li>
+						<li>Group the form controls into four groups with <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> tags as shown in the following figure</li>
+					</ul>
+					There should also be a button to submit the form,
+					and a button to reset the form.</li>
+			</ol>
+
+			<div>
+				<p>
+					Your form could look something like this.
+				</p>
+				<div class="img">
+					<figure>
+						<img src="/bbcswebdav/xid-11379903_1" alt="Sample Form" >
+  
+					</figure>
+				</div>
+			</div>
+
+			<p>
+				After submitting the form, you should see a list of the information
+				that the server-side CGI script received from your Web browser.
+			</p>
+
+			<hr>
+
+        <h2 id="tables">Task 2 - HTML Tables</h2>
+
+			<p>
+				In this task, you are going to use an HTML table to display
+				some statistical data about the Web.
+			</p>
+
+			<ol>
+				<li>Make a new copy of your <span class="file">template.html</span>
+					file and open it in your favourite plain-text editor.</li>
+				<li>After adding an appropriate title and level-1 heading,
+					insert table tags into the body of your document:
+					<pre><code>&lt;table&gt;
+					&lt;/table&gt;</code></pre></li>
+				<li>Inside the table tags, insert <code>&lt;thead&gt;</code>,
+					<code>&lt;tfoot&gt;</code> and
+					<code>&lt;tbody&gt;</code> tags (they <strong>must</strong> be in that order).</li>
+				<li>Go to the
+					<a href="http://www.isc.org/">Internet Systems Consortium</a>
+					site and copy some data from the
+					<a href="http://ftp.isc.org/www/survey/reports/2013/01/bynum.txt">Distribution of Top-Level Domain Names by Host Count, January 2013</a>.
+					You do not have to copy <em>all</em> the data
+					- just the first 8-10 rows will do.</li>
+				<li>Use this data to fill the body of your table.
+					Each cell should be enclosed in a table data (<code>&lt;td&gt;</code>) tag,
+					and each row of cells should be enclosed in a table row (<code>&lt;tr&gt;</code>) tag.</li>
+				<li>Into the head of your table, place a row with the headings of the table. Each cell of this row should use the table heading (<code>&lt;th&gt;</code>) tag.</li>
+				<li>Into the foot of your table, the totals as listed for the
+					<a href="http://ftp.isc.org/www/survey/reports/2013/01/bynum.txt">original data</a>.</li>
+				<li>Finally, add an appropriate <code>&lt;caption&gt;</code> to the table, including a hyperlink to the source of the <a href="http://ftp.isc.org/www/survey/reports/2013/01/bynum.txt">original data</a>.</li>
+			</ol>
+
+			<p>
+				Now you can add visual formatting suggestions for your table.
+			</p>
+
+			<ol>
+				<li>In the content of the <code>&lt;head&gt;</code> tag, place a CSS <code>&lt;style&gt;</code> tag:
+					<pre><code>&lt;style type="text/css"&gt;
+					&lt;/style&gt;</code></pre></li>
+				<li>Inside this <code>&lt;style&gt;</code> tag, add CSS rules to
+						suggest visual formatting for your tables.
+					<ul>
+						<li>You will have to add <code>class</code> attributes to some
+							tags to differentiate certain rows and columns.</li>
+						<li>You should at least change the text alignment of the numbers
+							to be right aligned,
+							without changing the alignment of the rest of the table's cells
+							(hint: apply <code>text-align: right</code> to the body of the
+							table, then override this with <code>text-align: left</code>
+							on those cells where <code>class="domain"</code> or
+							<code>class="name"</code>).</li>
+						<li>You should have different background colours for the cells of
+							the head, the body and the foot of the table.</li>
+					</ul></li>
+			</ol>
+
+			<p>
+				Don't forget to validate your <a href="http://validator.w3.org/">HTML</a> and
+				<a href="http://jigsaw.w3.org/css-validator/">CSS</a>.
+			</p>
+
+			<p>
+				Your completed table should look something like this (but with current figures).
+			</p>
+
+			<div class="img">
+				<figure>
+					<img src="table-small.png" alt="Table of statistics" width="700" >
+				</figure>
+			</div>
+
+			<h4>More tasks with table (optional/homework) </h4>
+				<p> Change your table with <code>'rowspan'</code> and <code>'colspan'</code> attributes. </p>
+				<ul> 
+					<li>Using <code>'colspan'</code> property, merge cells (r3,c5) and (r3,c6) where (rX,cY) represent the cell at row X, column Y.</li>
+					<li>Using <code>'rowpan'</code> property, merge cells (r5,c2), (r6,c2) and (r7, c2).</li>
+					<li>Insert random numbers in merged cells.</li>
+				</ul>
+		
+			<hr>
+		
+        <h2 id="struct">Task 3 - HTML Structural elements</h2>
+
+			<p>
+				In this task, you are going to create a page structure for HTML5 using the newly introduced structural elements.
+			</p>
+
+			<ol>
+				<li>Make another copy of your
+					<span class="file">template.html</span>
+					file and open it in your favourite plain-text editor.</li>
+				<li>Add different structural elements of HTML5 introduced in Week 05 lectures to create a page layout.</li>
+				<li>Your page should include atleast the following elements: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> and <code>&lt;footer&gt;</code>.  </li>
+				<li>Add some formatting to your HTML5 elements using CSS.</li>
+				<li>You can start with the code from Week05 lecture and modify it adding formatting and some text content.</li>
+			</ol>
+			<p>
+				Your completed page should have all the structural elements shown in the following figure and you should try to reorganize them.
+			</p>
+
+			<div class="img">
+				<figure>
+					<img src="/bbcswebdav/xid-11379905_1" alt="HTML structural elements" width="400" >
+				</figure>
+			</div>
+			
+			<p>
+				Be sure to <a href="http://validator.w3.org/">validate</a>
+				your designed HTML5 page.
+			</p>
+
+        <hr>
+
+        <h2 id="imagemap">Task 4 - Image Maps (Client side)</h2>
+
+			<p>
+				Image maps can be very useful items - you only need 1 image and you can
+				put as many links as you want on it. Using the following free map of Australia we will create an image map for Australian state governments' websites.
+			</p>
+
+			<div class="img">
+				<figure>
+					<img src="australia.jpg" alt="Free Map of Australia">
+					<figcaption>Figure: A free map of Australia. Source: <a href="http://www.allfreevectors.com/014-Australia-map-free-vector-image-9091.html">All Free Vectors</a></figcaption>
+				</figure>
+			</div>
+			<p>
+				Now that we have a free and ready image, we need to turn it into an image map. 
+			</p>
+			<ol>
+				<li>Create another copy of <span class="file">template.html</span> and open it in your favourite plain-text editor.</li>
+				<li>Insert the above image of the map of Australia (you can find it in your 'Lab 05' folder) using the <code>&lt;img&gt;</code> and set <code>usemap</code> attribute to some name e.g. <code>"#aus-govs"</code>.</li>
+				<li>Insert the <code>&lt;map&gt;</code> tag and link it with the inserted image using the <code>name</code> attribute.</li>
+				<li>Inside the <code>&lt;map&gt;</code> tag insert an <code>&lt;area&gt;</code> tag with shape <code>rect</code>. Choose some <code>coords</code> attribute for <code>rect</code> tag and 
+					set <code>href</code> attribute to <code>"https://www.nsw.gov.au/"</code>.</li>
+				<li>Open your html file in browser and check if clicking in the area takes you to the target website. </li>
+				<li>Now adjust the coordinates so that the <code>area</code> roughly covers the New South Wales region in the map. You might need to use a trial and error approach to choose the right <code>coords</code>.</li>
+				<li>Repeating Steps 4 to 6 insert another <code>area</code> for Western Australia region with <code>rect</code> shape and link to <code>http://www.wa.gov.au/</code>.</li>
+				<li>Once again repeat Steps 4 to 6 to insert another <code>area</code> for Tasmania with <code>circle</code> shape and link to <code>http://www.tas.gov.au/</code>.</li>
+			</ol>
+
+			<br>
+			<p>
+				Also, if the user clicks
+				somewhere that is not in a shape, they should be sent to <em>index.html</em>. Give it a go - use the lecture notes to find the detials about the tags, and look for examples on the internet to help you.
+			</p>
+
+		<hr>
+		
+	</div>
+
+	<div id="copyright">
+		<p>
+			<a href="http://validator.w3.org/check?uri=referer"><img
+				src="vs-blue-256.png"
+				alt="Valid HTML 5" height="31" ></a>
+		</p>
+	</div>
+
+</body>
+
+</html>

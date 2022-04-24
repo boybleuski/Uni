@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>SENG1050 - Laboratory 5</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+			kbd, samp, code, span.file { color: blue }
+			figure { font-size: x-small }
+		</style>
+	</head>
+
+	<body>
+		<div id="body">
+			<h1>SENG1050 - Laboratory 5</h1>
+			<p>
+				The objectives of this lab are to use XSLT to incorporate your XML data into a HTML page.
+			</p>
+
+			<hr>
+
+			<div class="toc">
+				<a href="#xslt">Task 1</a> -
+				<a href="#xslt2">Task 2</a>
+			</div>
+
+			<hr>
+
+			<h2 id="xslt">Task 1 - Transforming your XML Data with XSLT</h2>
+
+			<ol>
+				<li>We will be working with our original XML files that were made in Lab 3. 
+				(if you don't have <span class="file">airline.xml</span>, you can download it from Blackboard).
+				You will create and use an XSL file to display/style the contents of your <span class="file">airline.xml</span>.</li>
+				<li> 
+					Add the following line to <span class="file">airline.xml</span> (assuming this 
+					is what you named your .xml file in Lab 3), immediately before the DTD.
+					<pre><code>&lt;?xml-stylesheet type="text/xsl" href="airline-xslt.xsl"?&gt;</code></pre>
+				</li>
+				<li>
+					Create a new plain-text file called
+					<span class="file">airline-xslt.xsl</span> in the same directory
+					as <span class="file">airline.xml</span>.
+				</li>
+				<li>
+					Using your favourite text editor, copy the following XML into
+					<span class="file">airline-xslt.xsl</span>:
+					<pre>
+						<code>						
+&lt;xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+&lt;xsl:output method="html" /&gt;
+
+    &lt;xsl:template match="bookings"&gt;
+
+	   &lt;html&gt;
+		 &lt;head&gt;	
+		 
+			&lt;title&gt;Banana Airline Bookings&lt;/title&gt;		
+			&lt;meta charset="UTF-8"&gt;	
+			
+		  &lt;/head&gt;
+		  &lt;body&gt;
+		  
+			&lt;h1&gt;Welcome to Banana Airlines&lt;/h1&gt;
+			
+			
+			<!-- &lt;xsl:apply-templates select="booking" /&gt; -->
+		  &lt;/body&gt;
+	   &lt;/html&gt;
+	   
+    &lt;/xsl:template&gt;
+	
+&lt;/xsl:stylesheet&gt; </code>
+					</pre>
+				</li>	
+				<p>
+					XSLT is made up of a collection of templates. (Refer to the diagram below). Here, <code>&lt;xsl:template match="bookings"&gt;</code> 
+					acts as a "main" template. In an XSL File, your main template is where you include
+					your <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> html tags (You <i> do not </i> include these in any other template).
+					Below your main template, you can create additional templates that you can use to style different sections of your XML. For instance: 
+				</p>		
+				<li>
+					Add a new template in between <code>&lt;/xsl:template&gt;</code> and <code>&lt;/xsl:stylesheet&gt;</code> to display data 
+					from the booking tag:				
+					<pre>
+					<code>				
+&lt;xsl:template match=”booking”&gt;
+
+
+
+&lt;/xsl:template&gt; </code>
+					</pre>
+		
+				</li>
+				<li>
+					In order to use this template, you must use <code>&lt;xsl:apply-templates select="booking"&gt;</code> in the body of your "main" template. 
+					Notice that they both match with <code>"booking"</code>. 
+					<br><br>
+					It is important that you understand the structure of an XSL File, and how <code>&lt;apply-templates&gt;</code> are related to <code>&lt;template&gt;</code>.
+					If it is still unclear, ask your demonstrator for help.<br><br>
+					
+					<img src="/bbcswebdav/xid-11389882_1" alt="XSLtemplateStructure.jpg" /> <br><br>
+					<figure> Example of the structure for XSLT </figure> <br>
+				</li>
+				<li>
+					Inside your new <code> bookings </code> template, use <code>&lt;xsl:value-of select="<i>subpath</i>"/&gt;</code> to display the passenger's first name,
+					last name, address and phone number on the screen (Replace <i>subpath</i> with the X-path to the tag you want to display). 
+					Please ensure that you provide the correct X-path. Refer to Lecture 7, Slides 36-43 for more information on X-Paths. 
+				</li>
+				<li>
+					You can view your newly styled XML by opening <span class="file">airline.xml</span> in your web browser. 
+					Call your demonstrator if you are having issues displaying the data.
+				</li>
+				<li>
+					Create data labels using <code>&lt;xsl:text&gt;</code> tags.
+				</li>
+				<li>
+					Use <code>&lt;for-each&gt;</code> to display data for all 3 legs.
+				</li>				
+				<li>Display an attribute using XSLT's <span style="color:blue">@</span>. If you do not have an attribute in 
+					<span class="file">airline.xml</span>, then create one (For example, a bookingID). </li>
+				<li>
+					Add more <code>&lt;xsl:template&gt;</code>s that match with any additional tags you've created 
+					in <code>airline.xml</code>.
+					Pay careful attention to the order in which templates will be processed.
+					It is important that you understand how the
+					<code>&lt;apply-templates /&gt;</code> works with regards to this. (<i>Hint</i>: slides 38-40 
+					cover apply-templates). <br><br>	
+				</li>
+				<li>
+				Add the necessary XSLT tags to have the bookings displayed in
+				alphabetical order by passenger.
+				</li>
+				<li>
+				Use some html tags to style some of this data.
+				</li>
+			</ol>
+
+			<p>
+				If all was successful, then when you view
+				<span class="file">airline.xml</span>
+				in your Web browser you could see something like this.
+			</p>
+			<div class="img">
+				<img src="xslt.jpg" alt="airline.xml after applying XSLT" />
+			</div>
+
+			<hr />
+
+
+			<h2 id="xslt2">Task 2 - More Advanced XSLT</h2>
+
+			<p>
+				OK, now let's use some of the more advanced XSLT features. See if you can alter your XSLT file 
+				to do the following things...
+			</p>
+
+			<ol>
+				<li>Sort the flights alphabetically by the flight code</li>
+				<li>Only show the flights that are Economy</li>
+				<li>
+					If the flight departs Sydney, it should be colored red. All other flights should be 
+					colored green.
+				</li>
+				<li>
+					If there is no aircraft type for a flight, display a line that says "Plane Type Unknown". 
+					The line should have a style class so that it stands out.
+				</li>
+				<li>
+					Experiment with using an external CSS file to style your XSLT.
+				</li>
+				<li>
+					Research and experiment with some of the programming functions in XSLT. A good reference 
+					point is <a href="http://www.w3schools.com">W3 Schools</a>.
+				</li>
+			</ol>
+
+			<p>
+				To use XSLT well, you should understand the basics of XPath.  If you completed the 
+				previous tasks in this lab, you have already used XPath and may already have an intuitive 
+				understanding of it.  Regardless, increasing your understanding of XPath will be an advantage when 
+				you move onto assignment 2.  <br>
+				<br>To that end, first read through the lecture slides (slides 23-30 
+				describe XPath and use it in examples). A link to a very concise set of examples is given in the slides (link: 
+				<a href="http://www.zvon.org/xxl/XPathTutorial/Output/example1.html">
+					http://www.zvon.org/xxl/XPathTutorial/Output/example1.html
+				</a>
+				), which may be beneficial to refer to.
+				
+				<p> <span style="color:red"> <i> Hint: </i> </span> Slide 37 lists XSLT tags that you can use for Task 2. </p>
+			</p>
+
+		</div>
+		
+		<hr />
+		
+		<h3 style="color:red; text-align:center"> IMPORTANT NOTICE </h3>
+		<p> If you are having trouble understanding XSLT at any point during the lab exercises, call your demonstrator to explain it to you again. 
+		It is essential that you understand the basics of XSLT as they appear in your 2nd Assignment and take up much of the final exam. </p>
+		
+		<hr />
+		<div id="copyright">
+		<p> The lab instructions were written by Helen Giggins and Joe Ryan, and updated by Sharlene Von Drehnen, 2016.</p>
+			<p>
+				<a href="http://validator.w3.org/">
+				<img
+				src="vs-blue-256.png"
+				alt="Validator" height="31" width="88" />
+				</a>
+			</p>
+
+
+		</div>
+
+	</body>
+
+</html>
+

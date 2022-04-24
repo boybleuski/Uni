@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE restaurants [
+  <!ELEMENT restaurants (restaurant*)>
+  <!ELEMENT restaurant (cuisine, restname, restlogo?, foodpic+, url, address, 
+  phone+, openhours, delivery, description, headchef, specials?, pricerange)>
+  <!ELEMENT cuisine (#PCDATA)>
+    <!ATTLIST cuisine type (BBQ|Bistro|Burgers|Chinese|French|Indian|Italian|Thai) #REQUIRED>
+  <!ELEMENT restname (#PCDATA)>
+  <!ELEMENT restlogo (#PCDATA)>
+  <!ELEMENT foodpic (#PCDATA)>
+  <!ELEMENT url (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT phone (#PCDATA)>
+  <!ELEMENT openhours (time, days)>
+    <!ELEMENT time (#PCDATA)>
+    <!ELEMENT days (#PCDATA)>
+  <!ELEMENT delivery (minprice, deliveryfee)>
+    <!ELEMENT minprice (#PCDATA)>
+    <!ELEMENT deliveryfee (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT headchef (#PCDATA)>
+  <!ELEMENT specials (specialitem+)>
+    <!ELEMENT specialitem (#PCDATA)>
+      <!ATTLIST specialitem type (Beef|Fish|Pork|Poultry|Shellfish|Vegan|Vegetarian) #REQUIRED>
+  <!ELEMENT pricerange (lowprice, highprice)>
+    <!ELEMENT lowprice (#PCDATA)>
+    <!ELEMENT highprice (#PCDATA)>
+  <!ENTITY mar "Margaretville">
+]>
+
+<restaurants>
+  <restaurant>
+    <cuisine type ="Thai"></cuisine>
+    <restname>Blue Moon Thai</restname>
+    <restlogo></restlogo>
+    <foodpic></foodpic>
+    <url>http://www.bluemoon.com.au</url>
+    <address>55 Morgan Street, &mar;</address>
+    <phone>02 4928 6238</phone>
+    <openhours>
+      <time>11-3pm, 6-9pm</time>
+      <days>Monday-Sunday</days>
+    </openhours>
+    <delivery>
+      <minprice>$50</minprice>
+      <deliveryfee>$25</deliveryfee>
+    </delivery>
+    <description>Vibrant Thai restaurant located inside a popular local club.  Offers delivery and catering services.</description>
+    <headchef>Jose Nguyen</headchef>
+    <pricerange>
+      <lowprice>$5</lowprice>
+      <highprice>$22</highprice>
+    </pricerange>
+  </restaurant>
+
+  <restaurant>
+    <cuisine type="Thai"></cuisine>
+    <restname>Knott's Thai</restname>
+    <restlogo></restlogo>
+    <foodpic></foodpic>
+    <url>http://www.knottsthai.com.au</url>
+    <address>144 Dunsparce Road, &mar;</address>
+    <phone>02 4928 5525</phone>
+    <openhours>
+      <time>11-3pm, 6:30-10pm</time>
+      <days>Tuesday-Sunday</days>
+    </openhours>
+    <delivery>
+      <minprice>$75</minprice>
+      <deliveryfee>$25</deliveryfee>
+    </delivery>
+    <description>Family-owned since 1980.  Famous for its authentic decor, as well as its curry.</description>
+    <headchef>Basil Knott</headchef>
+    <pricerange>
+      <lowprice>$8</lowprice>
+      <highprice>$28</highprice>
+    </pricerange>
+  </restaurant>
+
+  <restaurant>
+    <cuisine type="Thai"></cuisine>
+    <restname>Bangkok's Finest</restname>
+    <restlogo></restlogo>
+    <foodpic></foodpic>
+    <url>http://www.bangkoksfinest.com.au</url>
+    <address>160 Kelso Avenue, &mar;</address>
+    <phone>02 4929 8809</phone>
+    <openhours>
+      <time>10-3pm, 6-10:30pm</time>
+      <days>Monday-Saturday</days>
+    </openhours>
+    <delivery>
+      <minprice>N/A</minprice>
+      <deliveryfee>N/A</deliveryfee>
+    </delivery>
+    <description>Fusion restaurant with modern, sleek decor and a string Thai influence.</description>
+    <headchef>Tuni Karnchan</headchef>
+    <specials>
+      <specialitem type="Shellfish">King crablettes</specialitem>
+    </specials>
+    <pricerange>
+      <lowprice>$8</lowprice>
+      <highprice>$30</highprice>
+    </pricerange>
+  </restaurant>
+</restaurants>

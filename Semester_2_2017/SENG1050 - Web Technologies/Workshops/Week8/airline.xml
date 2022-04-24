@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="airline-xslt.xsl" type="text/xsl"?>
+
+<!DOCTYPE bookings [
+<!ELEMENT bookings (booking*)>
+<!ELEMENT booking (passenger, address?, phone?, leg+)>
+  <!ELEMENT leg (date, flight, depart, arrive, class, aircraft?)>
+  <!ELEMENT passenger (givenname, initial, familyname)>
+  <!ELEMENT givenname (#PCDATA)>
+  <!ELEMENT initial (#PCDATA)>
+  <!ELEMENT familyname (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT phone (#PCDATA)>
+  <!ELEMENT date (#PCDATA)>
+  <!ELEMENT flight (#PCDATA)>
+  <!ELEMENT depart (airportcode, time)>
+  <!ELEMENT arrive (airportcode, time)>
+  <!ELEMENT airportcode (#PCDATA)>
+  <!ATTLIST airportcode airport (CDATA) #REQUIRED>
+  <!ELEMENT time (#PCDATA)>
+  <!ELEMENT class (#PCDATA)>
+  <!ELEMENT aircraft (#PCDATA)>
+
+]>
+
+
+<bookings>
+<booking>
+
+<passenger>
+  <givenname>Paul</givenname>
+  <initial>J</initial>
+  <familyname>Franks</familyname>
+</passenger>
+<address>University of Newcastle, University Drive, Callaghan, 2308</address>
+<phone>0249216175</phone>
+<leg>
+  <date>11 Aug 2003</date>
+  <flight>QF555</flight>
+  <depart>
+     <airportcode airport="Sydney">SYD</airportcode>
+     <time>15:45</time>
+  </depart>
+  <arrive>
+     <airportcode airport="Singapore">SIN</airportcode>
+     <time>21:35</time>
+  </arrive>
+  <class>Economy</class>
+  <aircraft>744</aircraft>
+</leg>
+<leg>
+  <date>21 Aug 2003</date>
+  <flight>QF010</flight>
+  <depart>
+     <airportcode airport="Singapore">SIN</airportcode>
+     <time>19:45</time>
+  </depart>
+  <arrive>
+     <airportcode airport="Melbourne">MEL</airportcode>
+     <time>04:55</time>
+  </arrive>
+  <class>Economy</class>
+</leg>
+<leg>
+  <date>24 Aug 2003</date>
+  <flight>QF434</flight>
+  <depart>
+     <airportcode airport="Melbourne">MEL</airportcode>
+     <time>13:00</time>
+  </depart>
+  <arrive>
+     <airportcode airport="Sydney">SYD</airportcode>
+     <time>14:20</time>
+  </arrive>
+  <class>Business</class>
+  <aircraft>73H</aircraft>
+</leg>
+
+</booking>
+</bookings>

@@ -1,0 +1,42 @@
+body {margin:10px; background-color:#fffaee;color:black;font-family:arial;}
+
+#head { width: 100% }
+
+#location { text-align: left }
+#location img { vertical-align: top; float: left }
+
+#quick { vertical-align: top; text-align: right }
+
+#main { width: 100%; border-top-style: groove; border-bottom-style: groove }
+
+#menu { width: 15%; border-right-style: groove; vertical-align: top; padding: 0 }
+#menu ul { margin: 0; padding: 0 }
+#menu li { list-style-type:none; margin: 1ex 1ex 1ex 0ex; background-color: #eeeeee }
+
+h1 { text-align: center }
+h2 { text-align: left }
+hr { width: 50%; text-align: center; color:navy }
+
+#foot { width: 100% }
+
+#valid { vertical-align: top }
+
+#copyright { vertical-align: top; text-align: right; font-size: x-small }
+
+kbd { font-family: monospace }
+samp { font-family: monospace }
+.menu { font-family: monospace }
+.file { font-family: monospace }
+.host { font-family: monospace }
+
+div.img { text-align: center; padding: 0.5em }
+div.img img { border-style: solid }
+
+div.toc { text-align: center; margin-left: auto; margin-right: auto }
+
+.due { font-size: large; font-weight: bold }
+strong.warning { color: #cc0000; background-color: #ffff33; border-style: none }
+.warning { text-align: center; color: #cc0000; background-color: #ffff33; border-style: outset }
+.warning h3 { font-size: x-large; text-decoration: underline }
+.warning p { font-style: italic }
+.todo { color: red }

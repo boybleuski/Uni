@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Online Survey</title>
+  <script type="text/javascript">
+    function requiredFields()
+    {
+      if(!document.yourinfo.firstname.value == null || !document.yourinfo.firstname.value == "")
+      {
+        if(document.yourinfo.email.value.endsWith(".com"))
+        {
+          if(document.getElementById("male").checked || document.getElementById("female").checked)
+          {
+            if(document.getElementById("bbq").checked || document.getElementById("bistro").checked ||
+              document.getElementById("burgers").checked || document.getElementById("chinese").checked ||
+              document.getElementById("french").checked || document.getElementById("indian").checked ||
+              document.getElementById("italian").checked || document.getElementById("thai").checked ||
+              document.getElementById("other").checked)
+            {
+              if(!document.getElementById("age").value == "")
+              {
+                return true;
+              }
+              else
+              {
+                alert("You need to select an age range.")
+                return false;
+              }
+            }
+            else
+            {
+              alert("You need to choose at least one cuisine.")
+              return false;
+            }
+          }
+          else
+          {
+            alert("You need to input your gender.")
+            return false;
+          }
+        }
+        else
+        {
+          alert("Not a valid email address.");
+          return false;
+        }
+      }
+      else
+      {
+        alert("You need to input your first name.");
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+  </header>
+
+  <main>
+    <h1>About You</h1>
+    <form name="yourinfo" method="post" action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" onSubmit="return requiredFields()">
+    <div class="transbox">
+      <p><em>Note: * denotes a required field.</em></p>
+
+      <p>
+        Sex*:
+        <label for="male">Male</label>
+        <input type="radio" name="sex" value="male" id="male">
+        <label for="female">Female</label>
+        <input type="radio" name="sex" value="female" id="female">
+      </p>
+
+      <p>
+        <label for="firstname">First name*: </label>
+        <input type="text" name="firstname" id="firstname">
+        <label for="othername">Middle name/s: </label>
+        <input type="text" name="othername" id="othername">
+        <label for="lastname">Last name: </label>
+        <input type="text" name="lastname" id="lastname">
+      </p>
+
+      <p>
+        <label for="email">Email*: </label>
+        <input type="text" name="email" id="email">
+      </p>
+
+      <p>
+        Age range*:
+        <select name="age" id="age">
+          <option></option>
+          <option>less than 20</option>
+          <option>20-30</option>
+          <option>31-40</option>
+          <option>41-50</option>
+          <option>51-60</option>
+          <option>more than 60</option>
+        </select>
+      </p>
+
+      <p>
+        Address(optional):
+        <textarea name="address" rows="4" cols="50">
+        </textarea>
+        <label for="postcode">Postcode: </label>
+        <input type="text" name="postcode" id="postcode">
+      </p>
+
+      <p>
+        Which cuisines are you interested in?*<br>
+        <label for="bbq">BBQ</label>
+        <input type="checkbox" name="cuisine" value="bbq" id="bbq"><br/>
+        <label for="bistro">Bistro</label>
+        <input type="checkbox" name="cuisine" value="bistro" id="bistro"><br/>
+        <label for="burgers">Burgers</label>
+        <input type="checkbox" name="cuisine" value="burgers" id="burgers"><br/>
+        <label for="chinese">Chinese</label>
+        <input type="checkbox" name="cuisine" value="chinese" id="chinese"><br/>
+        <label for="french">French</label>
+        <input type="checkbox" name="cuisine" value="french" id="french"><br/>
+        <label for="indian">Indian</label>
+        <input type="checkbox" name="cuisine" value="indian" id="indian"><br/>
+        <label for="italian">Italian</label>
+        <input type="checkbox" name="cuisine" value="italian" id="italian"><br/>
+        <label for="thai">Thai</label>
+        <input type="checkbox" name="cuisine" value="thai" id="thai"><br/>
+        <label for="other">Other</label>
+        <input type="checkbox" name="cuisine" value="other" id="other"><br/>
+      </p>
+
+      <p>
+        <input type="submit">
+        <input type="reset">
+      </p>
+
+    </div>
+    </form>
+  </main>
+
+  <footer>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>SENG1050 - Laboratory 9</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+
+			kbd, samp, code, span.file { color: blue }
+			ul{list-style-type:none}
+			td{padding:5px;text-align:center}
+
+		</style>
+	</head>
+
+	<body>
+
+
+		<div id="body">
+
+			<h1>SENG1050- Laboratory 9</h1>
+
+			<p>
+				The objectives of this lab are to:
+			</p>
+			<ol>
+				<li><a href="#enc">learn a little about compression and encodings</a></li>
+				<li><a href="#ass2">work on Assignment 2.</a></li>
+			</ol>
+
+			<hr />
+
+			<div class="toc">
+				<a href="#enc">Task 1</a>
+				<a href="#ass2">Task 2</a>
+			</div>
+
+			<hr />
+
+			<h2 id="enc">Task 1 - Huffman Encoding</h2>
+
+			<ul>
+				<li>
+					As you will see in this week's Lecture, Huffman Encoding is a simple statistical compression technique. To construct a Huffman code:
+
+					<ol>
+						<li>Rank all symbols by frequency of occurrence.</li>
+						<li>Repeatedly combine the two symbols of the lowest probability to form a new composite symbol</li>
+						<li>This builds a binary tree where each node is labelled with the frequency of all nodes beneath it</li>
+						<li>Follow the "trail" to each leaf - left is 0 right is 1.</li>
+						<li>This trail for each letter is it's Huffman Coding</li>
+					</ol>
+					<br /><br />
+				</li>
+				<li>
+					For example, consider the following text:
+					<ul>
+						<li><kbd>the three men were meant</kbd></li>
+						<li>
+							<ol>
+								<li>The symbols in order of frequency:
+									<table border="1">
+										<tr>
+											<td>e</td><td>t</td><td>h</td><td>r</td><td>m</td><td>n</td><td>w</td><td>a</td>
+										</tr>
+										<tr>
+											<td>7</td><td>3</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>1</td>
+										</tr>
+									</table>
+								</li>
+								<li>Now repeatedly add the smallest frequencies together. Then draw a tree from this once finished.  Ask your demonstrator for help if you are having problems.
+									<table border="1">
+										<tr>
+											<td>e (7)</td><td>e (7)</td><td>e (7)</td><td>e (7)</td><td>e (7)</td><td>e (7)</td><td></td><td></td>
+										</tr>
+										<tr>
+											<td>t (3)</td><td>t (3)</td><td>t (3)</td><td>t (3)</td><td>{th} (5)</td><td>{th} (5)</td><td>{e{th}} (12)</td><td></td>
+										</tr>
+										<tr>
+											<td>h (2)</td><td>h (2)</td><td>h (2)</td><td>h (2)</td><td></td><td></td><td></td><td></td>
+										</tr>
+										<tr>
+											<td>r (2)</td><td>r (2)</td><td>r (2)</td><td>{rm} (4)</td><td>{rm} (4)</td><td></td><td></td><td>{{e{th}}{{rm}{n{wa}}}} (20)</td>
+										</tr>
+										<tr>
+											<td>m (2)</td><td>m (2)</td><td>m (2)</td><td></td><td></td><td>{{rm}{n{wa}}} (8)</td><td>{{rm}{n{wa}}} (8)</td><td></td>
+										</tr>
+										<tr>
+											<td>n (2)</td><td>n (2)</td><td>{n{wa}} (4)</td><td>{n{wa}} (4)</td><td>{n{wa}} (4)</td><td></td><td></td><td></td>
+										</tr>
+										<tr>
+											<td>w (1)</td><td>{wa} (2)</td><td></td><td></td><td></td><td></td><td></td><td></td>
+										</tr>
+										<tr>
+											<td>a (1)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+										</tr>
+									</table>
+								</li>
+								<li>
+									Building a table from this encoding tree gives the Huffman Encoding
+									<table border="1">
+										<tr>
+											<td>e</td><td>t</td><td>h</td><td>r</td><td>m</td><td>n</td><td>w</td><td>a</td>
+										</tr>
+										<tr>
+											<td>00</td><td>010</td><td>011</td><td>100</td><td>101</td><td>110</td><td>1110</td><td>1111</td>
+										</tr>
+									</table>
+								</li>
+								<li>So my string would be encoded as: <kbd>0100110001001110000001010011011100010000101001111110010</kbd></li>
+							</ol>
+							<br /><br />
+						</li>
+					</ul>
+				</li>
+
+				<li>Use Huffman Encoding to compress the phrase <kbd>aardvarksandantelopeavoidanteaters</kbd><br /><br/></li>
+
+				<li>Assuming that it normally takes 8 bits to store a single ASCII character, how much has the message been compressed by the encoding? Calculate the compression both as a ratio (original_size / compressed_size, as in "a 4:1 compression ratio") and as the proportion reduced (1 - (compressed_size / original_size), as in "compressed by 75%").</li>
+			</ul>
+
+
+
+
+			<h2 id="ass2">Task 2 - Assignment 2</h2>
+			<p>
+				Work on Assignment 2. 
+				<!-- A good starting point is to get your Frames navigation section working correctly before starting your XSLT. -->
+			</p>
+		</div>
+		<div id="copyright">
+
+		<p>
+			<a href="http://validator.w3.org/">
+			<img
+			src="vs-blue-256.png"
+			alt="Validator" height="31" width="88" />
+			</a>
+		</p>
+
+
+		</div>
+	</body>
+
+</html>
+

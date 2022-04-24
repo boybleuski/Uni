@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE restaurants [
+  <!ELEMENT restaurants (restaurant*)>
+  <!ELEMENT restaurant (cuisine, restname, restlogo?, foodpic+, url, address, 
+  phone+, openhours, delivery, description, headchef, specials?, pricerange)>
+  <!ELEMENT cuisine (#PCDATA)>
+    <!ATTLIST cuisine type (BBQ|Bistro|Burgers|Chinese|French|Indian|Italian|Thai) #REQUIRED>
+  <!ELEMENT restname (#PCDATA)>
+  <!ELEMENT restlogo (#PCDATA)>
+  <!ELEMENT foodpic (#PCDATA)>
+  <!ELEMENT url (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT phone (#PCDATA)>
+  <!ELEMENT openhours (time, days)>
+    <!ELEMENT time (#PCDATA)>
+    <!ELEMENT days (#PCDATA)>
+  <!ELEMENT delivery (minprice, deliveryfee)>
+    <!ELEMENT minprice (#PCDATA)>
+    <!ELEMENT deliveryfee (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT headchef (#PCDATA)>
+  <!ELEMENT specials (specialitem+)>
+    <!ELEMENT specialitem (#PCDATA)>
+      <!ATTLIST specialitem type (Beef|Fish|Pork|Poultry|Shellfish|Vegan|Vegetarian) #REQUIRED>
+  <!ELEMENT pricerange (lowprice, highprice)>
+    <!ELEMENT lowprice (#PCDATA)>
+    <!ELEMENT highprice (#PCDATA)>
+  <!ENTITY mar "Margaretville">
+]>
+
+<restaurants>
+  <restaurant>
+    <cuisine type ="French"></cuisine>
+    <restname>Je Vaisque</restname>
+    <restlogo></restlogo>
+    <foodpic></foodpic>
+    <url>http://www.jevaisque.com.au</url>
+    <address>410 Jang Street, &mar;</address>
+    <phone>02 4928 2233</phone>
+    <openhours>
+      <time>12-3pm, 6-10pm</time>
+      <days>Wednesday-Sunday</days>
+    </openhours>
+    <delivery>
+      <minprice>N/A</minprice>
+      <deliveryfee>N/A</deliveryfee>
+    </delivery>
+    <description>A small and intimate setting with strong French influences.  Rich velvet-and-timber decor and gentle lighting make for a romantic night out.</description>
+    <headchef>Marco Frampton</headchef>
+    <specials>
+      <specialitem type="Beef">Filet mignon w/ roast vegetables, pumpkin puree and juniper berry jus </specialitem>
+      <specialitem type="Poultry">Coq au vin </specialitem>
+    </specials>
+    <pricerange>
+      <lowprice>$15</lowprice>
+      <highprice>$40</highprice>
+    </pricerange>
+  </restaurant>
+</restaurants>

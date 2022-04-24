@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SENG1050- Laboratory 8</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+			kbd, samp, code, span.file { color: blue }
+		</style>
+	</head>
+
+	<body>
+		<div id="body">
+			<h1>SENG1050- Laboratory 8</h1>
+	
+        <hr />
+
+        <div class="toc">
+          <a href="#ui">Task 1</a> -
+          <a href="#jstools">Task 2</a> -
+          <a href="#xslt1">Task 3</a> -
+		  <a href="#xslt2">Task 4</a> -
+		  <a href="#xslt3">Task 5</a>
+        </div>
+
+        <hr />
+
+		        <h2 id="ui">Task 1 - User Interface</h2>
+				Discuss how you can improve the following problems based on the information in 
+				<a href="http://hallofshame.gp.co.at/index.php%3Ffile%3Dshame.htm%26mode%3Doriginal"> Hall of Shame</a>
+					<ol>		
+
+						<li> Is there progress? <br /><br />
+							<img src="userInterface/noProgressBar.gif" alt="no progress bar"/> <br /><br /> or <br /><br />
+							<img src="userInterface/progressBar.gif" alt="progress bar"/> <br /><br />
+						</li>
+						<li> I want them all ! <br /><br />
+							<img src="userInterface/checkBox.gif" alt="no progress bar"/> <br /><br /> 
+						</li>
+						<li> Fun with scrolling !<br /><br />
+							<img src="userInterface/scroll1.gif" alt="no progress bar"/> <br /><br />
+							<img src="userInterface/scroll2.gif" alt="progress bar"/> <br /><br />
+						</li>
+						<li> More tabs please ! <br /><br />
+							<img src="userInterface/tab.gif" alt="no progress bar"/> <br /><br /> or <br /><br />
+							<img src="userInterface/noTabs.gif" alt="progress bar"/> <br /><br />
+						</li>
+						<li> Helpful tips ! <br /><br />
+							<img src="userInterface/tooltips.gif" alt="no progress bar"/> <br /><br /> 
+						</li>
+						<li> Gree good - red bad <br /><br />
+							<img src="userInterface/color.gif" alt="no progress bar"/> <br /><br /> 
+						</li>
+					</ol>
+		
+	
+        <h2 id="jstools">Task 2 - JavaScript</h2>
+	<p> Continue the JavaScript Exercises from last week's lab</p>
+       
+			<h2 id="xslt1">Task 3 - More XSLT : basic</h2>
+			<ol>
+				<li>
+					Given the following XML document:
+					<pre><code>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE recipe_book [
+	&lt;!ELEMENT recipe_book (recipe+)&gt;
+	&lt;!ELEMENT recipe (title,author,year?,ingredient*)&gt;
+	&lt;!ELEMENT title (#PCDATA)&gt;
+	&lt;!ELEMENT author (#PCDATA)&gt;
+	&lt;!ELEMENT year (#PCDATA)&gt;
+	&lt;!ELEMENT ingredient (#PCDATA)&gt;
+	&lt;!ATTLIST recipe category CDATA "dessert"&gt;
+	&lt;!ATTLIST recipe_book publisher CDATA #REQUIRED&gt;
+]>
+
+&lt;recipe_book publisher="Book Co."&gt;
+	&lt;recipe category="main"&gt;
+		&lt;title&gt;Lasagne&lt;/title&gt;
+		&lt;author&gt;Garfield the cat&lt;/author&gt;
+		&lt;year&gt;1994&lt;/year&gt;
+		&lt;ingredient&gt;Cheese&lt;/ingredient&gt;
+	&lt;/recipe&gt;
+	&lt;recipe&gt;
+		&lt;title>Pavlova&lt;/title&gt;
+		&lt;author>Helen G.&lt;/author&gt;
+		&lt;year>1994&lt;/year&gt;
+		&lt;ingredient>Eggs&lt;/ingredient&gt;
+		&lt;ingredient>Sugar&lt;/ingredient&gt;
+	&lt;/recipe&gt;
+&lt;/recipe_book&gt;
+				</code></pre>
+				</li>
+				<li>Create an XML tree to represent the structure of this document (see Lecture 3 - 02, slides 39-42). This will help you understand the XPath commands needed in your XSLT page.</li>
+				<li>Create an XSLT stylesheet to tranform the page as follows:
+					<ul>
+						<li>Show a main heading of recipes and then two subheading matching to the two types of recipes (main and dessert).</li>
+						<li>
+							For each individual recipe, show all of the information from the XML document. Try rearranging the order to help you understand
+								how the XSLT page creates a new 'tree' from the original document.
+						</li>
+						<li>Ask your demonstrator for help if you are having difficulties.</li>
+					</ul>
+				</li>
+			</ol>
+
+ 			<h2 id="xslt2">Task 4 - XSLT : Learning useful xslt</h2>
+			<p style="color:red"> Some browsers do not support following codes.</p>
+			<ol>
+			
+				<li>For Web links
+					<code><pre>
+	&lt;a href='{your XPath}'&gt;&lt;xsl:value-of select="your XPath"/&gt;&lt;/a&gt;
+					</pre></code>
+				</li>
+				<li>For image
+					<pre><code>	
+	&lt;img alt="some message"&gt;
+		&lt;xsl:attribute name="src"&gt;
+			&lt;xsl:value-of select="your XPath"/&gt;			
+		&lt;/xsl:attribute&gt;			
+	&lt;/img&gt;		
+					</code></pre>
+				</li>				
+				<li>For audio 
+					<pre>
+						<code>
+	&lt;audio controls="controls"&gt;
+		&lt;source type="audio/mpeg"&gt;
+		&lt;xsl:attribute name="src"&gt;
+			&lt;xsl:value-of select="your XPath"/&gt;			
+		&lt;/xsl:attribute&gt;			
+		&lt;/source&gt;
+	&lt;/audio&gt;
+						</code></pre>
+				</li>
+				
+				<li>For video 
+					<pre>
+						<code>
+	&lt;video width="320" height="240" controls="controls"&gt;
+		&lt;source type="audio/mp4"&gt;
+		&lt;xsl:attribute name="src"&gt;
+			&lt;xsl:value-of select="your XPath"/&gt;			
+		&lt;/xsl:attribute&gt;			
+		&lt;/source&gt;
+	&lt;/video&gt;
+						</code></pre>
+				</li>			
+				
+				<li>For YouTube
+					<pre>
+						<code>
+	&lt;embed width="560" height="315"&gt;
+		&lt;xsl:attribute name="src"&gt;
+			&lt;xsl:value-of select="your XPath"/&gt;			
+		&lt;/xsl:attribute&gt;			
+	&lt;/embed&gt;
+						</code></pre>
+						Or
+					<pre><code>	
+	&lt;iframe width="560" height="315"&gt;
+		&lt;xsl:attribute name="src"&gt;
+			&lt;xsl:value-of select="your XPath"/&gt;			
+		&lt;/xsl:attribute&gt;			
+	&lt;/iframe&gt;		
+					</code></pre>
+				</li>				
+				
+				<li>For other media
+					<pre>
+						<code>
+	&lt;embed&gt;
+		&lt;xsl:attribute name="src"&gt;
+			&lt;xsl:value-of select="your XPath"/&gt;			
+		&lt;/xsl:attribute&gt;			
+	&lt;/embed&gt;
+						</code></pre>
+						Or
+					<pre><code>	
+	&lt;object&gt;
+		&lt;xsl:attribute name="src"&gt;
+			&lt;xsl:value-of select="your XPath"/&gt;			
+		&lt;/xsl:attribute&gt;			
+	&lt;/object&gt;		
+					</code></pre>
+				</li>					
+
+			</ol>
+ 			
+			
+ 
+ 			<h2 id="xslt3">Task 5 - XSLT : Advanced</h2>
+
+			<ol>
+				<li>We will be working with our original XML file (<span class="file">airline.xml</span>) and XSLT (<span class="file">airline-xslt.xsl</span>) that were made in Lab 7
+				(or you can use <span class="file">airline.xml</span> and <span class="file">airline-xslt.xsl</span> in Lab9-UserInterface/xslt folder).</li>
+				<li>
+					Add the following tags to <span class="file">airline.xml</span> (assuming this 
+					is what you named your .xml file in Lab 7).<br />
+					<ul>
+					<li>As children of 'leg'
+					<ul>
+						<li>aircraft_photo?</li>
+						<li>aircraft_video?</li>
+						<li>aircraft_youtube?</li>
+					</ul></li>
+					<li>As children of 'depart' and 'arrive'
+					<ul>
+						<li>airportweb?</li>
+					</ul></li>
+					</ul>
+				</li>
+				<li>
+					Add some codes to <span class="file">airline-xslt.xsl</span> to display the contents of the above tags. 
+				</li>
+			</ol>
+ 
+
+
+</div>
+
+		<div id="copyright">
+
+		<p>
+			<a href="http://validator.w3.org/">
+			<img
+			src="vs-blue-256.png"
+			alt="Validator" height="31" width="88" />
+			</a>
+		</p>
+
+
+		</div>
+
+
+</body>
+
+</html>
+

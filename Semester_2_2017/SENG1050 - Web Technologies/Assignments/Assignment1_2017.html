@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+	<title>SENG1050 - Assignment 1</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<style type="text/css">
+		blockquote { font-style: italic }
+		.late { font-size: medium }
+		.listgroup * { margin-top: 0cm; margin-bottom: 0cm }
+		.warning {color: #ff0000;}
+	</style>
+</head>
+
+<body>
+
+	<div id="body">
+
+        <h1>SENG1050 - Assignment 1</h1>
+
+        <hr />
+
+        <div class="toc">
+          <a href="#outline">Outline</a> -
+          <a href="#template">Template</a> -
+		  <a href="#objects">XML pages</a> -
+          <a href="#web">Web Pages Development</a> -
+          <a href="#submit">Submission</a> -
+          <a href="#marking">Marking</a>
+        </div>
+
+        <hr />
+
+        <ul class="due">
+          <li>Due: 11:59pm, Friday 15th September, 2017
+            <ul class="late">
+              <li>by 11:59pm, Saturday 16th September, 2017 = -10%</li>
+              <li>by 11:59pm, Sunday 17th September, 2017 = -20%</li>
+              <li>by 11:59pm, Monday 18th September, 2017 = -30%</li>
+              <li>by 11:59pm, Tuesday 19th September, 2017 = -40%</li>
+              <li>by 11:59pm, Wednesday 20th September, 2017 = -50%</li>
+              <li>after 11:59pm, Wednesday 21st September, 2017 = 0</li>
+            </ul></li>
+          <li>Weight: SENG1050: 15% of course total</li>
+        </ul>
+
+        <p>
+          The objectives of this assignment are to test your ability to create
+          XML documents that contain well-defined information and to develop web pages using HTML with CSS. This assignment will
+          be developed further in Assignment 2.
+        </p>
+
+
+        <div class="warning">
+
+          <h3 id="generated" >Warning - HTML, XML, CSS Generating Tools</h3>
+
+          <p>
+            You are <strong>NOT</strong> allowed to use tools which
+            <em>generate</em> HTML, XML, XSLT or CSS code from a visual
+            representation. This includes DreamWeaver,
+            Microsoft Frontpage, Saving to HTML from MS Word, etc.
+            You must write all code yourself in a plain-text
+            editor such as NotePad.
+            Any assignments that use code generated from a tool will be given
+            <strong>ZERO</strong>.
+          </p>
+
+
+        </div>
+
+
+        <h2 id="outline">Outline</h2>
+
+        <p>
+			The NewcastleAd company has invited you, as a promising student of their partner 
+			institution the University of Newcastle with web communication skills, 
+			to develop a web site, <em>Online Food Delivery</em>,  that advertises the restaurants who have adopted online 
+			ordering and delivery system. This service is well received by those who use it but currently there is no place to advertise the system.  		
+		</p>
+		<p>
+			Whether the restaurants are opening first time or the restaurants have been many years, they need advertising
+			to be successful businesses. Your job is to help them! 
+		</p>
+		
+		<p>
+			Your task to present the restaurants as appealingly as possible on the web. 
+			This will involve, </p>
+
+        <ol>
+          <li>Creating an <a href="#template">XML template</a> and <a href="#dtd">DTD</a> </li>
+          <li>Creating two <a href="#objects">XML documents</a></li>
+          <li>Developing <a href="#web">a home page</a> for the advertisement.</li>
+        </ol>
+
+        <p>
+          Details of all these requirements are given below.
+        </p>
+
+        <hr />
+
+		<h2 id="template">XML template</h2>
+        <p>
+			The template will be a <strong>valid</strong> XML file. The important parts here are the tags
+			(the organization of the data), <strong>not the actual data</strong> about any restaurants. 
+			However, you will need to include some arbitrary data to allow your page to be validated. 
+			For example, if the <em>default</em> of an attribute is #REQUIRED, 
+			the attribute needs a value otherwise it will not be validated.
+		</p>
+
+        <h3> XML Specification</h3>
+        <p>
+			The document should be able to store as many restaurants as required, 
+			and all the restaurants in the <em>Online Food Delivery</em> website should belong to a particular cuisine. 
+			The cuisine could be &apos;Asian&apos;, &apos;BBQ &amp; Grill&apos;, &apos;Burgers&apos;, 
+			&apos;Indian&apos;, &apos;Italian&apos; or &apos;Thai&apos;. 
+			You will decide the tags that you wish to use to describe the restaurants, 
+			but you should at least have tags for the following items …. 
+		</p> 
+
+        <ul>
+			<li>Cuisine type (one only)</li>
+            <li>Restaurant name (one only)</li>
+			<li>Restaurant logo (zero or one)</li>
+			<li>Restaurant picture or Food picture (one or more)</li>
+			<li>URL (one only)</li>
+			<li>Address (one only)</li>
+			<li>Phone number (one or more)</li>
+			<li>Opening hours (one only)</li>
+			<li>Delivery (one only)
+				<ul>
+					<li>Mininum price</li>
+					<li>Delivery Fee</li>
+				</ul></li>
+			<li>Restaurant description</li>	
+							
+		</ul>
+        
+		<p>
+			At least 1 tag must have an attribute. If you  include only the items mentioned above you will 
+			<strong>NOT</strong> get full marks for the assignment. Please add at least 3 more tags that 
+			make your template different from others.
+		</p>
+		
+        <hr />
+
+        <h2 id="dtd">DTD</h2>
+
+        <p>
+          You will also need to write a DTD for your XML. Generally, it is your choice whether the DTD 
+		  is internal or external, however, for the SENG1050 assignment, you should make 
+		  the DTD internal because it is easier to validate your XML and DTD. 
+        </p>
+
+        <p>
+          Your DTD will need to describe all the tags and attributes that you used in your XML. 
+		  It will also be important to use optional modifiers (+, *, ?) to indicate how many 
+		  instances of each tag are allowed. 
+        </p>
+		<p>
+			In your DTD, define at least one entity (&lt;!ENTITY&gt;) and use it in the XML document.
+		</p>
+
+
+        <hr>
+		<h2 id="objects">XML documents</h2>
+
+        <p>
+          Once you have your XML template with DTD, you will need to make 2 separate XML documents.
+        </p>
+		<ul>
+			<li> choose two cuisines and</li>
+			<li> write one XML document for each cuisine.</li>
+			<li> each XML document should contain <strong>data</strong> for 3 restaurants.</li>
+			<li> each XML document should contain the internal DTD at the top of the document.</li>
+			<li> the DTDs in 2 XML documents should be the same.</li>
+			<li> the 2 XML documents <strong>MUST</strong> have the same tags and DTD as the XML template.</li>
+		</ul>
+		
+		<hr />
+		
+	<h2 id="web">Homepage development</h2>
+		<p>
+		You will develop the <em>Online Food Delivery</em> Homepage. You need to create the following files:<br><be>
+	
+		</be></p><ul>
+		<li><a href="#all">Homepage (index.html)</a></li>
+		<li><a href="#css">Cascading Style Sheet (style.css)</a></li>
+		</ul>
+		
+		and your site map should look as below.<br />
+			<img src="SiteMap.jpg" />
+		
+		
+		<h3 id="all">General requirements </h3>
+		<ul>
+			<li>Page should be coded according to the HTML5 standard.</li>
+			<li>Page should contain the full HTML5 document structure, including &lt;&#33;DOCTYPE&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt; and &lt;body&gt;</li>
+			<li>Page should use Cascading Style Sheets (CSS) for visual formatting. You must use an external style file and a few (NOT many) inline styles.</li>
+			<li>Your assignment directory should contain a sub-directory, named <em>images</em> with all the image files you are using in your web pages. </li>
+			<li>There should be a nice background image for the page.</li>
+			<li>There should be a left side margin of 1 cm.</li>				
+			<li>The page must have good readability, consistency and navigation</li>
+			<li>Use a CSS</li>
+				<ul>
+					<li>Use a class attribute and a CSS   .xxx selector to style multiple elements with the same class </li>
+					<li>At least one &lt;div&gt;.  Use CSS to provide some interesting styling for it (your choice of borders, background, floating alignment, etc.)</li>
+					<li>At least one &lt;span&gt;, used to provide some formatting (e.g. a colour or font change) for a few words of text</li>
+				</ul>
+			<li>Comments for your HTML code </li>
+		</ul>
+
+		<h3 id="index">Detail description for Homepage </h3>
+		<p>Your submission should contain a homepage, called <em>index.html</em>. This page should contain the following elements 
+		(in addition to the General requirements):</p>
+		
+		<ul>
+			<li>A descriptive title 
+				<ul>
+					<li>The text that appears in the browser window’s title bar.</li>
+				</ul></li>
+			
+			<li>Navigation bar (Menu bar) 
+				<ul>
+					<li>Hyperlinks from the index page to other pages (two XML pages).</li>
+					<li>These links should use <em>a relative</em> URL.</li>
+					<li>The text colours of a link before they are visited, after they are visited and 
+					during a user action must be different from each other. A link must appear bigger 
+					when you move the cursor over it.</li>
+				</ul></li>
+			
+			
+					
+			<li>Headings at more than one level, with &lt;h1&gt; formatted to make a nice looking title for the pages.
+				<ul>
+					<li>Level 1 heading appropriate for the homepage.  Centre the heading. </li>
+					<li>The page must have a couple of level 2 headings, which will be underlined.</li>
+					<li>Meaningful headings for each section. All level 1 and 2 headings must be in uppercase and this must be controlled by the external stylesheet.</li>
+				</ul></li>
+			<li>Several paragraphs of text
+				<ul>
+					<li>A paragraph welcoming people to the Web site. This particular paragraph should use a font size larger than other paragraphs. </li>
+					<li>Use a CSS to control at least a few aspects of text rendering (e.g. colour, font-styles, text-align, etc.)</li>
+				</ul></li>
+			<li>List around 5 cuisines
+				<ul>
+					<li>Use an unordered list or an ordered list</li>
+					<li>Short descriptions for each cuisine</li>					
+					<li>One image for each cuisine
+						<ul>
+							<li>Use an &lt;img&gt; tag</li>
+							<li>Float them to the left side of the webpage using CSS. Add box information (margin, padding and/or border) to make it look nice on the webpage.  </li>
+							<li>Use images in the <i>images</i> folder you created. </li>
+						</ul></li>
+				</ul></li>
+			<li>The above mentioned welcoming paragraph and the short description must have some abbreviations.</li>
+			<li>One hyperlink to an external website <i>(eg., http://www.newcastle.edu.au)</i>, but related to the course in some way. This must be <em>an absolute URL</em>.</li>
+			<li>A copyright statement, including information about you, like your name and email address. Your external stylesheet must place the copyright statement on the right bottom corner of the page.</li>
+			<li>Choose some other tag, such as EM, STRONG, P, or BLOCKQUOTE. You can customize that tag in your external style sheet.</li>
+		</ul>
+		
+		<h3 id="css">External Style Sheet</h3>
+		<ul>
+			<li> Once your Homepage is written, create an external style sheet (<code>style.css</code>) to define the style of the Homepage. The external style sheet should specify:
+			<ul>
+				<li>The style of a header tag</li>
+				<li>The background image, and the font family, size, and colour for the text</li>
+				<li>The style of the tags you used</li>
+			</ul></li>
+			<li>Use a document-level or inline style for some tags. </li>
+			<li>Use at least one ID and one class selector in CSS. </li>
+			</ul>
+
+		<h3>Coding Style</h3>
+		<p>
+			Please note that your HTML code and CSS code must be neat, clear, and commented. Comments at the top of the file, 
+			stating the name of the file, the name of the author and the date the file was created. Make sure these are comments, 
+			i.e. they don’t show on the web page, but only when one looks at the source code. An indentation and a clean, organized code is helpful.
+		</p>
+		<p>Other than the specifications mentioned, the way you design your page is up to you. However it should use semantically-correct tags. </p><p>
+		Your creation should be fully valid HTML5 and CSS. 
+		</p>
+
+	
+	
+		<p></p>
+
+  
+		<hr>
+
+        <h2 id="submit">Submission</h2>
+
+        <p>
+          Your submission should contain a template file (containing XML and DTD), and the 2 XML files (each XML file contains an internal DTD), html homepage and a CSS file. If there
+          are any other files that are part of your assignment (e.g. graphics files), include those too. You should also 
+		  include a <span class="file">README.txt</span> file,
+          containing your student number and a list of the files that are part
+          of your submission.
+        </p>
+
+        <p>
+          Finally, your submission should include a completed
+          Assignment Cover Sheet. You can download an Assessment Item Cover 
+          Sheet for Individual Assessment of SENG1050 from BlackBoard
+          or from <a href="http://www.newcastle.edu.au/current-students/learning/assessments-and-exams/submitting-an-assessment">
+         SUBMITTING AN ASSESSMENT</a>,
+          then fill in the details and include it with your submission.
+          An Assignment Cover Sheet submitted electronically is deemed to
+          have been signed.
+          Your assignment cannot be marked until a completed cover sheet
+          is received.
+        </p>
+
+        <div class="warning">
+
+          <h3 id="plagiarism">Warning - Plagiarism</h3>
+         <p>
+            Plagiarism is defined as
+            <dfn>presenting the work of others' as if it was your own</dfn>.
+            This includes the copying of content from other people's
+            Web pages (and other sources) without "appropriate referencing"
+            (indicating the parts of your assignment which have been
+            copied and where they were copied from).
+          </p>
+
+          <p>
+            If you "quote" other people's work in your assignments, then
+            you <strong>must</strong> reference them appropriately.
+            Failure to do so will cause you to lose marks for the assignment.
+            An assignment that consists largely of work copied from elsewhere
+            will receive very low (zero) marks, and may be reported to the
+            School for suspicion of plagiarism.
+          </p>
+
+          <p>
+            You can find more information on the University's
+            Policy on Student Academic Integrity in the Course Outline and at
+            <a href="http://www.newcastle.edu.au/about-uon/governance-and-leadership/policy-library">
+            Policy Library</a>
+          </p>
+
+        </div>
+
+        <p>
+          Submission will be via the Assignments page on
+          <a href="https://uonline.newcastle.edu.au">Blackboard</a>.
+          To submit your files, place them all into a single
+          <span class="file"><strong>.zip</strong></span> archive containing every files and
+          submit it using the Web form in the Assignment 1 area.
+          The <span class="file">.zip</span> archive should be named
+          <span class="file">cXXXXXXX.zip</span> archive where
+          <span class="file">XXXXXXX</span> is replaced by
+          <strong>your</strong> student id.
+        </p>
+
+ 
+
+        <p>
+          Failure to submit correctly is not of itself a sufficient reason
+          to apply for Adverse Circumstances on the assignment.
+          You will get a chance to practice using the
+          submission mechanism in labs before the submission deadline.
+        </p>
+
+        <hr>
+
+        <h2 id="marking">Marking Guide</h2>
+
+        <p>
+          
+        </p>
+
+        <ul>
+          <li>Total Marks: 100</li>
+		  <ul>
+			<li><a href="#template">XML and DTD Template Page</a>: 30</li>
+			<li><a href="#xml">XML pages</a>: 30</li>
+			<li><a href="#homepage">Homepage</a> and <a href="#css">CSS</a>: 40 </li>
+		  </ul>
+<li>Remember, all XML, HTML and CSS pages must be valid. You may check your work before submitting at<br>
+<a href="https://validator.w3.org/">https://validator.w3.org</a></li>	
+        </ul>
+
+</div>
+
+
+</body></html>

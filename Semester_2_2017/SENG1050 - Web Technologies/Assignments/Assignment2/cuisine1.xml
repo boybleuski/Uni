@@ -1,0 +1,124 @@
+<!--
+File: cuisine1.xml
+Name: Sam Dolbel
+Student no.: c3130069
+Date created: 12-9-2017
+Date modified: 20-10-2017
+-->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xmlformat.xsl"?>
+
+<!DOCTYPE restaurants [
+  <!ELEMENT restaurants (restaurant*)>
+  <!ELEMENT restaurant (cuisine, restname, restlogo?, foodpic+, url, address,
+  phone+, openhours, delivery, description, headchef, specials?, pricerange)>
+  <!ELEMENT cuisine (#PCDATA)>
+    <!ATTLIST cuisine type (BBQ|Bistro|Burgers|Chinese|French|Indian|Italian|Thai) #REQUIRED>
+  <!ELEMENT restname (#PCDATA)>
+  <!ELEMENT restlogo (#PCDATA)>
+  <!ELEMENT foodpic (#PCDATA)>
+  <!ELEMENT url (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT phone (#PCDATA)>
+  <!ELEMENT openhours (time, days)>
+    <!ELEMENT time (#PCDATA)>
+    <!ELEMENT days (#PCDATA)>
+  <!ELEMENT delivery (minprice, deliveryfee)>
+    <!ELEMENT minprice (#PCDATA)>
+    <!ELEMENT deliveryfee (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT headchef (#PCDATA)>
+  <!ELEMENT specials (specialitem+)>
+    <!ELEMENT specialitem (#PCDATA)>
+      <!ATTLIST specialitem type (Beef|Fish|Pork|Poultry|Shellfish|Vegan|Vegetarian) #REQUIRED>
+  <!ELEMENT pricerange (lowprice, highprice)>
+    <!ELEMENT lowprice (#PCDATA)>
+    <!ELEMENT highprice (#PCDATA)>
+  <!ENTITY mar "Margaretville">
+]>
+
+<restaurants>
+  <restaurant>
+    <cuisine type ="French">French</cuisine>
+    <restname>Je Vaisque</restname>
+    <restlogo></restlogo>
+    <foodpic>images/nbbistro.jpg</foodpic>
+    <url>http://www.jevaisque.com.au</url>
+    <address>410 Jang Street, &mar;</address>
+    <phone>02 4928 2233</phone>
+    <openhours>
+      <time>12-3pm, 6-10pm</time>
+      <days>Wednesday-Sunday</days>
+    </openhours>
+    <delivery>
+      <minprice>$100</minprice>
+      <deliveryfee>$20</deliveryfee>
+    </delivery>
+    <description>A small and intimate setting with strong French influences.  Rich velvet-and-timber decor and gentle lighting make for a romantic night out.</description>
+    <headchef>Marco Frampton</headchef>
+    <specials>
+      <specialitem type="Beef">Filet mignon w/ roast vegetables, pumpkin puree and juniper berry jus </specialitem>
+      <specialitem type="Poultry">Coq au vin </specialitem>
+    </specials>
+    <pricerange>
+      <lowprice>$15</lowprice>
+      <highprice>$40</highprice>
+    </pricerange>
+  </restaurant>
+
+  <restaurant>
+    <cuisine type="French"></cuisine>
+    <restname>Vous M'Avez</restname>
+    <restlogo></restlogo>
+    <foodpic>images/nbbistro.jpg</foodpic>
+    <url>http://www.vousmavez.com.au</url>
+    <address>28 Augur Road, &mar;</address>
+    <phone>02 4928 1102</phone>
+    <openhours>
+      <time>11:30-3pm, 5:30-10pm</time>
+      <days>Tuesday-Sunday</days>
+    </openhours>
+    <delivery>
+      <minprice>$100</minprice>
+      <deliveryfee>$25</deliveryfee>
+    </delivery>
+    <description>Lively, family-friendly restaurant with a diverse but undeniably French menu.  Notably the first French restaurant in the area to offer delivery services.</description>
+    <headchef>Anna Mordecai</headchef>
+    <specials>
+      <specialitem type="Vegetarian">Wild mushroom and pumpkin risotto </specialitem>
+      <specialitem type="Poultry">Twice-cooked duck breast w/ star anise jus, lentils and spinach puree </specialitem>
+    </specials>
+    <pricerange>
+      <lowprice>$8</lowprice>
+      <highprice>$30</highprice>
+    </pricerange>
+  </restaurant>
+
+  <restaurant>
+    <cuisine type="French"></cuisine>
+    <restname>Le Meilleur Grade</restname>
+    <restlogo></restlogo>
+    <foodpic>images/nbbistro.jpg</foodpic>
+    <url>http://www.lemeilleur.com.au</url>
+    <address>102 Kelso Avenue, &mar;</address>
+    <phone>02 4929 7219</phone>
+    <openhours>
+      <time>5-11pm</time>
+      <days>Monday-Saturday</days>
+    </openhours>
+    <delivery>
+      <minprice>$60</minprice>
+      <deliveryfee>$20</deliveryfee>
+    </delivery>
+    <description>A harbourside restaurant specialising in seafood, French style.  Offers a daytime function menu, seven days a week.</description>
+    <headchef>Pascal Dufresne</headchef>
+    <specials>
+      <specialitem type="Pork">Confit pork belly w/ brocollini, honey apple glaze and creamy mustard sauce </specialitem>
+      <specialitem type="Shellfish">Lobster Thermidor </specialitem>
+    </specials>
+    <pricerange>
+      <lowprice>$12</lowprice>
+      <highprice>$70</highprice>
+    </pricerange>
+  </restaurant>
+</restaurants>

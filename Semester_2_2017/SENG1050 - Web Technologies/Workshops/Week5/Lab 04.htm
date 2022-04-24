@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta content="text/html; charset=UTF-8">
+<title>SENG1050 - Laboratory 4 </title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+
+<div id="body">
+
+        <h1>SENG1050 <br>Laboratory 4</h1>
+
+        <p>
+          The objectives of this lab are to gain experience in constructing
+          Web pages, by experimenting with HTML and CSS tags and then adding
+	    HTML and CSS tags to the content you created in Lab 2.
+        </p>
+
+        <hr>
+
+        <div class="toc">
+          <a href="#fonts">Task 1</a> -
+          <a href="#css">Task 2</a> -
+          <a href="#morecss">Task 3</a> -
+		  <a href="#selector">Task 4</a> -
+		  <a href="#cascade">Task 5</a>
+        </div>
+
+        <hr>
+
+        <h2 id="fonts">Task 1 - Fun with Fonts (Inline style CSS)</h2>
+
+        <p>
+          For each list item, set the font properties so that the font reflects the text. 
+		  You don't need to try every values for different properties. Try a few you like/want.
+        </p>
+
+	  <p>font-style</p>
+	  <ul>
+		   <li><code>normal</code> font-style</li>
+               <li><code>italic</code> font-style</li>
+               <li><code>oblique</code> font-style</li>
+            </ul>
+            <p>font-weight</p>
+            <ul>
+               <li><code>normal</code> font-weight</li>
+               <li><code>bold</code> font-weight</li>
+               <li><code>100</code> font-weight</li>
+               <li><code>400</code> font-weight</li>
+               <li><code>600</code> font-weight</li>
+               <li><code>900</code> font-weight</li>
+               <li><code>lighter</code> font-weight</li>
+               <li><code>bolder</code> font-weight</li>
+            </ul>
+            <p>font-variant</p>
+            <ul>
+            	<li><code>normal</code> font-variant</li>
+            	<li><code>small-caps</code> font-variant</li>
+            </ul>
+            <p>font-family</p>
+            <ul>
+				<li><code>Garamond</code>, or <code>serif</code> font-family</li>
+				<li><code>Arial</code>, or <code>sans-serif</code> font-family</li>
+				<li><code>Courier New</code>, or <code>monospace</code> font-family</li>
+				<li><code>Comic Sans</code>, or <code>cursive</code> font-family</li>
+				<li><code>Impact</code>, or <code>fantasy</code> font-family</li>
+            </ul>
+            <p>font-size</p>
+            <ul>
+                <li>absolute values
+                <ul>
+                	<li><code>xx-small</code> font-size</li>
+                	<li><code>x-small</code> font-size</li>
+                	<li><code>small</code> font-size</li>
+                	<li><code>medium</code> font-size</li>
+                	<li><code>large</code> font-size</li>
+                	<li><code>x-large</code> font-size</li>
+                	<li><code>xx-large</code> font-size</li>
+                </ul>
+                </li>
+                <li>relative values
+                <ul>
+                   <li><code>smaller</code> font-size</li>
+                   <li><code>larger</code> font-size</li>
+                   <li><code>50%</code> font-size</li>
+                   <li><code>100%</code> font-size</li>
+                   <li><code>300%</code> font-size</li>
+                   <li><code>0.5cm</code> length font-size</li>
+                   <li><code>24px</code>  font-size</li>
+                   <li><code>2pc</code> (1 pica = 12 point) font-size</li>
+                </ul>
+                </li>
+            </ul>
+
+
+        <hr>
+
+
+        <h2 id="css">Task 2 - Visual Formatting with CSS (embedded)</h2>
+
+        <p>
+          Open the page you created in Lab 2 (My Favourite Things - <code>index.html</code>). 
+	    Now that your Web page has structure, you can add visual formatting
+          suggestions using CSS.
+        </p>
+
+        <ol>
+          <li>In the content of the <code>&lt;head&gt;</code> tag, place a CSS <code>&lt;style&gt;</code> tag:
+            <pre><code>&lt;style type="text/css"&gt;
+&lt;/style&gt;</code></pre></li>
+          <li>Inside this <code>&lt;style&gt;</code> tag, add a selectors for
+            body and address tags:
+            <pre><code>  body { }
+  address { }</code></pre></li>
+          <li>Inside the braces (<code>{ }</code>) add some property-value pairs.
+            For example, to make most text yellow on a black background and aligned to the
+            left of the page use <code>body { color: yellow; background-color: black; text-align: left }</code></li>
+          <li>To make text inside the address block orange and aligned to the right of the page
+            use <code>address { color: orange; text-align: right }</code></li>
+          <li>Reload the Web page into your Web browser to see the changes in visual formatting.</li>
+          <li>Add more style rules to change the formatting of level-1 and level-2 headings.</li>
+          <li>Add <em>Pseudo-class</em> selectors for the email you have in <code>&lt;address&gt;</code> block. 
+		  You should define pseudo classes so that your email address look differently when it is <em>unvisited</em>, <em>visited</em>, <em>hovered</em> and <em>selected</em> . </li>
+        </ol>
+
+        <p>
+          The page could look something like this.
+        </p>
+
+        <div class="img">
+          <img src="visual-small.png" alt="XHTML file with visual formatting">
+        </div>
+
+        <p>
+          As with HTML, you should
+          use a Web validation service to check your CSS code.
+          You can find a CSS validator
+          <a href="http://jigsaw.w3.org/css-validator/">here</a>.
+          You can use the "validate by direct input" form
+          and paste in the content of your <code>&lt;style&gt;</code> tag
+          to be validated.
+        </p>
+
+        <hr>
+
+        <h2 id="morecss">Task 3 - More CSS Styles (Using external style sheet)</h2>
+
+        <p> External sheets are ideal for maintaining formatting 
+consistency over many pages on a site.
+          This task wants you to experiment with as many different 
+styles as you can. See if you can implement the following styles, 
+		and watch their effect in the browser...
+        </p>
+
+        <ol>
+        <li>Change the margin of the webpage to 0px. Change it to 50px.</li>
+        <li>Change the type of bullets used for lists. Better yet, change the bullet to an image.</li>
+        <li>Add styles to insert a border around the image. Modify <code>margin</code>, <code>padding</code>, <code>border-width</code>, <code>border-style</code> and <code>border-color</code> properties.</li>
+        <li>Make all level-1 headings centre-aligned</li>
+		<li>Insert a background image and repeat it throughout the page.</li>
+        <li>Set a background color (highlighting) behind all paragraphs. Try to set colour using both <code>rgb</code> and <code>hexadecimal</code> schemes.</li>
+        <li>Now use the same external style sheet to format both favourite pages you created in Lab 2 (<code>favourite01.html</code> and <code>favourite02.html</code>). Change some properties in your external style sheet and see how it is reflected in both favourite pages.
+		</ol>
+	    <hr>
+		
+	  <h2 id="selector">Task 4 - Formatting with CSS Selectors</h2>
+        
+		<p>
+          Open the copy page you created in Lab 2 (My Favourite Things - <code>index2.html</code>). 
+	    Now you will add visual formatting to this page using CSS selectors and watch their effect in the browser...
+        </p>
+
+        <ol>
+          <li>In the content of the <code>&lt;head&gt;</code> tag, place a <code>&lt;style&gt;</code> tag as you have done in <a href="#css">Task 2</a>.</li>
+          <li>Inside the <code>&lt;style&gt;</code> tag, add the following selectors 
+			<ul>
+				<li>One <em>ID</em> selector with <code>background-color</code> property. And use the <code>id</code> attribute in the target paragraph to receive the formatting.</li>
+				<li>One <em>class</em> selector with <code>color</code> property. And use that <em>class</em> name to format different tags in your <code>index2.html</code> file. For example one <em>paragraph</em> and one <em>list</em>.
+                <li>Try to test one of the <em>descendant</em> and/or <em>sibling</em> selectors (Optional).				
+			</ul>
+		  </li>
+		</ol>
+		<hr>
+	  <h2 id="cascade">Task 5 - Cascading multiple style declaration</h2>
+        
+		<p>
+          In this task you see how the styling rules defined at different levels are cascaded in CSS.
+		  Open the file you created in <a href="#morecss">Task 3</a> using external style sheet.
+        </p>
+
+        <ol>
+          <li>Insert a few document level styles (inside the <code>head</code> element) to override the same styles defined in external style sheet with different values. 
+		      For example define a different style for the bullets to override the style defined in the external style sheet.</li>
+          <li>Check how the document level styles override the external styles.</li>
+		  <li>Now override the document level styles you added in Step 1 using <em>in-line</em> style declaration.</li>
+		  <li>Check how in-line styles override the document level styles.</li>
+		</ol>
+
+      <hr>
+</div>
+<div id="copyright">
+    <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img src="vs-blue-256.png" alt="Valid HTML 5" height="31" ></a>
+  </p>
+ 
+
+</div>
+
+
+
+</body></html>

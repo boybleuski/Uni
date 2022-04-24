@@ -1,0 +1,52 @@
+
+body
+{
+	background-image:url('images/farm-3.jpg');
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-size:100%;
+	background-attachment:fixed;
+	margin-left: 1cm;
+	font-family:verdana,serif;
+}
+
+div.transbox
+{
+	background-color:white;
+	opacity:0.7;
+}
+
+h1
+{
+	text-align:center;
+	text-decoration:underline;
+	text-transform:uppercase;
+	font-family:georgia,serif;
+	color:white;
+}
+
+ul
+{
+	background-color:gray;
+	opacity:0.7;
+	color:black;
+}
+
+h2
+{
+	text-decoration:underline;
+	text-transform:uppercase;
+	font-family:georgia,serif;
+	color:white;
+}
+
+footer
+{
+	text-align:right;
+	color:black;
+}
+
+a:link { color:lime; }
+a:visited { color:red; }
+a:hover { font-size:120%; }
+a:active { color:white; }

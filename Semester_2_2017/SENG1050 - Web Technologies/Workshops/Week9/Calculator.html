@@ -1,0 +1,54 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>A Very Simple Calculator</title>
+		<script type="text/javascript">
+            function multiply() 
+            {
+				var x = window.document.the_form.field_one.value;
+	            var y = window.document.the_form.field_two.value;
+				var p = x * y;
+				alert(x + " times " + y + " is " + p);
+            } // calculator()
+
+            function addition() 
+            {
+				var x = window.document.the_form.field_one.value;
+	            var y = window.document.the_form.field_two.value;
+				var p = 1 * parseInt(x) + parseInt(y);
+				alert(x + " plus " + y + " is " + p);
+            } // calculator()   
+
+            function subtraction() 
+            {
+				var x = window.document.the_form.field_one.value;
+	            var y = window.document.the_form.field_two.value;
+				var p = x - y;
+				alert(x + " minus " + y + " is " + p);
+            } // calculator()   
+			
+            function division() 
+            {
+				var x = window.document.the_form.field_one.value;
+	            var y = window.document.the_form.field_two.value;
+				var p = x / y;
+				alert(x + " divided by " + y + " is " + p);
+            } // calculator()   
+
+        </script>
+	</head>
+
+	<body>
+		<p>This is a simple calculator. You can add addition, subtraction and division.</p>
+		<form name="the_form">
+		   Number 1: <input type="text" name="field_one"/> <br />
+		   Number 2: <input type="text" name="field_two"/> <br />
+		   <input type="button" value="multiply them!" onclick="javascript:multiply()"/>
+		   <input type="button" value="add them!" onclick="javascript:addition()"/>
+		   <input type="button" value="subtract them!" onclick="javascript:subtraction()"/>
+		   <input type="button" value="divide them!" onclick="javascript:division()"/>
+		</form>
+	</body>
+</html>  
+

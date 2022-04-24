@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>SENG1050 - Laboratory 7</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<style type="text/css">
+
+kbd, samp, code, span.file { color: blue }
+
+</style>
+</head>
+
+<body>
+
+
+<div id="body">
+
+        <h1>SENG1050 - Laboratory 7</h1>
+
+        <p>
+          The objectives of this lab are to:
+        </p>
+        <ol>
+		  <li><a href="#cal">a simple calculator</a></li>
+          <li><a href="#js">understand and write a form validation script</a></li>
+          <li><a href="#jstools">learn new and useful JavaScript tools</a></li>
+          <li><a href="#validform">implement a form validation script</a></li>
+        </ol>
+
+        <hr />
+
+        <div class="toc">
+		  <a href="#cal">Task 1</a> -
+          <a href="#js">Task 2</a> -
+          <a href="#jstools">Task 3</a> -
+          <a href="#validform">Task 4</a>
+        </div>
+
+        <hr />
+		
+		<h2 id="cal">Task 1 - A simple calculator</h2>
+
+		<p> <img src="calculator.PNG" alt="calculator"/> </p>	
+		<p> Please add ADDITION, SUBTRACTION, and DIVISION functions.</p>
+	
+
+		        <h2 id="js">Task 2 - Understand and write a form validation script</h2>
+
+		<p> <img src="form.png" alt="forms"/> </p>		
+		
+	<p> Download <code><a href="formValidation.html"> formValidation.html</a> </code>from Blackboard.
+
+</P>	
+    <ol>		
+
+	<li> Write a function called <code>checkNameYear()</code> that, in addition to validating that the name field is filled out, 
+	also validates that the birth year is 4 digits long. Hint: you may need to use a cascading if in <code>checkNameYear()</code>.</li>
+
+	<li> Write a JavaScript expression to validate that not more than two of the checkboxes were selected from 
+	     <code>easyform</code>.</li>
+	
+
+	<li>Write a JavaScript expression to validate that one and only one of the checkboxes was selected from 
+	    <code>easyform</code>.
+	In English, the test of the if is broken into two parts: if (A OR B) where A is "if no boxes are checked at all" 
+	and B is "if more than 1 box is checked". If either of these cases is true, then it is not the case that one and 
+	only one box was checked, so we issue and alert and return false. Otherwise (else), 
+	we thank the user and return true.
+	
+	</li>
+	
+
+	</ol>
+	<hr />
+
+        <h2 id="jstools">Task 3 - Learning new, useful JavaScript tools</h2>
+
+        <ul>
+		<li><strong>Check that a textbox contains only numerical data.</strong> Use a form to construct a textbox (at least 10 characters) and write a JavaScript function to check that the input is numerical. In your function you can make use of the following variable <br /> <pre><code>var pattern = /^-?\d+(\.\d+)?$/;</code></pre><br />
+The interpretation is;<br />
+<table><tbody><tr>
+<td><code>^-?</code></td><td>	At the start of the string you may have a minus sign</td></tr><tr>
+<td><code>\d+</code></td><td>	Then you will have one or more digits</td></tr><tr>
+<td><code>(\.\d+)?</code></td><td> Then, optionally, a decimal point followed by one or more digits</td></tr><tr>
+<td><code>$</code></td><td>	Then the string ends. </td></tr></tbody></table>
+To test, use <code>var a = pattern.test(getElementById("id").value)</code> and check to see if <code>a</code> contains "true" or "false".</li>
+	</ul>
+	<ul>
+		<li><strong>Calculate the length of a text string.</strong> From the lecture notes, make use of 
+<code>document.getElementById("id").value.length</code>. Make sure your textbox has an identifier ("id"). Use <code>document.write()</code> to print out the length of the text string.</li>
+	</ul>
+	<ul>
+		<li><strong>Calculate the position of a character within a string.</strong> JavaScript's <code>indexOf</code> allows us to determine the position of a character (or even a substring) within a string of text. For example <br />
+<pre><code> var a = "1 1 was a racehorse, 2 2 was 1 2. 1 1 1 1 race 1 day, 2 2 1 1 2.";<br />
+ var b = a.indexOf("w");</code></pre><br />
+The value of the variable <code>b</code> is now 4 (remember JavaScript begins counting from 0).<br />
+Choose a character from the textbox with identity "id" above and use <code>indexOf</code> to determine its position.</li>
+	</ul>
+
+        <hr />
+
+        <h2 id="validform">Task 4 - Implement a form validation script</h2>
+
+	Much time and bandwidth can be saved by performing simple checks on a form at the client side before the form is transmitted. The exercises in Task 2 allow for a simple form validation script.
+        <ol>
+          <li>Construct a simple HTML form with input boxes for name, password, email address and telephone number.</li>
+          <li>Make sure the password is at least 6 characters long. You will need to use an <code>if</code> statement to determine if the password in insufficient and, if so, you may like to notify the reader by means of an <code>alert</code> box.</li>
+          <li>Make sure the box for telephone number contains only integers. (You do not need to check for negative numbers or decimals).</li>
+          <li>Make sure the email address contains the "@" symbol.</li>
+          <li>Consider making the script more sophisticated by allowing "+" and "( )" characters in telephone numbers to allow for international calls or by making sure that a "." appears as a character after "@" in an email address.</li>
+        </ol>
+
+        <hr />
+
+
+</div>
+
+		<div id="copyright">
+
+		<p>
+			<a href="http://validator.w3.org/">
+			<img
+			src="vs-blue-256.png"
+			alt="Validator" height="31" width="88" />
+			</a>
+		</p>
+
+
+		</div>
+
+</body>
+
+</html>
+
